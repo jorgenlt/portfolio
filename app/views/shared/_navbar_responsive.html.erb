@@ -1,0 +1,36 @@
+<nav class="nav-responsive">
+  <div class="container">
+    <div class="logo">
+      <a href="#">Portfolio</a>
+    </div>
+    <div id="mainListDiv" class="main_list">
+      <ul class="nav-responsivelinks">
+        <li><a href="#"><span class="link-num">01.</span> about</a></li>
+        <li><a href="#"><span class="link-num">02.</span> portfolio</a></li>
+        <li><a href="#"><span class="link-num">03.</span> resume</a></li>
+        <li><a href="#"><span class="link-num">04.</span> contact</a></li>
+      </ul>
+    </div>
+    <span class="nav-responsiveTrigger">
+      <i></i>
+      <i></i>
+      <i></i>
+    </span>
+  </div>
+</nav>
+
+<!-- Jquery needed -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<!-- Function used to shrink nav-responsive bar removing paddings and adding black background -->
+<script>
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+      $('.nav-responsive').addClass('affix');
+      console.log("OK");
+    } else {
+      $('.nav-responsive').removeClass('affix');
+    }
+  });
+</script>
