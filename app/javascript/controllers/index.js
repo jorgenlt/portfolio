@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import FullpageController from "./fullpage_controller"
+application.register("fullpage", FullpageController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
