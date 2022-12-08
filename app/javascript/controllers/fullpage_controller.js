@@ -5924,14 +5924,14 @@ export default class extends Controller {
 
   new fullpage('#fullpage', {
     //options here
-    autoScrolling:true, 
+    autoScrolling:true,
     scrollHorizontally: true,
     scrollBar: false,
     licenseKey: 'gplv3-license',
     scrollingSpeed: 1000,
     continuousVertical: true,
     navigation: true,
-    // anchors:['hero-anchor', 'about-anchor', 'portfolio-anchor', 'resume-anchor', 'contact-anchor'],
+    anchors:['hero-anchor', 'about-anchor', 'portfolio-anchor', 'resume-anchor', 'contact-anchor'],
     credits: {enabled: false},
     });
 
