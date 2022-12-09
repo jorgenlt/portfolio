@@ -1,4 +1,4 @@
-<%= render "shared/navbar" %>
+<%= render 'shared/navbar' %>
 <div data-controller="fullpage">
   <div id="fullpage">
     <div class="section" id="hero">
@@ -26,13 +26,7 @@
     </div>
 
     <div class="section" id="portfolio">
-      <h1>Portfolio</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-        cupiditate accusantium illo exercitationem praesentium illum, fugit
-        aut quas dolorum at magni cum quaerat a, repellendus dolores doloremque
-        amet beatae ipsam?
-      </p>
+      <%= render 'shared/portfolio_cards' %>
     </div>
 
     <div class="section" id="resume">
