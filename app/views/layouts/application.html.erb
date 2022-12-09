@@ -12,13 +12,12 @@
   </head>
 
   <body>
-  <%#= render "shared/navbar_responsive" %>
-
   <%= render "shared/navbar" %>
+
   <div class="container container-margin">
     <%= yield %>
   </div>
-  <%= render "shared/flashes" %>
 
+  <%= render "shared/flashes" %>
   </body>
 </html>
