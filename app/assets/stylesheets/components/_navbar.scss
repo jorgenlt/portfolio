@@ -1,35 +1,24 @@
-// $height: 50px;
-// $line-height: 50px;
-
-.nav-container {
+#nav-home {
   display: flex;
+  justify-content: end;
   background: none;
 
   ul {
-    width: 100%;
-    // height: $height;
-    display: flex;
     list-style: none;
     margin: 0;
-    padding-right: 30px;
     position: fixed;
-    top: 0;
-    left: 0;
     z-index: 99;
   }
 }
 
-
 .nav-links {
   font-family: $nav-font;
-  // padding-right: 30px;
-  justify-content: end;
+  display: flex;
 
   a {
     padding-left: 30px;
     text-decoration: none;
     color: $white-reg;
-    // line-height: $line-height;
     font-size: 14px;
     &:hover {
       color: $green-light;
