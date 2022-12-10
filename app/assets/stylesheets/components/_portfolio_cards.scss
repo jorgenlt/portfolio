@@ -57,7 +57,19 @@ $width-container: 1200px;
       width: 100%;
     }
 
+    .portfolio-card-1 {
+      background-image: url(homify-pixel-2-1-rot.png);
+    }
+
+    .portfolio-card-2 {
+      background-image: url(ben-kolde-unsplash.jpg);
+    }
+
+    .portfolio-card-3 {
+      background-image: url(edho-pratama-unsplash.jpg);
+    }
   }
+
   .portfolio-card__background{
     background-size: cover;
     background-position: center;
