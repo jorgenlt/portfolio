@@ -9,8 +9,15 @@ $width-container: 1200px;
 
 #portfolio-cards {
   // height: 95vh;
+  // margin: 5vh 0px;
+  // height: 65vh;
+
   margin: 5vh 0px;
-  height: 70vh;
+  height: 55vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
 
   *{
     border: 0;
@@ -20,16 +27,16 @@ $width-container: 1200px;
   }
 
   .hero-section{
-    display: flex;
-    justify-content: start;
-    align-items: center;
+    // display: flex;
+    // justify-content: start;
+    // align-items: center;
+
     // height: 90vh;
     // padding: $spacing-xxl) $spacing-l);
   }
 
   .portfolio-card-container {
     display: flex;
-    // height: 80%;
     // flex-direction: row;
     // justify-content: center;
     // align-items: center;
@@ -44,8 +51,7 @@ $width-container: 1200px;
   }
 
   .portfolio-card{
-    width: 25vw;
-    min-width: 350px;
+    width: 20vw;
     margin: 0px 20px;
     text-decoration: none;
     position: relative;
@@ -67,6 +73,15 @@ $width-container: 1200px;
 
     .portfolio-card-3 {
       background-image: url(edho-pratama-unsplash.jpg);
+    }
+  }
+
+  .background-overlay {
+    height: 100%;
+    border-radius: inherit;
+
+    &:hover {
+      background: linear-gradient(0deg, rgba(33,37,49,0.80) 25%, rgba(255,29,0,0) 55%);
     }
   }
 
@@ -95,7 +110,7 @@ $width-container: 1200px;
     justify-content: space-between;
   }
   .portfolio-card__category{
-    color: $text-light;
+    color: $white-reg;
     font-size: 0.9rem;
     margin-bottom: $spacing-s;
     text-transform: uppercase;
@@ -109,7 +124,7 @@ $width-container: 1200px;
     font-family: $headers-font;
     font-weight: 200;
     font-size: 1.9rem;
-    color: $text-lighter;
+    color: $white-reg;
     text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
     line-height: 1.4;
     word-spacing: 100vw;
@@ -124,8 +139,10 @@ $width-container: 1200px;
     font-family: $body-font;
     font-weight: 200;
     font-size: 1.0rem;
-    color: $text-lighter;
-    text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+    color: $white-reg;
+    // text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+    // text-shadow: 2px 2px 15px #212531;
+    // backdrop-filter: blur(10px) saturate(70%);
     line-height: 1.4;
     // position: relative;
     // top: 30px;
@@ -152,6 +169,6 @@ $width-container: 1200px;
   .portfolio-card-container:hover > .portfolio-card:not(:hover) .portfolio-card__category,
   .portfolio-card-container:hover > .portfolio-card:not(:hover) .portfolio-card__heading,
   .portfolio-card-container:hover > .portfolio-card:not(:hover) .portfolio-card__text {
-    filter: brightness(0.5) saturate(0.2) contrast(1.2) blur(2px);
+    filter: brightness(0.5) saturate(0.2) contrast(1.2) blur(8px);
   }
 }
