@@ -1,57 +1,61 @@
-<%= render 'shared/navbar' %>
-<div data-controller="fullpage">
-  <div id="fullpage">
-    <div class="section" id="hero">
-      <div>
-        <div><h4>Hello, my name is</h4></div>
-        <div><h1 id="full-name">Jørgen Larsen Tjønnteig</h1></div>
-        <div><h1 id="full-name-subtitle">Full Stack Developer</h1></div>
+<%= render 'shared/sticky_some_bar' %>
+
+<div class="container">
+  <%= render 'shared/navbar' %>
+  <div data-controller="fullpage">
+    <div id="fullpage">
+      <div class="section" id="hero">
         <div>
-          <p>
-            Full Stack Web Development, Javascript ES6, SQL, Ruby, Ruby on Rails, HTML, CSS, UX/UI, Product Design and Bootstrap.
-          </p>
+          <div><h4>Hello, my name is</h4></div>
+          <div><h1 id="full-name">Jørgen Larsen Tjønnteig</h1></div>
+          <div><h1 id="full-name-subtitle">Full Stack Developer</h1></div>
+          <div>
+            <p>
+              Full Stack Web Development, Javascript ES6, SQL, Ruby, Ruby on Rails, HTML, CSS, UX/UI, Product Design and Bootstrap.
+            </p>
+          </div>
+        </div>
+        <div id="learn-more-container">
+          <div id=learn-more>
+            <p>Learn more about what I do</p>
+            <span><i class="fa-solid fa-chevron-down bounce2"></i></span>
+          </div>
         </div>
       </div>
-      <div id="learn-more-container">
-        <div id=learn-more>
-          <p>Learn more about what I do</p>
-          <span><i class="fa-solid fa-chevron-down bounce2"></i></span>
-        </div>
+
+      <div class="section" id="about">
+        <h1>About</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+          cupiditate accusantium illo exercitationem praesentium illum, fugit
+          aut quas dolorum at magni cum quaerat a, repellendus dolores doloremque
+          amet beatae ipsam?
+        </p>
       </div>
-    </div>
 
-    <div class="section" id="about">
-      <h1>About</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-        cupiditate accusantium illo exercitationem praesentium illum, fugit
-        aut quas dolorum at magni cum quaerat a, repellendus dolores doloremque
-        amet beatae ipsam?
-      </p>
-    </div>
+      <div class="section" id="portfolio">
+        <%= render 'shared/portfolio_cards' %>
+      </div>
 
-    <div class="section" id="portfolio">
-      <%= render 'shared/portfolio_cards' %>
-    </div>
+      <div class="section" id="resume">
+        <h1>Resume</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+          cupiditate accusantium illo exercitationem praesentium illum, fugit
+          aut quas dolorum at magni cum quaerat a, repellendus dolores doloremque
+          amet beatae ipsam?
+        </p>
+      </div>
 
-    <div class="section" id="resume">
-      <h1>Resume</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-        cupiditate accusantium illo exercitationem praesentium illum, fugit
-        aut quas dolorum at magni cum quaerat a, repellendus dolores doloremque
-        amet beatae ipsam?
-      </p>
-    </div>
-
-    <div class="section" id="contact">
-      <h1>Contact</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-        cupiditate accusantium illo exercitationem praesentium illum, fugit
-        aut quas dolorum at magni cum quaerat a, repellendus dolores doloremque
-        amet beatae ipsam?
-      </p>
+      <div class="section" id="contact">
+        <h1>Contact</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+          cupiditate accusantium illo exercitationem praesentium illum, fugit
+          aut quas dolorum at magni cum quaerat a, repellendus dolores doloremque
+          amet beatae ipsam?
+        </p>
+      </div>
     </div>
   </div>
 </div>
