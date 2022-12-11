@@ -20,6 +20,7 @@
     text-decoration: none;
     color: $white-reg;
     font-size: 14px;
+    transition: all 0.3s ease;
     &:hover {
       color: $green-light;
     }
