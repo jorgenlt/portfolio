@@ -1,0 +1,20 @@
+<div class="loader-container">
+    <div class="spinner"></div>
+</div>
+
+<script>
+  const loaderContainer = document.querySelector('.loader-container');
+
+  // load animation stops when page is loaded
+  // const displayNone = () => {
+  //   window.addEventListener('load', () => {
+  //     loaderContainer.classList.add('d-none');
+  //   });
+  // }
+
+  // load animation based on a set time
+  setTimeout(() => {
+    loaderContainer.classList.add('d-none')
+    }, 750);
+
+</script>
