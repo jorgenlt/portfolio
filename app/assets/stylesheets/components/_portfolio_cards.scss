@@ -174,3 +174,18 @@ $width-container: 1200px;
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  #portfolio-cards {
+    .portfolio-card {
+      width: 60vw;
+    }
+
+    .portfolio-card-container:hover > .portfolio-card:not(:hover) .portfolio-card__background,
+    .portfolio-card-container:hover > .portfolio-card:not(:hover) .portfolio-card__category,
+    .portfolio-card-container:hover > .portfolio-card:not(:hover) .portfolio-card__heading,
+    .portfolio-card-container:hover > .portfolio-card:not(:hover) .portfolio-card__text {
+      filter: brightness(1.0) saturate(0.2) contrast(1.0) blur(0px);
+    }
+  }
+}
