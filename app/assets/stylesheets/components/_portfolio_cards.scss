@@ -43,12 +43,6 @@ $width-container: 1200px;
     // width: 100%;
   }
 
-  @media(min-width: 540px){
-
-  }
-  @media(min-width: 960px){
-
-  }
 
   .portfolio-card{
     width: 20vw;
@@ -170,5 +164,13 @@ $width-container: 1200px;
   .portfolio-card-container:hover > .portfolio-card:not(:hover) .portfolio-card__heading,
   .portfolio-card-container:hover > .portfolio-card:not(:hover) .portfolio-card__text {
     filter: brightness(0.5) saturate(0.2) contrast(1.2) blur(8px);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #portfolio-cards {
+    .portfolio-card {
+      width: 32vw;
+    }
   }
 }
