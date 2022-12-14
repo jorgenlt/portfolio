@@ -68,7 +68,84 @@ body {
   // background-color: rgb(116, 113, 113);;
 }
 
+
+// Responsive design
+
 @media only screen and (max-width: 1000px) {
+  #hero {
+    #hero-content {
+      margin: 0px 40px;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+
+    #full-name {
+      font-size: 35px;
+    }
+
+    #full-name-subtitle {
+      font-size: 35px;
+    }
+
+    p {
+      max-width: 80%;
+    }
+
+    #learn-more-container {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  #about {
+    #about-content {
+      margin: 0px 40px;
+    }
+
+    h1 {
+      font-size: 35px;
+    }
+  }
+
+  #portfolio {
+    #portfolio-content {
+      margin: 0px 40px;
+    }
+
+    h1 {
+      font-size: 35px;
+    }
+  }
+
+  #resume {
+    #resume-content {
+      margin: 0px 40px;
+    }
+
+    h1 {
+      font-size: 35px;
+    }
+  }
+
+  #contact {
+    #contact-content {
+      margin: 0px 40px;
+    }
+
+    h1 {
+      font-size: 35px;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  
+
   #hero {
     #hero-content {
       margin: 0px 40px;
