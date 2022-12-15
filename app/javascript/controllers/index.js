@@ -9,6 +9,3 @@ application.register("fullpage", FullpageController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
-
-import MobilenavController from "./mobilenav_controller"
-application.register("mobilenav", MobilenavController)
