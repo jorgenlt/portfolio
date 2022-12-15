@@ -6,3 +6,33 @@
     <li><a href="#contact-anchor"><span class="link-num">04.</span> contact</a></li>
   </ul>
 </div>
+
+<%# mobile navbar %>
+<div class="" id="mobile-nav-home">
+  <%# open menu %>
+  <div id="burger" data-pushbar-target="mypushbar1">
+    <span><i class="fa-solid fa-bars"></i></span>
+  </div>
+
+  <%# pushbar slide menu %>
+  <div id="mobile-menu" data-pushbar-id="mypushbar1" data-pushbar-direction="right">
+    <%# close menu %>
+    <div id="burger-close" data-pushbar-close>
+      <span><i class="fa-solid fa-xmark"></i></span>
+    </div>
+    <%# menu content %>
+    <ul class="mobile-nav-links">
+      <li><a href="#about-anchor"><span class="mobile-link-num">01.</span> about</a></li>
+      <li><a href="#portfolio-anchor"><span class="mobile-link-num">02.</span> portfolio</a></li>
+      <li><a href="#resume-anchor"><span class="mobile-link-num">03.</span> resume</a></li>
+      <li><a href="#contact-anchor"><span class="mobile-link-num">04.</span> contact</a></li>
+    </ul>
+	</div>
+</div>
+
+<script type="text/javascript">
+  const pushbar = new Pushbar({
+        blur:false,
+        overlay:true,
+      });
+</script>

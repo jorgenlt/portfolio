@@ -8,10 +8,6 @@ $spacing-xxl: 26px;
 $width-container: 1200px;
 
 #portfolio-cards {
-  // height: 95vh;
-  // margin: 5vh 0px;
-  // height: 65vh;
-
   margin: 5vh 0px;
   height: 55vh;
   display: flex;
@@ -27,20 +23,12 @@ $width-container: 1200px;
   }
 
   .hero-section{
-    // display: flex;
-    // justify-content: start;
-    // align-items: center;
 
-    // height: 90vh;
-    // padding: $spacing-xxl) $spacing-l);
   }
 
   .portfolio-card-container {
     display: flex;
-    // flex-direction: row;
-    // justify-content: center;
-    // align-items: center;
-    // width: 100%;
+
   }
 
 
@@ -135,13 +123,7 @@ $width-container: 1200px;
     font-weight: 200;
     font-size: 1.0rem;
     color: $white-reg;
-    // text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
-    // text-shadow: 2px 2px 15px #212531;
-    // backdrop-filter: blur(10px) saturate(70%);
     line-height: 1.4;
-    // position: relative;
-    // top: 30px;
-    // bottom: 0px;
     opacity: 0;
     transition: 0.5s;
     transition-delay: .1s;
@@ -185,13 +167,6 @@ $width-container: 1200px;
       width: 60vw;
       min-width: 260px;
     }
-
-    // .portfolio-card-container:hover > .portfolio-card:not(:hover) .portfolio-card__background,
-    // .portfolio-card-container:hover > .portfolio-card:not(:hover) .portfolio-card__category,
-    // .portfolio-card-container:hover > .portfolio-card:not(:hover) .portfolio-card__heading,
-    // .portfolio-card-container:hover > .portfolio-card:not(:hover) .portfolio-card__text {
-    //   filter: brightness(1.0) saturate(0.2) contrast(1.0) blur(0px);
-    // }
 
     .portfolio-card:hover .portfolio-card__category,
     .portfolio-card-container:hover .portfolio-card__heading,
