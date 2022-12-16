@@ -156,7 +156,7 @@ $width-container: 1200px;
 @media only screen and (max-width: 1000px) {
   #portfolio-cards {
     .portfolio-card {
-      width: calc((20vw / 2) + 160px);
+      width: calc((40vw / 3) + (20vh));
       // min-width: 220px;
     }
   }
@@ -167,7 +167,7 @@ $width-container: 1200px;
     .portfolio-card {
       // width: 30vh;
       // min-width: 200px;
-      width: calc((20vw / 2) + 160px);
+      width: calc((30vw / 2) + (25vh));
     }
 
     .portfolio-card:hover .portfolio-card__category,
