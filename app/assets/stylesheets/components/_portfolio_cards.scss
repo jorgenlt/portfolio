@@ -33,8 +33,9 @@ $width-container: 1200px;
 
 
   .portfolio-card{
-    width: 20vw;
-    min-width: 320px;
+    // width: 30vh;
+    width: calc((15vw / 2) + 160px);
+    // min-width: 265px;
     margin: 0px 20px;
     text-decoration: none;
     position: relative;
@@ -155,8 +156,8 @@ $width-container: 1200px;
 @media only screen and (max-width: 1000px) {
   #portfolio-cards {
     .portfolio-card {
-      width: 32vw;
-      min-width: 300px;
+      width: calc((20vw / 2) + 160px);
+      // min-width: 220px;
     }
   }
 }
@@ -164,8 +165,9 @@ $width-container: 1200px;
 @media only screen and (max-width: 600px) {
   #portfolio-cards {
     .portfolio-card {
-      width: 60vw;
-      min-width: 260px;
+      // width: 30vh;
+      // min-width: 200px;
+      width: calc((20vw / 2) + 160px);
     }
 
     .portfolio-card:hover .portfolio-card__category,
