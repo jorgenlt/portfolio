@@ -5933,6 +5933,8 @@ export default class extends Controller {
     navigation: true,
     anchors:['hero-anchor', 'about-anchor', 'portfolio-anchor', 'resume-anchor', 'contact-anchor'],
     credits: {enabled: false},
+    normalScrollElements: '.modal-content',
+    scrollOverflow: true,
     });
 
 }
