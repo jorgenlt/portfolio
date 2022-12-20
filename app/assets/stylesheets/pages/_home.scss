@@ -64,6 +64,53 @@ body {
 }
 
 
+// modal excl. bootstrap variables
+.modal-header {
+  i {
+    color: $green-light;
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  // scrollbar styling
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: $green-light none;
+  }
+
+  /* Chrome, Edge and Safari */
+  *::-webkit-scrollbar {
+    width: 3px;
+    width: 3px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color: none;
+  }
+
+  *::-webkit-scrollbar-track:hover {
+    background-color: none;
+  }
+
+  *::-webkit-scrollbar-track:active {
+    background-color: none;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background-color: $green-light;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: $green-light;
+  }
+
+  *::-webkit-scrollbar-thumb:active {
+    background-color: $green-light;
+  }
+}
 
 // Responsive design
 
@@ -165,7 +212,7 @@ body {
     }
 
     #learn-more-container {
-        font-size: 14px;
+      font-size: 14px;
     }
   }
 
@@ -209,43 +256,4 @@ body {
     }
   }
 
-}
-
-
-// scrollbar styling
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #397524 none;
-}
-
-/* Chrome, Edge and Safari */
-*::-webkit-scrollbar {
-  width: 5px;
-  width: 5px;
-}
-*::-webkit-scrollbar-track {
-  border-radius: 5px;
-  background-color: none;
-}
-
-*::-webkit-scrollbar-track:hover {
-  background-color: none;
-}
-
-*::-webkit-scrollbar-track:active {
-  background-color: none;
-}
-
-*::-webkit-scrollbar-thumb {
-  border-radius: 0px;
-  background-color: #009580;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background-color: #01c2a8;
-}
-
-*::-webkit-scrollbar-thumb:active {
-  background-color: #01c2a8;
 }
