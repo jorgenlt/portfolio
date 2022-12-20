@@ -24,13 +24,7 @@ $border-radius-sm: 2px;
 
 // Override other variables below!
 
-// Modal
-$modal-content-bg:                    $black-dark;
-$modal-fade-transform:                translate(0, -500px);
-$modal-transition:                  transform 0.3s ease-out;
-
-
-// Modal-options:
+// Modal - options:
 
 // $modal-inner-padding:               $spacer;
 
@@ -42,7 +36,7 @@ $modal-transition:                  transform 0.3s ease-out;
 // $modal-title-line-height:           $line-height-base;
 
 // $modal-content-color:               null;
-// $modal-content-bg:                  $white;
+$modal-content-bg:                  $black-dark;
 // $modal-content-border-color:        var(--#{$prefix}border-color-translucent);
 // $modal-content-border-width:        $border-width;
 // $modal-content-border-radius:       $border-radius-lg;
@@ -53,14 +47,14 @@ $modal-transition:                  transform 0.3s ease-out;
 // $modal-backdrop-bg:                 $black;
 // $modal-backdrop-opacity:            .5;
 
-// $modal-header-border-color:         var(--#{$prefix}border-color);
+$modal-header-border-color:         none;
 // $modal-header-border-width:         $modal-content-border-width;
 // $modal-header-padding-y:            $modal-inner-padding;
 // $modal-header-padding-x:            $modal-inner-padding;
 // $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
 
 // $modal-footer-bg:                   null;
-// $modal-footer-border-color:         $modal-header-border-color;
+$modal-footer-border-color:         $modal-header-border-color;
 // $modal-footer-border-width:         $modal-header-border-width;
 
 // $modal-sm:                          300px;
@@ -68,7 +62,8 @@ $modal-transition:                  transform 0.3s ease-out;
 // $modal-lg:                          800px;
 // $modal-xl:                          1140px;
 
-// $modal-fade-transform:              translate(0, -50px);
+// $modal-fade-transform:                translate(0, -500px);
+$modal-fade-transform:                translateX(100%);
 // $modal-show-transform:              none;
-// $modal-transition:                  transform .3s ease-out;
+$modal-transition:                    transform 0.4s ease-out;
 // $modal-scale-transform:             scale(1.02);
