@@ -14,12 +14,13 @@ $width-container: 1200px;
   justify-content: start;
   align-items: center;
   flex-direction: row;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-  *{
-    border: 0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  .btn-primary {
+    color: white;
   }
 
   .hero-section{
