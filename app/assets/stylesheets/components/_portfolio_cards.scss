@@ -12,6 +12,9 @@
 
   .btn-primary {
     color: $white-reg;
+    &:hover {
+      background-color: $hover-green;
+    }
   }
 
   .portfolio-card-container {
