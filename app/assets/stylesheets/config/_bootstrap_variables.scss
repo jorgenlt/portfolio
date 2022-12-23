@@ -19,9 +19,9 @@ $secondary:  $black-dark;
 // $warning:    $green-light;
 
 // Buttons & inputs' radius
-$border-radius:           6px;
-$border-radius-lg:        6px;
-$border-radius-sm:        6px;
+$border-radius:           5px;
+$border-radius-lg:        5px;
+$border-radius-sm:        5px;
 $btn-font-weight:         300;
 
 // $btn-link-color:          $white-reg;
@@ -70,5 +70,5 @@ $modal-footer-border-color:         $modal-header-border-color;
 // $modal-fade-transform:                translate(0, -500px);
 $modal-fade-transform:                translateX(100%);
 // $modal-show-transform:              none;
-$modal-transition:                    transform 0.4s ease-out;
+$modal-transition:                    transform 0.2s ease-out;
 // $modal-scale-transform:             scale(1.02);
