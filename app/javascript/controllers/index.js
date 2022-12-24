@@ -9,3 +9,6 @@ application.register("fullpage", FullpageController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import NavlinksController from "./navlinks_controller"
+application.register("navlinks", NavlinksController)
