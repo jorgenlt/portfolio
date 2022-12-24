@@ -10,23 +10,23 @@
 }
 
 // spinner loader
-// .spinner {
-//   width: 64px;
-//   height: 64px;
-//   border: 8px solid;
-//   border-color: $green-light transparent $green-light transparent;
-//   border-radius: 50%;
-//   animation: spin-anim 1.2s linear infinite;
-// }
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 4px solid;
+  border-color: $green-light transparent $green-light transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+}
 
-// @keyframes spin-anim {
-//   0% {
-//       transform: rotate(0deg);
-//   }
-//   100% {
-//       transform: rotate(360deg);
-//   }
-// }
+@keyframes spin-anim {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
 
 // rocket loader
 // .loader {
@@ -103,77 +103,77 @@
 
 
 // xy ball loader
-.loader {
-  transform: rotateZ(45deg);
-  perspective: 1000px;
-  border-radius: 50%;
-  width: 68px;
-  height: 68px;
-  color: #009580;
-}
+// .loader {
+//   transform: rotateZ(45deg);
+//   perspective: 1000px;
+//   border-radius: 50%;
+//   width: 68px;
+//   height: 68px;
+//   color: #009580;
+// }
 
-.loader:before,
-.loader:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: inherit;
-  height: inherit;
-  border-radius: 50%;
-  transform: rotateX(70deg);
-  animation: 1s spin linear infinite;
-}
+// .loader:before,
+// .loader:after {
+//   content: '';
+//   display: block;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: inherit;
+//   height: inherit;
+//   border-radius: 50%;
+//   transform: rotateX(70deg);
+//   animation: 1s spin linear infinite;
+// }
 
-.loader:after {
-  color: #009580;
-  transform: rotateY(70deg);
-  animation-delay: .4s;
-}
+// .loader:after {
+//   color: #009580;
+//   transform: rotateY(70deg);
+//   animation-delay: .4s;
+// }
 
-@keyframes rotate {
-  0% {
-    transform: translate(-50%, -50%) rotateZ(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotateZ(360deg);
-  }
-}
+// @keyframes rotate {
+//   0% {
+//     transform: translate(-50%, -50%) rotateZ(0deg);
+//   }
+//   100% {
+//     transform: translate(-50%, -50%) rotateZ(360deg);
+//   }
+// }
 
-@keyframes rotateccw {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(-360deg);
-  }
-}
+// @keyframes rotateccw {
+//   0% {
+//     transform: translate(-50%, -50%) rotate(0deg);
+//   }
+//   100% {
+//     transform: translate(-50%, -50%) rotate(-360deg);
+//   }
+// }
 
-@keyframes spin {
-  0%,
-  100% {
-    box-shadow: .5em 0px 0 0px currentcolor;
-  }
-  12% {
-    box-shadow: .5em .5em 0 0 currentcolor;
-  }
-  25% {
-    box-shadow: 0 .5em 0 0px currentcolor;
-  }
-  37% {
-    box-shadow: -.5em .5em 0 0 currentcolor;
-  }
-  50% {
-    box-shadow: -.5em 0 0 0 currentcolor;
-  }
-  62% {
-    box-shadow: -.5em -.5em 0 0 currentcolor;
-  }
-  75% {
-    box-shadow: 0px -.5em 0 0 currentcolor;
-  }
-  87% {
-    box-shadow: .5em -.5em 0 0 currentcolor;
-  }
-}
+// @keyframes spin {
+//   0%,
+//   100% {
+//     box-shadow: .5em 0px 0 0px currentcolor;
+//   }
+//   12% {
+//     box-shadow: .5em .5em 0 0 currentcolor;
+//   }
+//   25% {
+//     box-shadow: 0 .5em 0 0px currentcolor;
+//   }
+//   37% {
+//     box-shadow: -.5em .5em 0 0 currentcolor;
+//   }
+//   50% {
+//     box-shadow: -.5em 0 0 0 currentcolor;
+//   }
+//   62% {
+//     box-shadow: -.5em -.5em 0 0 currentcolor;
+//   }
+//   75% {
+//     box-shadow: 0px -.5em 0 0 currentcolor;
+//   }
+//   87% {
+//     box-shadow: .5em -.5em 0 0 currentcolor;
+//   }
+// }

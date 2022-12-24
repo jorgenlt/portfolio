@@ -15,12 +15,15 @@
   font-family: $nav-font;
   display: flex;
 
-  a {
+  li {
+    padding-top: 3px;
     padding-left: 30px;
     text-decoration: none;
     color: $white-reg;
     font-size: 14px;
     transition: all 0.3s ease;
+    cursor: pointer;
+
     &:hover {
       color: $green-light;
     }
@@ -65,15 +68,15 @@
     color: $green-light;
   }
 
-  a {
+  li {
     padding-left: 0px;
     text-decoration: none;
     color: $white-reg;
     font-size: 24px;
-    transition: all 0.3s ease;
+    cursor: pointer;
+
     &:hover {
       color: $green-light;
-      font-size: 26px;
     }
   }
 
