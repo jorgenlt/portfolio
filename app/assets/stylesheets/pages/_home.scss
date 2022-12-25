@@ -40,12 +40,9 @@ body {
     bottom: 0;
     width: 100%;
     margin-bottom: 20px;
-
-    a {
-      color: $white-reg;
-      text-decoration: none;
-      cursor: default;
-    }
+    color: $white-reg;
+    text-decoration: none;
+    cursor: default;
   }
 
   #learn-more {
