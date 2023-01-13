@@ -41,7 +41,16 @@
     }
 
     .portfolio-card-2 {
-      background-image: url(ben-kolde-unsplash.jpg);
+      background-image: url(tidder_desktop_1.png);
+      background-position: top -30px left -120px;
+      background-repeat: no-repeat;
+      background-size: 230% auto;
+
+      .portfolio-card-category,
+      .portfolio-card-heading,
+      .portfolio-card-text {
+        color: $black;
+      }
     }
 
     .portfolio-card-3 {
