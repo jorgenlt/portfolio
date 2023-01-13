@@ -6,9 +6,32 @@
         <h1 class="modal-title fs-5" id="tidderModalLabel">Tidder</h1>
         <span data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark hover-brighter-green"></i></span>
       </div>
-      <div class="modal-body">
-        <h1>Tidder</h1>
-        <p>A reddit clone.</p>
+      <div class="modal-body modal-template tidder-modal-body">
+        <div>
+          <p>A reddit clone.</p>
+          <p>
+          Visit site:
+          <%= link_to 'tidder.eu', 'http://www.tidder.eu'  %>
+
+          </p>
+          <div>
+            <p>Features:</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Sign in or sign up.</li>
+              <li><i class="fa-solid fa-check"></i> Create a profile and add a profile picture.</li>
+              <li><i class="fa-solid fa-check"></i> Create a new post.</li>
+              <li><i class="fa-solid fa-check"></i> Upvote or downvote a post.</li>
+              <li><i class="fa-solid fa-check"></i> Add a new comment to post.</li>
+              <li><i class="fa-solid fa-check"></i> Upvote or downvote a comment.</li>
+              <li><i class="fa-solid fa-check"></i> Search for a post.</li>
+              <li><i class="fa-solid fa-check"></i> Save a post.</li>
+              <li><i class="fa-solid fa-check"></i> Share a post.</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <%= image_tag 'tidder_phone_1', height: "700", alt: "Tidder on phone." %>
+        </div>
       </div>
       <%# <div class="modal-footer">
       </div> %>

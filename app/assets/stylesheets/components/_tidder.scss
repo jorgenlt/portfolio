@@ -1,0 +1,22 @@
+.tidder-modal-body {
+  display: flex;
+
+  p {
+    margin: 5px;
+  }
+
+  i {
+    font-size: 12px;
+  }
+
+  li {
+    font-weight: 200;
+    list-style: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tidder-modal-body {
+    flex-direction: column;
+  }
+}
