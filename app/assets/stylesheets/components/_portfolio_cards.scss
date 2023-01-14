@@ -46,11 +46,11 @@
       background-repeat: no-repeat;
       background-size: 230% auto;
 
-      .portfolio-card-category,
-      .portfolio-card-heading,
-      .portfolio-card-text {
-        color: $black;
-      }
+      // .portfolio-card-category,
+      // .portfolio-card-heading,
+      // .portfolio-card-text {
+      //   color: $black;
+      // }
     }
 
     .portfolio-card-3 {
@@ -63,14 +63,14 @@
     border-radius: inherit;
 
     &:hover {
-      background: linear-gradient(0deg, rgba(33,37,49,0.80) 25%, rgba(255,29,0,0) 55%);
+      background: linear-gradient(0deg, rgba(33, 37, 49, 0.7) 25%, rgba(255, 29, 0, 0) 50%, rgba(33, 37, 49, 0.7) 75%)
     }
   }
 
   .portfolio-card-background{
     background-size: cover;
     background-position: center;
-    border-radius: 6px;
+    border-radius: 4px;
     position: absolute;
     top: 0;
     left: 0;
@@ -93,35 +93,47 @@
     justify-content: space-between;
     opacity: 0;
     transition: 200ms ease-in-out;
+    margin: 0;
+
+    p {
+      color: $white;
+      font-weight: 200;
+      margin: 0;
+    }
   }
 
-  .portfolio-card-category{
-    color: $white-reg;
-    font-size: 0.9rem;
-    margin-bottom: 3px;
-    text-transform: uppercase;
-    position: relative;
-    top: 20px;
-  }
+  // .portfolio-card-category{
+  //   color: $white-reg;
+  //   font-size: 0.9rem;
+  //   font-weight: 400;
+  //   margin-bottom: 3px;
+  //   text-transform: uppercase;
+  //   position: relative;
+  //   top: 0px;
+  // }
 
   .portfolio-card-heading{
     font-family: $headers-font;
-    font-weight: 200;
-    font-size: 1.9rem;
+    font-weight: 400;
+    font-size: 30px;
     color: $white-reg;
     text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
     line-height: 1.4;
     word-spacing: 100vw;
     position: relative;
-    top: 30px;
+    top: 0px;
+    margin: 0;
   }
 
   .portfolio-card-text{
     font-family: $body-font;
-    font-weight: 200;
     font-size: 1.0rem;
     color: $white-reg;
     line-height: 1.4;
+
+    p {
+      font-weight: 400;
+    }
   }
 
   // when hovering portfolio-card, background transforms

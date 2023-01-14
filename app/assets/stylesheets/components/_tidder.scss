@@ -1,6 +1,10 @@
 .tidder-modal-body {
   display: flex;
 
+  a {
+    font-weight: 400;
+  }
+
   p {
     margin: 5px;
   }
@@ -13,6 +17,10 @@
     font-weight: 200;
     list-style: none;
   }
+}
+
+.tidder-features {
+  margin-top: 40px;
 }
 
 @media only screen and (max-width: 600px) {
