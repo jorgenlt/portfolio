@@ -1,5 +1,6 @@
 .messagemate-modal-body {
   display: flex;
+  flex-direction: column;
 
   a {
     font-weight: 400;
@@ -19,6 +20,16 @@
   }
 }
 
+.messagemate-description {
+  display: flex;
+  margin-bottom: 20px;
+  max-width: 750px;
+}
+
+.messagemate-text {
+  // max-width: 500px;
+}
+
 .messagemate-features {
   margin-top: 40px;
 }
@@ -31,16 +42,28 @@
 .messagemate-desktop {
   display: flex;
   justify-content: center;
+  max-width: 750px;
 
   img {
     margin: 40px 0px;
     border-radius: 10px;
-    width: 600px;
+    width: 640px;
   }
+}
+
+.messagemate-video {
+  margin: 10px 10px;
+}
+
+.messagemate-photos {
+  display: flex;
+  justify-content: space-between;
+  max-width: 750px;
 }
 
 .messagemate-phone {
   display: flex;
+  flex-direction: column;
 
   img {
     margin: 0px 20px;
@@ -48,18 +71,31 @@
   }
 }
 
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 670px) {
   .messagemate-modal-body {
     flex-direction: column;
+  }
+
+  .messagemate-description {
+    flex-direction: column;
+  }
+
+  .messagemate-video {
+    justify-content: center;
+    display: flex;
   }
 
   .messagemate-phone {
     flex-direction: column;
     align-items: center;
-    
+
     img {
       margin: 20px 20px;
     }
+  }
+
+  .messagemate-photos {
+    flex-direction: column;
   }
 
   .messagemate-desktop {
