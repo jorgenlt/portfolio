@@ -1,0 +1,45 @@
+<!-- Modal -->
+<div class="modal fade" id="messagemateModal" tabindex="-1" aria-labelledby="messagemateModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-2" id="messagemateModalLabel">MessageMate</h1>
+        <span data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark hover-brighter-green"></i></span>
+      </div>
+      <div class="modal-body modal-template messagemate-modal-body">
+        <div>
+          <p>A responsive instant messenger application for desktop and mobile.</p>
+          <p>
+          Visit site:
+          <%= link_to 'messagemate.me', 'http://www.messagemate.me', target: "_blank"  %>
+          </p>
+          <div class="messagemate-features">
+            <p>Features:</p>
+            <ul style="display: none;">
+              <li><i class="fa-solid fa-check"></i> Sign up, sign in.</li>
+              <li><i class="fa-solid fa-check"></i> Create a profile and add a profile picture.</li>
+              <li><i class="fa-solid fa-check"></i> Create a new post.</li>
+              <li><i class="fa-solid fa-check"></i> Upvote or downvote a post.</li>
+              <li><i class="fa-solid fa-check"></i> Add a new comment to a post.</li>
+              <li><i class="fa-solid fa-check"></i> Upvote or downvote a comment.</li>
+              <li><i class="fa-solid fa-check"></i> Search for a post.</li>
+              <li><i class="fa-solid fa-check"></i> Save a post.</li>
+              <li><i class="fa-solid fa-check"></i> Share a post.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="messagemate-media">
+          <div class="messagemate-phone">
+            <%= image_tag 'messagemate_phone1.png', alt: "messagemate on phone." %>
+            <%= image_tag 'messagemate_phone2.png', alt: "messagemate on phone." %>
+          </div>
+          <div class="messagemate-desktop">
+            <%= image_tag 'messagemate_desktop1.png', alt: "messagemate on desktop." %>
+          </div>
+        </div>
+      </div>
+      <%# <div class="modal-footer">
+      </div> %>
+    </div>
+  </div>
+</div>
