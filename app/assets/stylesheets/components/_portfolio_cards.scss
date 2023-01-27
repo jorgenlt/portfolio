@@ -19,6 +19,7 @@
 
   .portfolio-card-container {
     display: flex;
+    padding-right: 100px;
   }
 
   .portfolio-card{
@@ -54,8 +55,18 @@
     }
 
     .portfolio-card-3 {
-      background-image: url(edho-pratama-unsplash.jpg);
+      background-image: url(messagemate_desktop1.png);
+      background-position: top 0px left 0px;
+      background-repeat: no-repeat;
+      background-size: 152% auto;
+
+      // .portfolio-card-category,
+      // .portfolio-card-heading,
+      // .portfolio-card-text {
+      //   color: $black;
+      // }
     }
+
   }
 
   .background-overlay {
@@ -160,6 +171,8 @@
 
 @media only screen and (max-width: 1000px) {
   #portfolio-cards {
+    height: 450px;
+
     .portfolio-card {
       width: calc((40vw / 3) + (20vh));
       // min-width: 220px;
