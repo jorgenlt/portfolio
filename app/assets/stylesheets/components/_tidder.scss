@@ -5,22 +5,28 @@
     font-weight: 400;
   }
 
-  p {
-    margin: 5px;
-  }
-
   i {
     font-size: 12px;
+    margin-right: 10px;
+    color: $green-light;
+  }
+
+  ul {
+    div {
+      display: flex;
+      align-items: baseline;
+    }
   }
 
   li {
     font-weight: 200;
     list-style: none;
+    margin: 15px 0px 0px 0px;
   }
 }
 
 .tidder-features {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 600px) {

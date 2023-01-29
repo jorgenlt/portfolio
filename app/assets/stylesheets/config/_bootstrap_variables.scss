@@ -30,6 +30,12 @@ $btn-font-weight:         400;
 // Override other variables below!
 
 // Modal - options:
+.modal-header {
+  span {
+    display: flex;
+    align-items: center;
+  }
+}
 
 // $modal-inner-padding:               $spacer;
 
@@ -54,8 +60,8 @@ $modal-content-bg:                  $black-dark;
 
 $modal-header-border-color:         none;
 // $modal-header-border-width:         $modal-content-border-width;
-// $modal-header-padding-y:            $modal-inner-padding;
-// $modal-header-padding-x:            $modal-inner-padding;
+$modal-header-padding-y:            0px;
+$modal-header-padding-x:            10px;
 // $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
 
 // $modal-footer-bg:                   null;
