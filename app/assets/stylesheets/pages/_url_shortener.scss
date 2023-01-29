@@ -1,0 +1,70 @@
+.hidden {
+  visibility: hidden;
+}
+
+#url-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#url-shortener {
+  min-width: 400px;
+
+  h1 {
+    color: $green-light;
+    font-size: 60px;
+    margin-bottom: 40px;
+    font-weight: 600;
+  }
+
+  form {
+    display: flex;
+  }
+
+  #linkinput {
+    margin-right: 10px;
+  }
+
+  #myinput {
+
+  }
+
+  .form-control {
+    border: 1px solid $green-light;
+  }
+
+  .btn-primary {
+    color: $white-reg;
+    font-weight: 500;
+  }
+}
+
+.url-result {
+  margin-top: 20px;
+  display: flex;
+
+  i {
+    color: $green-light;
+    margin: 0px 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  #message {
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #url-shortener {
+    padding: 0px 20px;
+
+    h1 {
+      font-size: 40px;
+    }
+  }
+}

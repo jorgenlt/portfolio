@@ -1,0 +1,62 @@
+<div id="url-container">
+  <div id="url-shortener">
+    <h1>URL Shortener</h1>
+    <div>
+      <form>
+        <input class="form-control" name="text" type="url" value  id="linkinput" placeholder="Paste a URL to shorten" >
+        <div>
+          <input class="btn btn-primary" type="submit" id="myinput" value="Go!">
+        </div>
+      </form>
+    </div>
+    <div class="url-result hidden">
+      <p>Your URL is: <span onclick="copyUrl();" id="message"></span></p><i onclick="copyUrl();" class="fa-solid fa-copy"></i>
+    </div>
+  </div>
+</div>
+
+<script>
+  function show() {
+    document.querySelector(".url-result").style.visibility = "visible";
+  }
+
+  document.getElementById("myinput").onclick = function() {
+    var link = document.getElementById("linkinput").value;
+    var data = {
+      "domain":"url.jorgenlt.me",
+      "originalURL": link,
+      "allowDuplicates":false };
+  fetch('https://api.short.cm/links/public', {
+      method: 'post',
+      headers: {
+        'accept': 'application/json',
+        'Content-Type': 'application/json',
+        'authorization': 'pk_0Un0di4WhxYgCjwn'
+      },
+      body: JSON.stringify(data)
+    }) .then(function(response) {
+          return response.json();
+      })
+      .then(function(data){
+      document.getElementById("message").innerHTML = data.shortURL;
+      show();
+      });
+
+    document.getElementById("linkinput").value='';
+  }
+
+  function copyUrl() {
+  // Get the text field
+  let copyText = document.querySelector("#message");
+
+  // Select the text field
+  // copyText.select();
+  // copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.innerHTML);
+
+  // Alert the copied text
+  alert("Your URL was copied to the clipboard.");
+  }
+</script>

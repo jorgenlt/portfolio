@@ -12,3 +12,6 @@ application.register("hello", HelloController)
 
 import NavlinksController from "./navlinks_controller"
 application.register("navlinks", NavlinksController)
+
+import UrlshortenerController from "./urlshortener_controller"
+application.register("urlshortener", UrlshortenerController)

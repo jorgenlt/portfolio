@@ -4,4 +4,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  # resources :pages, only: :url_shortener, as: :url_shortener
+
+  get '/url-shortener', to: 'pages#url_shortener'
 end
