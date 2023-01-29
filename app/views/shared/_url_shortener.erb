@@ -1,0 +1,31 @@
+<!-- Modal -->
+<div class="modal fade" id="urlshortenerModal" tabindex="-1" aria-labelledby="urlshortenerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-fullscreen-lg-down modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-2" id="urlshortenerModalLabel">URL Shortener</h1>
+        <span data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark hover-brighter-green"></i></span>
+      </div>
+      <div class="modal-body modal-template urlshortener-modal-body">
+        <div class="urlshortener-description">
+          <div class="urlshortener-text">
+            <p>A lightweight URL shortener using API from <%= link_to 'app.short.io', 'https://app.short.io/', target: "_blank" %></p>
+            <p>
+            Visit site:
+            <%= link_to 'URL Shortener', url_shortener_path, target: "_blank"  %>
+            </p>
+            <div class="urlshortener-features">
+              <p>Features:</p>
+              <ul>
+                <div>
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <li>URL Shortener</li>
+                </div>
+              </ul>
+            </div>
+            <%= image_tag 'url_shortener.png', alt: "URL Shortener", width: "400px" %>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,6 +2,6 @@ class PagesController < ApplicationController
   def home
   end
 
-  def show
+  def url_shortener
   end
 end
