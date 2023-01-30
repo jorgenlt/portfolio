@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import CurrencyconverterController from "./currencyconverter_controller"
+application.register("currencyconverter", CurrencyconverterController)
+
 import FullpageController from "./fullpage_controller"
 application.register("fullpage", FullpageController)
 

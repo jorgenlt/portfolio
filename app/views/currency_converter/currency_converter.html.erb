@@ -1,19 +1,18 @@
 <div id="currency-bg">
   <div id="currency-container">
 
-    <div id="currency-converter">
+    <div id="currency-converter" data-controller="currencyconverter">
       <form accept-charset="UTF-8" action="" autocomplete="off" method="GET" target="_blank">
         <div id="currencies">
           <div id="from-currency">
-            <div id=from-amount>
-              <label for="name">Amount</label>
-              <input class="form-control" name="name" type="number" placeholder="Amount"/>
+            <div id="from-amount">
+              <input data-currencyconverter-target="amount" class="form-control" name="name" type="number" placeholder="Amount"/>
             </div>
             <div id="from-ticker">
-              <select class="form-control">
-                <option value="option1" selected>USD</option>
-                <option value="option2">EUR</option>
-                <option value="option3">NOK</option>
+              <select data-currencyconverter-target="fromcurrency" id="selected-from-ticker" class="form-control">
+                <option value="USD" selected>USD</option>
+                <option value="EUR">EUR</option>
+                <option value="NOK">NOK</option>
               </select>
             </div>
           </div>
@@ -21,24 +20,32 @@
             <i class="fa-solid fa-arrows-left-right"></i>
           </div>
           <div id="to-currency">
-            <div id="to-amount">
-              <label for="name">Converted to</label>
-              <input class="form-control" name="name" type="number" placeholder="Converted to"/>
-            </div>
             <div id="to-ticker">
-              <select class="form-control">
-                <option value="option1" selected>USD</option>
-                <option value="option2">EUR</option>
-                <option value="option3">NOK</option>
+              <select data-currencyconverter-target="tocurrency" id="selected-from-ticker" class="form-control">
+                <option value="USD" selected>USD</option>
+                <option value="EUR">EUR</option>
+                <option value="NOK">NOK</option>
               </select>
             </div>
           </div>
         </div>
+        <div id="result" class="d-none">
+          <p>Some info</p>
+          <p data-currencyconverter-target="result"></p>
+          <p>Some info</p>
+        </div>
         <div id="currency-submit">
-          <button class="btn btn-primary" type="submit" value="Convert">Convert</button>
+          <div data-action="click->currencyconverter#convert" id="convert" class="btn btn-primary">Convert</div>
         </div>
       </form>
     </div>
 
   </div>
 </div>
+<a
+  style="position: fixed; bottom: 10px; left: 10px; font-size: 12px;"
+  href="https://www.exchangerate-api.com"
+  target="_blank"
+  >
+  Rates By Exchange Rate API
+</a>
