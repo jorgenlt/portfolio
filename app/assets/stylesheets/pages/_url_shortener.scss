@@ -1,5 +1,30 @@
+// Colors
+$url-pri: #3d405bff;
+$url-sec: #E07A5F;
+$url-bg: #f4f1deff;
+$url-color: $url-pri;
+$url-btn-bg: $url-sec;
+$url-btn-color: $url-pri;
+$url-result-color: $url-pri;
+$url-copy-btn: $url-pri;
+$url-tooltip-bg: #81B29A;
+$url-tooltip-color: $url-sec;
+
+$eggshell: #f4f1deff;
+$terra-cotta: #e07a5fff;
+$independence: #3d405bff;
+$green-sheen: #81b29aff;
+$deep-champagne: #f2cc8fff;
+
 .hidden {
   visibility: hidden;
+}
+
+#url-bg {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: $url-bg;
 }
 
 #url-container {
@@ -7,17 +32,25 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw;
+  color: $url-color;
 }
 
 #url-shortener {
   min-width: 400px;
 
+  ::selection {
+    background: $url-bg;
+  }
+
   h1 {
-    color: $green-light;
+    color: $url-color;
     font-size: 60px;
     margin-bottom: 40px;
     font-weight: 600;
+  }
+
+  p {
+    font-weight: 400;
   }
 
   form {
@@ -28,35 +61,64 @@
     margin-right: 10px;
   }
 
-  #myinput {
-
+  .form-control {
+    border: 1px solid $url-sec;
+    background-color: $white-reg;
+    color: $url-color;
   }
 
-  .form-control {
-    border: 1px solid $green-light;
+  .form-control:focus {
+    border: 2px solid $url-sec;
+    box-shadow: none;
   }
 
   .btn-primary {
-    color: $white-reg;
+    background-color: $url-btn-bg;
+    border: 2px solid $url-btn-bg;
+    color: $url-btn-color;
     font-weight: 500;
+
+    &:hover {
+      background-color: lighten($url-btn-bg, 5);
+      border: 2px solid lighten($url-btn-bg, 5);
+    }
   }
 }
 
-.url-result {
+#url-result {
   margin-top: 20px;
   display: flex;
+  color: $url-result-color;
+  cursor: pointer;
 
   i {
-    color: $green-light;
+    color: $url-copy-btn;
     margin: 0px 10px;
     font-size: 20px;
-    cursor: pointer;
   }
 
   #message {
     font-weight: 600;
-    cursor: pointer;
   }
+}
+
+#copied-container {
+  position: relative;
+}
+
+#copied {
+  position: absolute;
+  left: -21px;
+  top: 27px;
+  width: max-content;
+  color: $url-tooltip-color;
+  font-weight: 600;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 @media only screen and (max-width: 600px) {
@@ -66,5 +128,10 @@
     h1 {
       font-size: 40px;
     }
+  }
+
+  #copied {
+    left: -212px;
+    top: 30px;
   }
 }
