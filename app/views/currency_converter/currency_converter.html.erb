@@ -1,0 +1,44 @@
+<div id="currency-bg">
+  <div id="currency-container">
+
+    <div id="currency-converter">
+      <form accept-charset="UTF-8" action="" autocomplete="off" method="GET" target="_blank">
+        <div id="currencies">
+          <div id="from-currency">
+            <div id=from-amount>
+              <label for="name">Amount</label>
+              <input class="form-control" name="name" type="number" placeholder="Amount"/>
+            </div>
+            <div id="from-ticker">
+              <select class="form-control">
+                <option value="option1" selected>USD</option>
+                <option value="option2">EUR</option>
+                <option value="option3">NOK</option>
+              </select>
+            </div>
+          </div>
+          <div id="currency-divider">
+            <i class="fa-solid fa-arrows-left-right"></i>
+          </div>
+          <div id="to-currency">
+            <div id="to-amount">
+              <label for="name">Converted to</label>
+              <input class="form-control" name="name" type="number" placeholder="Converted to"/>
+            </div>
+            <div id="to-ticker">
+              <select class="form-control">
+                <option value="option1" selected>USD</option>
+                <option value="option2">EUR</option>
+                <option value="option3">NOK</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="currency-submit">
+          <button class="btn btn-primary" type="submit" value="Convert">Convert</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
