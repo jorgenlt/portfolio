@@ -1,47 +1,62 @@
 // colors
-
+$c-black:       #121416ff;
+$c-white:       #f5f5f5ff;
+$c-pri:         #2374abff;
+$c-sec:         #d17b0fff;
+$c-bg:          $c-pri;
+$c-box-bg:      $c-white;
+$c-btn:         $c-sec;
+$c-light-gray:    #e9ecef;
 
 #currency-bg {
   position: fixed;
   height: 100vh;
   width: 100vw;
-  background-color: white;
+  background-color: $c-bg;
 }
 
 #currency-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: black;
+  color: $c-black;
   font-family: 'Kanit', sans-serif;
+
+  h1 {
+    margin-bottom: 30px;
+    color: $c-white;
+    font-weight: 600;
+
+  }
 
   p {
     font-weight: 400;
   }
 
   .form-control {
-    background-color: lightgray;
+    background-color: $c-light-gray;
     color: black;
-    font-size: 20px;
+    font-size: 16px;
     padding: 5px 15px;
   }
 
   .form-control:focus {
-    border: 2px solid red;
+    border: 2px solid $c-sec;
     box-shadow: none;
   }
 
   .btn-primary {
-    background-color: gray;
-    border: 2px solid gray;
-    color: black;
+    background-color: $c-sec;
+    border: 2px solid $c-sec;
+    color: $c-black;
     font-weight: 500;
     padding: 10px 50px;
 
     &:hover {
-      background-color: lighten(gray, 5);
-      border: 2px solid lighten(gray, 5);
+      background-color: lighten($c-sec, 5);
+      border: 2px solid lighten($c-sec, 5);
     }
   }
 }
@@ -49,6 +64,7 @@
 #currency-converter {
   padding: 60px;
   border-radius: 7px;
+  background-color: $c-box-bg;
   box-shadow:
   0px 0px 6.2px -9px rgba(0, 0, 0, 0.071),
   0px 0px 15.7px -9px rgba(0, 0, 0, 0.102),
@@ -108,20 +124,24 @@
 }
 
 #currency-submit {
- margin-top: 50px;
- display: flex;
- justify-content: center;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#currency-headers-mobile {
+  display: none;
 }
 
 .slideDown{
   animation-name: slideDown;
   -webkit-animation-name: slideDown;
 
-  animation-duration: 2s;
-  -webkit-animation-duration: 2s;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
 
-  animation-timing-function: ease;
-  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
 
   visibility: visible !important;
 }
@@ -165,5 +185,34 @@
   }
   100% {
     -webkit-transform: translateY(0%);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #currencies {
+    width: 300px;
+    gap: 10px;
+
+    select {
+      width: 65px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  #currency-converter {
+    padding: 25px;
+  }
+
+  #currency-headers {
+    display: none;
+  }
+
+  #currency-headers-mobile {
+    display: flex;
   }
 }
