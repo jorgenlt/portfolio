@@ -14,11 +14,17 @@
   align-items: center;
   height: 100vh;
   color: black;
+  font-family: 'Kanit', sans-serif;
+
+  p {
+    font-weight: 400;
+  }
 
   .form-control {
     background-color: lightgray;
     color: black;
-
+    font-size: 20px;
+    padding: 5px 15px;
   }
 
   .form-control:focus {
@@ -31,6 +37,7 @@
     border: 2px solid gray;
     color: black;
     font-weight: 500;
+    padding: 10px 50px;
 
     &:hover {
       background-color: lighten(gray, 5);
@@ -40,7 +47,7 @@
 }
 
 #currency-converter {
-  padding: 90px;
+  padding: 60px;
   border-radius: 7px;
   box-shadow:
   0px 0px 6.2px -9px rgba(0, 0, 0, 0.071),
@@ -49,6 +56,10 @@
   0px 0px 66.1px -9px rgba(0, 0, 0, 0.159),
   0px 0px 181px -9px rgba(0, 0, 0, 0.23)
   ;
+}
+
+#currency-headers {
+  display: flex;
 }
 
 #currencies {
@@ -76,12 +87,83 @@
   align-items: center;
 
   i {
-    font-size: 30px;
+    font-size: 20px;
   }
+}
+
+#result {
+  margin: 40px 0px;
+
+}
+
+#result-main {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0px 0px 0px 0px;
+}
+
+#result-top, #result-bottom {
+  font-size: 14px;
+  margin: 5px 0px;
 }
 
 #currency-submit {
  margin-top: 50px;
  display: flex;
  justify-content: center;
+}
+
+.slideDown{
+  animation-name: slideDown;
+  -webkit-animation-name: slideDown;
+
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+
+  visibility: visible !important;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  50%{
+    transform: translateY(8%);
+  }
+  65%{
+    transform: translateY(-4%);
+  }
+  80%{
+    transform: translateY(4%);
+  }
+  95%{
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+  }
+  50%{
+    -webkit-transform: translateY(8%);
+  }
+  65%{
+    -webkit-transform: translateY(-4%);
+  }
+  80%{
+    -webkit-transform: translateY(4%);
+  }
+  95%{
+    -webkit-transform: translateY(-2%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
 }
