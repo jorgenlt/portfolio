@@ -87,7 +87,7 @@ body {
   /* Firefox */
   * {
     scrollbar-width: thin;
-    scrollbar-color: $green-light none;
+    scrollbar-color: $dark-gray none;
   }
 
   /* Chrome, Edge and Safari */
@@ -110,15 +110,15 @@ body {
 
   *::-webkit-scrollbar-thumb {
     border-radius: 0px;
-    background-color: $green-light;
+    background-color: $dark-gray;
   }
 
   *::-webkit-scrollbar-thumb:hover {
-    background-color: $green-light;
+    background-color: $dark-gray;
   }
 
   *::-webkit-scrollbar-thumb:active {
-    background-color: $green-light;
+    background-color: $dark-gray;
   }
 }
 

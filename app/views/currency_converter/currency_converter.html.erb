@@ -1,17 +1,22 @@
 <div id="currency-bg">
   <div id="currency-container">
-
+    <h1>Currency converter</h1>
     <div id="currency-converter" data-controller="currencyconverter">
       <form accept-charset="UTF-8" action="" autocomplete="off" method="GET" target="_blank">
         <div id="currency-headers">
-          <p style="margin: 0px 218px 0px 0px;">Amount</p>
-          <p style="margin: 0px 100px 0px 0px;">From</p>
+          <p style="margin: 0px 178px 0px 0px;">Amount</p>
+          <p style="margin: 0px 91px 0px 0px;">From</p>
+          <p style="margin: 0px 0px 0px 0px;">To</p>
+        </div>
+        <div id="currency-headers-mobile">
+          <p style="margin: 0px 83px 0px 0px;">Amount</p>
+          <p style="margin: 0px 79px 0px 0px;">From</p>
           <p style="margin: 0px 0px 0px 0px;">To</p>
         </div>
         <div id="currencies">
           <div id="from-currency">
             <div id="from-amount">
-              <input data-currencyconverter-target="amount" class="form-control" name="name" type="number" placeholder="Amount"/>
+              <input data-currencyconverter-target="amount" class="form-control" name="name" type="number"/>
             </div>
             <div id="from-ticker">
               <select data-currencyconverter-target="fromcurrency" id="selected-from-ticker" class="form-control">
@@ -181,7 +186,7 @@
             </div>
           </div>
           <div id="currency-divider">
-            <i class="fa-solid fa-arrows-left-right"></i>
+            <i class="fa-solid fa-arrow-right"></i>
           </div>
           <div id="to-currency">
             <div id="to-ticker">
