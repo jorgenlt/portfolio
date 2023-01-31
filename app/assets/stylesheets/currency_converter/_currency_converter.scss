@@ -6,7 +6,8 @@ $c-sec:         #d17b0fff;
 $c-bg:          $c-pri;
 $c-box-bg:      $c-white;
 $c-btn:         $c-sec;
-$c-light-gray:    #e9ecef;
+$c-light-gray:  #e9ecef;
+$c-dark-gray:   #A5ABB6;
 
 #currency-bg {
   position: fixed;
@@ -14,6 +15,22 @@ $c-light-gray:    #e9ecef;
   width: 100vw;
   background-color: $c-bg;
 }
+
+#currency-h1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    color: $c-white;
+    font-weight: 600;
+    font-family: 'Kanit', sans-serif;
+    margin: 0px;
+    position: absolute;
+    top: -125px;
+  }
+}
+
 
 #currency-container {
   display: flex;
@@ -24,12 +41,6 @@ $c-light-gray:    #e9ecef;
   color: $c-black;
   font-family: 'Kanit', sans-serif;
 
-  h1 {
-    margin-bottom: 30px;
-    color: $c-white;
-    font-weight: 600;
-
-  }
 
   p {
     font-weight: 400;
@@ -37,6 +48,7 @@ $c-light-gray:    #e9ecef;
 
   .form-control {
     background-color: $c-light-gray;
+    border: 1px solid $c-dark-gray;
     color: black;
     font-size: 16px;
     padding: 5px 15px;
@@ -62,16 +74,16 @@ $c-light-gray:    #e9ecef;
 }
 
 #currency-converter {
-  padding: 60px;
+  padding: 30px;
   border-radius: 7px;
   background-color: $c-box-bg;
-  box-shadow:
-  0px 0px 6.2px -9px rgba(0, 0, 0, 0.071),
-  0px 0px 15.7px -9px rgba(0, 0, 0, 0.102),
-  0px 0px 32.1px -9px rgba(0, 0, 0, 0.128),
-  0px 0px 66.1px -9px rgba(0, 0, 0, 0.159),
-  0px 0px 181px -9px rgba(0, 0, 0, 0.23)
-  ;
+  // box-shadow:
+  // 0px 0px 6.2px -9px rgba(0, 0, 0, 0.071),
+  // 0px 0px 15.7px -9px rgba(0, 0, 0, 0.102),
+  // 0px 0px 32.1px -9px rgba(0, 0, 0, 0.128),
+  // 0px 0px 66.1px -9px rgba(0, 0, 0, 0.159),
+  // 0px 0px 181px -9px rgba(0, 0, 0, 0.23)
+  // ;
 }
 
 #currency-headers {
@@ -201,6 +213,12 @@ $c-light-gray:    #e9ecef;
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+  }
+
+  #currency-h1 {
+    h1 {
+      top: -80px;
     }
   }
 
