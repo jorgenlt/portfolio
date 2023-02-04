@@ -1,4 +1,4 @@
-.urlshortener-modal-body {
+.otherProjects-modal-body {
   display: flex;
   flex-direction: column;
 
@@ -26,25 +26,31 @@
   }
 }
 
-.urlshortener-description {
+.otherProjects-description {
   display: flex;
   margin-bottom: 20px;
   max-width: 750px;
 }
 
-.urlshortener-features {
+.otherProjects-features {
   margin-top: 20px;
 }
 
-
+.currencyconverter-img, .urlshortener-img {
+  width: 400px;
+}
 
 @media only screen and (max-width: 670px) {
-  .urlshortener-modal-body {
+  .otherProjects-modal-body {
     flex-direction: column;
   }
 
-  .urlshortener-description {
+  .otherProjects-description {
     flex-direction: column;
+  }
+
+  .currencyconverter-img, .urlshortener-img {
+    width: 300px;
   }
 }
 
