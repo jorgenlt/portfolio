@@ -8,45 +8,49 @@
       </div>
       <div class="modal-body modal-template otherProjects-modal-body">
 
-        <h2>URL Shortener</h2>
-        <div class="otherProjects-description">
-          <div class="otherProjects-text">
-            <p>A lightweight URL shortener using API from <%= link_to 'app.short.io', 'https://app.short.io/', target: "_blank" %></p>
-            <p>
-            Visit site:
-            <%= link_to 'URL Shortener', url_shortener_path, target: "_blank"  %>
-            </p>
-            <div class="otherProjects-features">
-              <p>Features:</p>
-              <ul>
-                <div>
-                  <i class="fa-solid fa-circle-arrow-right"></i>
-                  <li>URL Shortener</li>
-                </div>
-              </ul>
+        <div class="other-project-container">
+          <h2>URL Shortener</h2>
+          <div class="otherProjects-description">
+            <div class="otherProjects-text">
+              <p>A lightweight URL shortener using API from <%= link_to 'app.short.io', 'https://app.short.io/', target: "_blank" %></p>
+              <p>
+              Visit site:
+              <%= link_to 'URL Shortener', url_shortener_path, target: "_blank"  %>
+              </p>
+              <div class="otherProjects-features">
+                <p>Features:</p>
+                <ul>
+                  <div>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                    <li>URL Shortener with the domain url.jorgenlt.me/SHORTENED-URL</li>
+                  </div>
+                </ul>
+              </div>
+              <%= image_tag 'url_shortener.png', alt: "URL Shortener", class: "urlshortener-img" %>
             </div>
-            <%= image_tag 'url_shortener.png', alt: "URL Shortener", class: "urlshortener-img" %>
           </div>
-        </div>
+        </div >
 
-        <h2>Currency Converter</h2>
-        <div class="otherProjects-description">
-          <div class="otherProjects-text">
-            <p>A lightweight currency converter using API from <%= link_to 'exchangerate-api.com', 'https://www.exchangerate-api.com/', target: "_blank" %>.</p>
-            <p>
-            Visit site:
-            <%= link_to 'Currency Converter', currency_converter_path, target: "_blank"  %>
-            </p>
-            <div class="otherProjects-features">
-              <p>Features:</p>
-              <ul>
-                <div>
-                  <i class="fa-solid fa-circle-arrow-right"></i>
-                  <li>Currency converter</li>
-                </div>
-              </ul>
+        <div class="other-project-container">
+          <h2>Currency Converter</h2>
+          <div class="otherProjects-description">
+            <div class="otherProjects-text">
+              <p>A lightweight currency converter using API from <%= link_to 'exchangerate-api.com', 'https://www.exchangerate-api.com/', target: "_blank" %>.</p>
+              <p>
+              Visit site:
+              <%= link_to 'Currency Converter', currency_converter_path, target: "_blank"  %>
+              </p>
+              <div class="otherProjects-features">
+                <p>Features:</p>
+                <ul>
+                  <div>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                    <li>Currency converter</li>
+                  </div>
+                </ul>
+              </div>
+              <%= image_tag 'currency_converter_cropped.png', alt: "Currency Converter web application", class: "currencyconverter-img" %>
             </div>
-            <%= image_tag 'currency_converter_cropped.png', alt: "Currency Converter web application", class: "currencyconverter-img" %>
           </div>
         </div>
 
