@@ -68,10 +68,10 @@
     }
 
     .portfolio-card-4 {
-      background-image: url(url_shortener.png);
+      background-image: url(coding-bg.jpg);
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 253% auto;
+      background-size: 230% auto;
     }
 
     .portfolio-card-5 {
@@ -181,6 +181,11 @@
     filter: brightness(0.7) saturate(0.6) blur(0px);
   }
 
+}
+
+.photo-credit {
+  font-size: 12px;
+  font-weight: 200;
 }
 
 @media only screen and (max-width: 1000px) {
