@@ -72,7 +72,10 @@
             <%= image_tag 'messagemate_desktop1.png', alt: "messagemate on desktop." %>
           </div>
         </div>
-        <div>
+        <div class="messagemate-documentation">
+          <h2>Making the messages appear in real time for sender and receiver</h2>
+          <p>The application is using Websocket with Action Cable for real-time, two-way communication between the server and client. This allows the exchange of messages in both directions without the need for a new request to be made for each message.</p>
+          <p>Action Cable is a feature of Ruby on Rails that provides a framework for using WebSockets in a Rails application. It allows us to create "channels" in our application, which can receive and broadcast messages in real-time. This makes it possible to build real-time applications, such as chat apps, posts, comments, and other features that requires real-time updates and notifications.</p>
           <pre>
             <code class="language-html">
 &lt;div class="messagemate-video">
