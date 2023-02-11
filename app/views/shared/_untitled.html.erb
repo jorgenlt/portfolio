@@ -1,10 +1,12 @@
-&lt;div class="messagemate-video">
-  &lt;iframe src="https://player.vimeo.com/video/793256271?h=70456f8a85&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-          width="290"
-          height="644"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen title="Screenrecorder-2023-01-27-14-23-07-727">
-  &lt;/iframe>
+&lt;div data-controller="messagesent">
+  &lt;div data-messagesent-target="messagesent" class="d-none message-sent-at">
+    &lt;span>
+    Sent &lt;%= time_ago_in_words(message.created_at) %> ago.
+    &lt;/span>
+  &lt;/div>
+  &lt;div class="message" data-action="click->messagesent#messageSent">
+    &lt;div class="message-content">
+      &lt;p>&lt;%= message.message_body %>&lt;/p>
+    &lt;/div>
+  &lt;/div>
 &lt;/div>
-
