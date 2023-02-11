@@ -76,50 +76,304 @@
           <h2>Making the messages appear in real time for sender and receiver</h2>
           <p>The application is using Websocket with Action Cable for real-time, two-way communication between the server and client. This allows the exchange of messages in both directions without the need for a new request to be made for each message.</p>
           <p>Action Cable is a feature of Ruby on Rails that provides a framework for using WebSockets in a Rails application. It allows us to create "channels" in our application, which can receive and broadcast messages in real-time. This makes it possible to build real-time applications, such as chat apps, posts, comments, and other features that requires real-time updates and notifications.</p>
-          <pre>
-            <code class="language-html">
-&lt;div class="messagemate-video">
-  &lt;iframe src="https://player.vimeo.com/video/793256271?h=70456f8a85&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-          width="290"
-          height="644"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen title="Screenrecorder-2023-01-27-14-23-07-727">
-  &lt;/iframe>
+          <p>The MVC of this feature consists of:</p>
+          <ul>
+            <li><i class="fa-solid fa-circle-arrow-right"></i>A Chatroom model and a Message model.</li>
+            <li><i class="fa-solid fa-circle-arrow-right"></i>The show view of the Chatroom where the messages are displayed and new messages are sent.</li>
+            <li><i class="fa-solid fa-circle-arrow-right"></i>The view of all chatrooms (the conversations), called chatrooms_list.html.erb.</li>
+            <li><i class="fa-solid fa-circle-arrow-right"></i>The Chatrooms controller and the Messages controller</li>
+          </ul>
+          <h3>The Models</h3>
+<pre>
+<code class="language-ruby">
+# Chatroom model
+class Chatroom < ApplicationRecord
+  belongs_to :user
+  has_many :messages
+
+  validates :username, presence: true
+end
+
+# Message model
+class Message < ApplicationRecord
+  belongs_to :user
+  belongs_to :chatroom
+
+  def sender?(a_user)
+    user.id == a_user.id
+  end
+end
+</code>
+</pre>
+          <h3>The Views</h3>
+<p>The Chatroom show view, chatrooms/show.html.erb</p>
+<pre>
+<code class="language-html">
+&lt;div class="chat-container">
+
+  &lt;div id="render-chat-list">
+    &lt;%= render 'chatrooms/chatrooms_list' %>
+  &lt;/div>
+
+      &lt;div id="mobile-navbar">
+        &lt;%= link_to root_path do %>
+          &lt;span class="back-to-chat-list">&lt;i class="fa-solid fa-arrow-left">&lt;/i> BACK&lt;/span>
+          &lt;span class="recipient-message">&lt;%= recipient(@chatroom).username %>&lt;/span>
+        &lt;% end %>
+      &lt;/div>
+
+  &lt;div class="chat"
+    data-controller="chatroom-subscription"
+    data-chatroom-subscription-chatroom-id-value="&lt;%= @chatroom.id %>"
+    data-chatroom-subscription-current-user-id-value="&lt;%= current_user.id %>"
+  >
+    &lt;div class="messages" data-chatroom-subscription-target="messages">
+      &lt;% @chatroom.messages.each do |message| %>
+        &lt;div class="d-flex &lt;%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+          &lt;div class="&lt;%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
+            &lt;div data-controller="messagesent">
+              &lt;div data-messagesent-target="messagesent" class="d-none message-sent-at">
+                &lt;span>
+                Sent &lt;%= time_ago_in_words(message.created_at) %> ago.
+                &lt;/span>
+              &lt;/div>
+              &lt;div class="message" data-action="click->messagesent#messageSent">
+                &lt;div class="message-content">
+                  &lt;p>&lt;%= message.message_body %>&lt;/p>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;% end %>
+    &lt;/div>
+
+    &lt;div id="new-message">
+      &lt;%= simple_form_for [@chatroom, @message],
+        html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" },
+        class: "d-flex" } do |f| %>
+        &lt;div id="message-form">
+          &lt;div class="message-text">
+            &lt;%= f.input :message_body,
+                        as: :text,
+                        label: false,
+                        placeholder: "New message",
+                        input_html: { rows: 1 }
+                      %>
+          &lt;/div>
+          &lt;div class="send-message">
+            &lt;%= f.button :submit, 'SEND', class: "submit-button"%>
+          &lt;/div>
+        &lt;/div >
+      &lt;% end %>
+    &lt;/div>
+  &lt;/div>
 &lt;/div>
-            </code>
-          </pre>
-          <pre>
-            <code class="language-ruby">
-def create
-  if User.find_by(username: chatroom_params[:username]).present?
-    recipient = User.find_by(username: chatroom_params[:username])
-    if Chatroom.where(user_id: current_user.id, recipient_id: recipient.id).exists? ||
-      Chatroom.where(user_id: recipient.id, recipient_id: current_user.id).exists?
-      redirect_to root_path
-      flash.alert = "You already have a chat going with this user."
-    else
-      @chatroom = Chatroom.new(chatroom_params)
-      @chatroom.user_id = current_user.id
-      @chatroom.recipient_id = recipient.id
-      if @chatroom.save
-        redirect_to chatroom_path(@chatroom)
-      else
-        redirect_to root_path
-        flash.alert = "Error! Chatroom was not created."
-      end
-    end
-  else
-    redirect_to root_path
-    flash.alert = "User does not exist. Try again."
+</code>
+</pre>
+<p>The chatrooms list, chatrooms/_chatrooms_list.html.erb</p>
+<pre>
+<code class="language-html">
+&lt;div class="users">
+  &lt;div class="new-chat">
+    &lt;p class="d-none">Connect to user&lt;/p>
+    &lt;%= simple_form_for @new_chatroom do |f| %>
+      &lt;div class="new-chat-content">
+        &lt;div class="message-text">
+          &lt;%= f.input :username,
+                      as: :text,
+                      label: false,
+                      placeholder: "Username",
+                      input_html: { rows: 1 }
+                    %>
+        &lt;/div>
+        &lt;div class="send-message">
+          &lt;%= f.button :submit, 'ADD', class: "submit-button" %>
+        &lt;/div>
+      &lt;/div>
+    &lt;% end %>
+  &lt;/div>
+
+  &lt;% chatrooms = find_chatroom(current_user) %>
+  &lt;% chatrooms.each do |chatroom| %>
+    &lt;%= link_to chatroom_path(chatroom) do %>
+      &lt;div class="user">
+        &lt;div class="profile-picture">
+          &lt;% if recipient(chatroom).photo.attached? %>
+            &lt;%= cl_image_tag recipient(chatroom).photo.key, height: 150, width: 150, crop: :fill %>
+          &lt;% else %>
+            &lt;i class="fa-solid fa-user">&lt;/i>
+          &lt;% end %>
+        &lt;/div>
+        &lt;div class="user-content">
+          &lt;div class="username">
+            &lt;%= username(chatroom) %>
+          &lt;/div>
+          &lt;div class="last-chat">
+            &lt;%= recent_chat(chatroom) %>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;% end %>
+  &lt;% end %>
+
+  &lt;div class="log-out">
+    &lt;%= link_to "SIGN OUT", destroy_user_session_path, data: {turbo_method: :delete} %>
+  &lt;/div>
+  &lt;div class="edit-account">
+    &lt;%= link_to "PROFILE", edit_user_registration_path %>
+  &lt;/div>
+&lt;/div>
+&lt;%= javascript_include_tag('onloadDelayedAnimation') %>
+</code>
+</pre>
+          <h3>The Controllers</h3>
+<p>The Chatrooms controller</p>
+<pre>
+<code class="language-ruby">
+class ChatroomsController < ApplicationController
+  helper_method [
+    :recipient,
+    :find_chatroom,
+    :username,
+    :recent_chat
+  ]
+
+  def index
+    @new_chatroom = Chatroom.new
+
+    @chatroom = policy_scope(Chatroom)
   end
 
-  # authorize everyone to create a new chatroom with another user.
-  @chatroom = policy_scope(Chatroom)
-  authorize @chatroom
+  def show
+
+    @chatroom = Chatroom.find(params[:id])
+    @message = Message.new
+    @new_chatroom = Chatroom.new
+
+    # authorize viewers of the chatrooms
+    @chatrooms = policy_scope(Chatroom)
+    authorize @chatroom
+  end
+
+  def new
+  end
+
+  # A chatroom is created with recipients id and username,
+  # and senders user_id. If the two already have a chatroom
+  # the user will be alerted and the chatroom will not be created.
+  def create
+    if User.find_by(username: chatroom_params[:username]).present?
+      recipient = User.find_by(username: chatroom_params[:username])
+      if Chatroom.where(user_id: current_user.id, recipient_id: recipient.id).exists? ||
+        Chatroom.where(user_id: recipient.id, recipient_id: current_user.id).exists?
+        redirect_to root_path
+        flash.alert = "You already have a chat going with this user."
+      else
+        @chatroom = Chatroom.new(chatroom_params)
+        @chatroom.user_id = current_user.id
+        @chatroom.recipient_id = recipient.id
+        if @chatroom.save
+          redirect_to chatroom_path(@chatroom)
+        else
+          redirect_to root_path
+          flash.alert = "Error! Chatroom was not created."
+        end
+      end
+    else
+      redirect_to root_path
+      flash.alert = "User does not exist. Try again."
+    end
+
+    # authorize everyone to create a new chatroom with another user.
+    @chatroom = policy_scope(Chatroom)
+    authorize @chatroom
+  end
+
+  def recipient(chatroom)
+    if chatroom.user_id == current_user.id
+      User.find(chatroom.recipient_id)
+    else
+      User.find(chatroom.user_id)
+    end
+  end
+
+  def username(chatroom)
+    if chatroom.user_id == current_user.id
+      User.find(chatroom.recipient_id).username
+    else
+      User.find(chatroom.user_id).username
+    end
+  end
+
+  def recent_chat(chatroom)
+    if Message.where(chatroom_id: chatroom.id).length == 0
+      "Send a new message."
+    else
+      Message.where(chatroom_id: chatroom.id).last.message_body
+    end
+  end
+
+  def find_chatroom(user)
+    Chatroom.where(user_id: user.id).or(Chatroom.where(recipient_id: user.id))
+  end
+
+  private
+
+  def chatroom_params
+    params.require(:chatroom).permit(:username)
+  end
 end
-            </code>
-          </pre>
+
+</code>
+</pre>
+<p>The Messages controller</p>
+<pre>
+<code class="language-ruby">
+class MessagesController < ApplicationController
+  # skip authorization on MessagesController with the before_action
+  before_action :skip_authorization
+
+  def create
+    @chatroom = Chatroom.find(params[:chatroom_id])
+    @message = Message.new(message_params)
+    @message.chatroom_id = @chatroom.id
+    @message.user_id = current_user.id
+
+    if message_params[:message_body].empty?
+      # submit button 'send' does nothing.
+    else
+      # setting sender/receiver of the message
+      if current_user.id == @chatroom.user_id
+        @message.recipient_id = @chatroom.recipient_id
+      else
+        @message.recipient_id = @chatroom.user_id
+      end
+
+      # instant message with action cable
+      if @message.save
+        ChatroomChannel.broadcast_to(
+          @chatroom,
+          message: render_to_string(partial: "message", locals: { message: @message }),
+          sender_id: @message.user.id
+        )
+        head :ok
+      else
+        render "chatrooms/show", status: :unprocessable_entity
+        flash.alert = "Error. Message was not sent."
+      end
+    end
+  end
+
+  private
+
+  def message_params
+    params.require(:message).permit(:message_body, :chatroom_id)
+  end
+end
+</code>
+</pre>
+<p>Then description of the javascript part and implementation of action cable.</p>
         </div>
       </div>
       <%# <div class="modal-footer">
