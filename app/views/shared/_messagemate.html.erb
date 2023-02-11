@@ -72,6 +72,52 @@
             <%= image_tag 'messagemate_desktop1.png', alt: "messagemate on desktop." %>
           </div>
         </div>
+        <div>
+          <pre>
+            <code class="language-html">
+&lt;div class="messagemate-video">
+  &lt;iframe src="https://player.vimeo.com/video/793256271?h=70456f8a85&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          width="290"
+          height="644"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen title="Screenrecorder-2023-01-27-14-23-07-727">
+  &lt;/iframe>
+&lt;/div>
+            </code>
+          </pre>
+          <pre>
+            <code class="language-ruby">
+def create
+  if User.find_by(username: chatroom_params[:username]).present?
+    recipient = User.find_by(username: chatroom_params[:username])
+    if Chatroom.where(user_id: current_user.id, recipient_id: recipient.id).exists? ||
+      Chatroom.where(user_id: recipient.id, recipient_id: current_user.id).exists?
+      redirect_to root_path
+      flash.alert = "You already have a chat going with this user."
+    else
+      @chatroom = Chatroom.new(chatroom_params)
+      @chatroom.user_id = current_user.id
+      @chatroom.recipient_id = recipient.id
+      if @chatroom.save
+        redirect_to chatroom_path(@chatroom)
+      else
+        redirect_to root_path
+        flash.alert = "Error! Chatroom was not created."
+      end
+    end
+  else
+    redirect_to root_path
+    flash.alert = "User does not exist. Try again."
+  end
+
+  # authorize everyone to create a new chatroom with another user.
+  @chatroom = policy_scope(Chatroom)
+  authorize @chatroom
+end
+            </code>
+          </pre>
+        </div>
       </div>
       <%# <div class="modal-footer">
       </div> %>
