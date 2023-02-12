@@ -72,10 +72,53 @@
             <%= image_tag 'messagemate_desktop1.png', alt: "messagemate on desktop." %>
           </div>
         </div>
+
         <div class="messagemate-documentation">
+          <h2>Features</h2>
+            <ul>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Web application built with the <%= link_to 'Ruby on Rails', 'https://rubyonrails.org/', target: '_blank' %> framework.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Instant chat messenger with live chat using Websocket with <%= link_to 'Action Cable', 'https://guides.rubyonrails.org/action_cable_overview.html', target: '_blank' %></li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Real-time, two-way communication between the server and client.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Create a new user.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Add a user by username to start a new chat.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Mobile responsiveness to ensure an optimal user experience.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Ligthweight and simple messaging web application.</li>
+            </ul>
+
+          <h2>Technologies</h2>
+          <p>
+            MessageMate is built with Ruby on Rails on the backend and ... on the frontend. Data is stored in a PostgreSQL database
+            and Cloudinary is used for cloud storage of the profile image files. Authentication and authorization is being handled with
+            the <%= link_to 'Devise gem', 'https://github.com/heartcombo/devise', target: '_blank' %>. This ensures the user to securely sign in
+            and sign up to the application, authorization is given to the user so that they can only view their own content. The application is
+            using Websocket with Action Cable for real-time, two-way communication between the server and client. This allows the exchange of
+            messages in both directions without the need for a new request to be made for each message.
+
+            The application is additionally supported by Webpack, simple_form, stimulus...
+          </p>
+
+          <h2>Technical challenges</h2>
+            <h3>Making the messages appear in real time for sender and receiver</h3>
+
+          <h2>Upcoming features</h2>
+            <ul>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Upcoming features.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Upcoming features.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Upcoming features.</li>
+            </ul>
+
           <h2>Making the messages appear in real time for sender and receiver</h2>
-          <p>The application is using Websocket with Action Cable for real-time, two-way communication between the server and client. This allows the exchange of messages in both directions without the need for a new request to be made for each message.</p>
-          <p>Action Cable is a feature of Ruby on Rails that provides a framework for using WebSockets in a Rails application. It allows us to create "channels" in our application, which can receive and broadcast messages in real-time. This makes it possible to build real-time applications, such as chat apps, posts, comments, and other features that requires real-time updates and notifications.</p>
+          <p>
+            The application is using Websocket with Action Cable for real-time, two-way communication between the server
+            and client. This allows the exchange of messages in both directions without the need for a new request to be made
+            for each message.
+          </p>
+          <p>
+            Action Cable is a feature of Ruby on Rails that provides a framework for using WebSockets in a Rails application.
+            It allows us to create "channels" in our application, which can receive and broadcast messages in real-time.
+            This makes it possible to build real-time applications, such as chat apps, posts, comments, and other features that requires
+            real-time updates and notifications.
+          </p>
           <p>The MVC of this feature consists of:</p>
           <ul>
             <li><i class="fa-solid fa-circle-arrow-right"></i>A Chatroom model and a Message model.</li>
