@@ -10,11 +10,9 @@
         <div class="messagemate-description">
           <div class="messsagemate-text">
             <p>A responsive instant messenger application for desktop and mobile.</p>
-            <p>
-            Visit site:
-            <%= link_to 'messagemate.me', 'http://www.messagemate.me', target: "_blank"  %>
-            </p>
+            <p>Visit site: <%= link_to 'messagemate.me', 'https://www.messagemate.me', target: "_blank"  %></p>
             <p>Download for android: <%= link_to 'messagemate.apk', '/messagemate.apk', target: "_blank"  %></p>
+            <p><%= link_to 'View on GitHub', 'https://github.com/jorgenlt/messagemate', target: "_blank"  %></p>
             <div class="messagemate-features">
               <p>Features:</p>
               <ul>
@@ -87,7 +85,7 @@
 
           <h2>Technologies</h2>
           <p>
-            MessageMate is built with Ruby on Rails on the backend and ... on the frontend. Data is stored in a PostgreSQL database
+            MessageMate is built with <%= link_to 'Ruby on Rails', 'https://rubyonrails.org/', target: '_blank' %> on the backend and ... on the frontend. Data is stored in a PostgreSQL database
             and Cloudinary is used for cloud storage of the profile image files. Authentication and authorization is being handled with
             the <%= link_to 'Devise gem', 'https://github.com/heartcombo/devise', target: '_blank' %>. This ensures the user to securely sign in
             and sign up to the application, authorization is given to the user so that they can only view their own content. The application is
@@ -99,6 +97,76 @@
 
           <h2>Technical challenges</h2>
             <h3>Making the messages appear in real time for sender and receiver</h3>
+            <p>
+              Action Cable is a feature of Ruby on Rails that provides a framework for using WebSockets in a Rails application.
+              It allows us to create "channels" in our application, which can receive and broadcast messages in real-time.
+              This makes it possible to build real-time applications, such as chat apps, posts, comments, and other features that requires
+              real-time updates and notifications.
+            </p>
+            <p>
+              At connection to the chatrooom page the user is connected to the chatroom. Using javascript the messages are inserted into the DOM.
+            </p>
+<pre>
+<code class="language-javascript">
+// when the user connects to the page a subscription to the channel is made.
+  connect() {
+    this.channel = createConsumer().subscriptions.create(
+      { channel: "ChatroomChannel", id: this.chatroomIdValue },
+      { received: data => this.#insertMessageAndScrollDown(data) }
+      )
+      console.log(`Subscribed to the chatroom with the id ${this.chatroomIdValue}.`)
+  }
+
+  #insertMessageAndScrollDown(data) {
+    // logic to know if the sender is the current_user
+    const currentUserIsSender = this.currentUserIdValue === data.sender_id
+
+    // creating the whole message from the `data.message` string
+    const messageElement = this.#buildMessageElement(currentUserIsSender, data.message)
+
+    // inserting the `message` in the DOM
+    this.messagesTarget.insertAdjacentHTML("beforeend", messageElement)
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+
+  // function to build a complete message with its two wrapping div,
+  // passing it the currentUserIsSender boolean, and the message string
+  // coming from the data:
+  #buildMessageElement(currentUserIsSender, message) {
+    return `
+    &lt;div class="message-row d-flex ${this.#justifyClass(currentUserIsSender)}">
+    &lt;div class="${this.#userStyleClass(currentUserIsSender)}">
+    ${message}
+    &lt;/div>
+    &lt;/div>
+    `
+  }
+
+  // two functions to return the relevant classes to position and style the message
+  // the user on the right and the recipient on the left, like other popular messaging services.
+  #justifyClass(currentUserIsSender) {
+    return currentUserIsSender ? "justify-content-end" : "justify-content-start"
+  }
+
+  #userStyleClass(currentUserIsSender) {
+    return currentUserIsSender ? "sender-style" : "receiver-style"
+  }
+
+  // reset the send message input field after the message is sent
+  resetForm(event) {
+    event.target.reset()
+  }
+
+  // unsubscribe from the channel when user leaves the page
+  disconnect() {
+    console.log("Unsubscribed from the chatroom")
+    this.channel.unsubscribe()
+  }
+}
+
+</code>
+</pre>
+
 
           <h2>Upcoming features</h2>
             <ul>
