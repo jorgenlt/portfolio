@@ -1,53 +1,30 @@
-connect() {
-    // window.scrollTo(0, document.body.scrollHeight);
-    this.channel = createConsumer().subscriptions.create(
-      { channel: "ChatroomChannel", id: this.chatroomIdValue },
-      { received: data => this.#insertMessageAndScrollDown(data) }
+def create
+  @chatroom = Chatroom.find(params[:chatroom_id])
+  @message = Message.new(message_params)
+  @message.chatroom_id = @chatroom.id
+  @message.user_id = current_user.id
+
+  if message_params[:message_body].empty?
+    # submit button 'send' does nothing.
+  else
+    # setting sender/receiver of the message
+    if current_user.id == @chatroom.user_id
+      @message.recipient_id = @chatroom.recipient_id
+    else
+      @message.recipient_id = @chatroom.user_id
+    end
+
+    # if the message is saved successfully the message is broadcasted to the Chatroom channel.
+    if @message.save
+      ChatroomChannel.broadcast_to(
+        @chatroom,
+        message: render_to_string(partial: "message", locals: { message: @message }),
+        sender_id: @message.user.id
       )
-      console.log(`Subscribed to the chatroom with the id ${this.chatroomIdValue}.`)
-
-    }
-
-    #insertMessageAndScrollDown(data) {
-      // logic to know if the sender is the current_user
-      const currentUserIsSender = this.currentUserIdValue === data.sender_id
-
-      // creating the whole message from the `data.message` string
-      const messageElement = this.#buildMessageElement(currentUserIsSender, data.message)
-
-      // inserting the `message` in the DOM
-      this.messagesTarget.insertAdjacentHTML("beforeend", messageElement)
-      window.scrollTo(0, document.body.scrollHeight);
-    }
-
-    // function to build a complete message with its two wrapping div,
-    // passing it the currentUserIsSender boolean, and the message string
-    // coming from the data:
-    #buildMessageElement(currentUserIsSender, message) {
-      return `
-      &lt;div class="message-row d-flex ${this.#justifyClass(currentUserIsSender)}">
-      &lt;div class="${this.#userStyleClass(currentUserIsSender)}">
-      ${message}
-      &lt;/div>
-      &lt;/div>
-      `
-    }
-
-    // two functions to return the relevant classes to position and style the message
-    #justifyClass(currentUserIsSender) {
-      return currentUserIsSender ? "justify-content-end" : "justify-content-start"
-    }
-
-    #userStyleClass(currentUserIsSender) {
-      return currentUserIsSender ? "sender-style" : "receiver-style"
-    }
-
-    resetForm(event) {
-      event.target.reset()
-    }
-
-    disconnect() {
-      console.log("Unsubscribed from the chatroom")
-      this.channel.unsubscribe()
-    }
-  }
+      head :ok
+    else
+      render "chatrooms/show", status: :unprocessable_entity
+      flash.alert = "Error. Message was not sent."
+    end
+  end
+end
