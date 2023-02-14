@@ -1,5 +1,6 @@
 .tidder-modal-body {
   display: flex;
+  flex-direction: column;
 
   a {
     font-weight: 400;
@@ -25,28 +26,81 @@
   }
 }
 
-.tidder-features {
-  margin-top: 20px;
+.tidder-lede {
+  display: flex;
+  margin-bottom: 20px;
+  max-width: 750px;
+}
 
-  p {
-    margin: 0px;
-  }
+.tidder-media {
+  display: flex;
+  flex-direction: column;
+}
 
-  ul {
-    margin: 0px;
+.tidder-desktop {
+  display: flex;
+  max-width: 750px;
 
-    div {
-      margin: 5px 0px;
-    }
-  }
-
-  li {
-    margin: 0px;
+  img {
+    margin: 40px 0px;
+    border-radius: 10px;
+    width: 640px;
   }
 }
 
-@media only screen and (max-width: 600px) {
+.tidder-video {
+  margin: 10px 10px;
+}
+
+.tidder-photos {
+  display: flex;
+  justify-content: space-between;
+  max-width: 750px;
+}
+
+.tidder-phone {
+  display: flex;
+
+  img {
+    margin: 0px 20px;
+    height: 670px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
   .tidder-modal-body {
     flex-direction: column;
   }
+
+  .tidder-lede {
+    flex-direction: column;
+  }
+
+  .tidder-video {
+    justify-content: center;
+    display: flex;
+  }
+
+  .tidder-phone {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      margin: 20px 20px;
+    }
+  }
+
+  .tidder-photos {
+    flex-direction: column;
+  }
+
+  .tidder-desktop {
+    justify-content: center;
+
+    img {
+      width: 360px;
+      margin-top: 20px;
+    }
+  }
+
 }
