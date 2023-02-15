@@ -1,30 +1,9 @@
-def create
-  @chatroom = Chatroom.find(params[:chatroom_id])
-  @message = Message.new(message_params)
-  @message.chatroom_id = @chatroom.id
-  @message.user_id = current_user.id
-
-  if message_params[:message_body].empty?
-    # submit button 'send' does nothing.
-  else
-    # setting sender/receiver of the message
-    if current_user.id == @chatroom.user_id
-      @message.recipient_id = @chatroom.recipient_id
-    else
-      @message.recipient_id = @chatroom.user_id
-    end
-
-    # if the message is saved successfully the message is broadcasted to the Chatroom channel.
-    if @message.save
-      ChatroomChannel.broadcast_to(
-        @chatroom,
-        message: render_to_string(partial: "message", locals: { message: @message }),
-        sender_id: @message.user.id
-      )
-      head :ok
-    else
-      render "chatrooms/show", status: :unprocessable_entity
-      flash.alert = "Error. Message was not sent."
-    end
-  end
-end
+&lt;%= content_tag "div", id: "upvote-#{post.id}" do %>
+  &lt;%= link_to upvote_post_path(post), method: :patch, remote: true, data: { disable_with: "voting..." } do %>
+    &lt;% if current_user.voted_up_on? post %>
+      &lt;i class="fa-solid fa-arrow-up" style="color: green;">&lt;/i>
+    &lt;% else %>
+      &lt;i class="fa-solid fa-arrow-up">&lt;/i>
+    &lt;% end %>
+  &lt;% end %>
+&lt;% end %>
