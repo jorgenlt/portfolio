@@ -44,7 +44,7 @@
               <li><i class="fa-solid fa-circle-arrow-right"></i>A user can upvote or downvote a post.</li>
               <li><i class="fa-solid fa-circle-arrow-right"></i>A user can create a new comment on a post.</li>
               <li><i class="fa-solid fa-circle-arrow-right"></i>A user can upvote or downvote a comment on a post.</li>
-              <li><i class="fa-solid fa-circle-arrow-right"></i>Secure authentication and authorization.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Secure authentication.</li>
               <li><i class="fa-solid fa-circle-arrow-right"></i>Mobile responsiveness to ensure optimal user experience.</li>
             </ul>
 
@@ -61,20 +61,21 @@
           <h2>Technical challenges</h2>
           <h3>Upvote and downvote</h3>
           <p>
-            A must have feature when making a reddit-clone is the famous upvote and downvote first used by
-            <%= link_to 'Everything2', 'https://everything2.com/title/An+Introduction+to+Everything2' %> and that Reddit adopted and made a popular feature
-            on many other websites and applications. The first approach to achieve this feature was done by making everything from scratch with the
-            appropriate database tables and making the logic in the controllers. After some research it was decided to go with the Ruby on Rails gem
-            <%= link_to 'acts_as_votable', 'https://github.com/ryanto/acts_as_votable' %> developed by <%= link_to 'Ryan Toronto', 'https://github.com/ryanto' %>.
+            The inclusion of the renowned upvote and downvote system, which was first introduced by <%= link_to 'Everything2', 'https://everything2.com/title/An+Introduction+to+Everything2' %>
+            and later adopted by Reddit and other platforms, has become an essential feature in the development of a Reddit-like platform, as it has gained widespread popularity across various
+            websites and applications. The first approach to achieve this feature was done by making everything from scratch with the appropriate database tables and making the logic in the
+            controllers. After some research it was decided to go with the Ruby on Rails gem <%= link_to 'acts_as_votable', 'https://github.com/ryanto/acts_as_votable' %> which was developed by
+            <%= link_to 'Ryan Toronto', 'https://github.com/ryanto' %>.
           </p>
           <p>
-            This gem is at first glance a very straight forward solution to the challenge and for the most part that is correct. However, there is no immidate
-            solution to make the voting appear in real-time to the user. To acchieve this one must implement technologies such as AJAX.
+            At first glance, the acts_as_votable gem provides a straightforward solution to the upvote and downvote feature.
+            However, it doesn't offer an immediate solution for displaying the votes in real-time to the user. To achieve this functionality, additional technologies such as AJAX needs to be implemented.
           </p>
           <p>
             First the databases are created according to the act_as_votable documentation. Then simply the terms "acts_as_voter" or "acts_as_votable" are added to the
-            appropriate models. The logic for the voting itself was done in the controllers. The code below is from the posts controller and the upvote/downvote logic
-            was made in the same way for the comments controller.
+            appropriate models. The voting logic is implemented in the controllers. For instance, in the posts controller, the upvote and downvote functions are defined.
+            Whenever a user clicks the upvote or downvote button, the respective function is called, updating the post with the user's vote. The code for the upvote and
+            downvote functions is similar for other controllers that utilize the voting feature. The code below is from the posts controller.
           </p>
           <pre>
             <code class="language-ruby">
@@ -102,7 +103,7 @@
   end
             </code>
           </pre>
-          <p>
+          <p class="mt-4 mb-2">
             Upvote and downvote in the views. Below shown by an example of upvote a post.
           </p>
           <pre>
