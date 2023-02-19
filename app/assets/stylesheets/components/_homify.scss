@@ -1,0 +1,106 @@
+.homify-modal-body {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    font-weight: 400;
+  }
+
+  i {
+    font-size: 12px;
+    margin-right: 10px;
+    color: $green-light;
+  }
+
+  ul {
+    div {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+
+  li {
+    font-weight: 200;
+    list-style: none;
+    margin: 15px 0px 0px 0px;
+  }
+}
+
+.homify-lede {
+  display: flex;
+  margin-bottom: 20px;
+  max-width: 750px;
+}
+
+.homify-media {
+  display: flex;
+  flex-direction: column;
+}
+
+.homify-desktop {
+  display: flex;
+  justify-content: center;
+  max-width: 750px;
+
+  img {
+    margin: 40px 0px;
+    border-radius: 10px;
+    width: 640px;
+  }
+}
+
+.homify-video {
+  margin: 10px 10px;
+}
+
+.homify-photos {
+  display: flex;
+  justify-content: space-between;
+  max-width: 750px;
+}
+
+.homify-phone {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    margin: 0px 20px;
+    width: 290px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .homify-modal-body {
+    flex-direction: column;
+  }
+
+  .homify-lede {
+    flex-direction: column;
+  }
+
+  .homify-video {
+    justify-content: center;
+    display: flex;
+  }
+
+  .homify-phone {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      margin: 20px 20px;
+    }
+  }
+
+  .homify-photos {
+    flex-direction: column;
+  }
+
+  .homify-desktop {
+    img {
+      width: 360px;
+      margin-top: 20px;
+    }
+  }
+
+}
