@@ -1,0 +1,82 @@
+<!-- Modal -->
+<div class="modal fade" id="finditModal" tabindex="-1" aria-labelledby="finditModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-fullscreen-lg-down modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-2" id="finditModalLabel">findit</h1>
+        <span data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark hover-brighter-green"></i></span>
+      </div>
+      <div class="modal-body modal-findit findit-modal-body">
+        <div class="findit-lede">
+          <div>
+            <p></p>
+            <p>Visit site: <%#= link_to 'findit', '#', target: "_blank"  %></p>
+            <p>Download for android: <%#= link_to 'findit.apk', '/findit.apk', target: "_blank"  %></p>
+            <p><%#= link_to 'View on GitHub', 'https://github.com/jorgenlt/findit', target: "_blank"  %></p>
+          </div>
+          <div class="findit-video">
+          </div>
+        </div>
+        <div class="findit-media">
+          <div class="findit-phone">
+            <div class="findit-photos">
+              <%#= image_tag '', alt: "findit on phone." %>
+            </div>
+          </div>
+          <div>
+          </div>
+          <div class="findit-desktop">
+            <%#= image_tag '', alt: "findit on desktop." %>
+          </div>
+        </div>
+
+        <div class="findit-documentation">
+          <h2>Features</h2>
+            <ul>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
+            </ul>
+
+          <h2>Technologies</h2>
+          <p>
+            findit is built with <%= link_to 'Ruby on Rails', 'https://rubyonrails.org/', target: '_blank' %> on both backend and frontend.
+          </p>
+
+          <h2>Technical challenges</h2>
+          <h3>Technical challenge 1</h3>
+          <p>
+            Text with code below.
+          </p>
+          <pre>
+            <code class="language-javascript">
+Some Code.
+            </code>
+          </pre>
+          <p class="mt-4 mb-2">
+            Text with code below.
+          </p>
+          <pre>
+            <code class="language-ruby">
+Some Code.
+            </code>
+          </pre>
+
+          <h2>Upcoming features</h2>
+          <ul>
+            <li><i class="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
+            <li><i class="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
+            <li><i class="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
+            <li><i class="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
+            <li><i class="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
