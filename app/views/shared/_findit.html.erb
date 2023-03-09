@@ -9,10 +9,9 @@
       <div class="modal-body modal-findit findit-modal-body">
         <div class="findit-lede">
           <div>
-            <p></p>
-            <p>Visit site: <%#= link_to 'findit', '#', target: "_blank"  %></p>
-            <p>Download for android: <%#= link_to 'findit.apk', '/findit.apk', target: "_blank"  %></p>
-            <p><%#= link_to 'View on GitHub', 'https://github.com/jorgenlt/findit', target: "_blank"  %></p>
+            <p>An online classified web application. Made with inspiration from <%= link_to 'Finn.no', 'http://www.finn.no', target: "blank" %></p>
+            <p>Visit site: <%= link_to 'findit', 'http://findit.herokuapp.com', target: "_blank"  %></p>
+            <p><%= link_to 'View on GitHub', 'https://github.com/jorgenlt/findit', target: "_blank"  %></p>
           </div>
           <div class="findit-video">
           </div>
@@ -26,31 +25,30 @@
           <div>
           </div>
           <div class="findit-desktop">
-            <%#= image_tag '', alt: "findit on desktop." %>
+            <%= image_tag 'findit_desktop1.png', alt: "findit on desktop." %>
           </div>
         </div>
 
         <div class="findit-documentation">
           <h2>Features</h2>
             <ul>
-              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
-              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
-              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
-              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
-              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
-              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
-              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Sign up and sign in.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Search for ads.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Browse ads by categories and subcategories.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>View ads with pictures and information.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Contact seller.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Add a new ad.</li>
             </ul>
 
           <h2>Technologies</h2>
           <p>
-            findit is built with <%= link_to 'Ruby on Rails', 'https://rubyonrails.org/', target: '_blank' %> on both backend and frontend.
+            Findit is built with <%= link_to 'Ruby on Rails', 'https://rubyonrails.org/', target: '_blank' %> on both backend and frontend.
           </p>
 
           <h2>Technical challenges</h2>
-          <h3>Technical challenge 1</h3>
+          <h3>The search feature</h3>
           <p>
-            Text with code below.
+            Made simple using a gem.
           </p>
           <pre>
             <code class="language-javascript">
