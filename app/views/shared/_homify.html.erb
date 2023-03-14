@@ -9,16 +9,25 @@
       <div class="modal-body modal-template homify-modal-body">
         <div class="homify-lede">
           <div>
-            <p></p>
+            <p>An app for finding apartments for rent by swiping and matching.</p>
             <p>Visit site: <%#= link_to 'homify', '#', target: "_blank"  %></p>
-            <p>Download for android: <%#= link_to 'homify.apk', '/homify.apk', target: "_blank"  %></p>
-            <p><%#= link_to 'View on GitHub', 'https://github.com/jorgenlt/homify', target: "_blank"  %></p>
+            <p><%= link_to 'View on GitHub', 'https://github.com/jorgenlt/homify', target: "_blank"  %></p>
           </div>
           <div class="homify-video">
+
           </div>
         </div>
         <div class="homify-media">
           <div class="homify-phone">
+            <iframe src="https://player.vimeo.com/video/808073105?h=86bec683c0&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    width="250"
+                    height="556"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen
+                    title="homify demo">
+            </iframe>
+
             <div class="homify-photos">
               <%= image_tag 'homify-pixel-2-1-rot.png', alt: "homify on phone." %>
             </div>
@@ -33,18 +42,17 @@
         <div class="homify-documentation">
           <h2>Features</h2>
             <ul>
-              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
-              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
-              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
-              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
-              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
-              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
-              <li><i class="fa-solid fa-circle-arrow-right"></i>Feature</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Sign up and create a profile with a profile picture.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Create a new search.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Filter search results by editing your search.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Swipe on apartments to find a match.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Instantly book an appointments for viewings on your matches.</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i>Live instant chat feature with matches.</li>
             </ul>
 
           <h2>Technologies</h2>
           <p>
-            homify is built with <%= link_to 'Ruby on Rails', 'https://rubyonrails.org/', target: '_blank' %> on both backend and frontend.
+            Homify is built with <%= link_to 'Ruby on Rails', 'https://rubyonrails.org/', target: '_blank' %> on both backend and frontend.
           </p>
 
           <h2>Technical challenges</h2>
