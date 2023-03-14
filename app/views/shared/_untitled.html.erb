@@ -1,9 +1,23 @@
-&lt;%= content_tag "div", id: "upvote-#{post.id}" do %>
-  &lt;%= link_to upvote_post_path(post), method: :patch, remote: true, data: { disable_with: "voting..." } do %>
-    &lt;% if current_user.voted_up_on? post %>
-      &lt;i class="fa-solid fa-arrow-up" style="color: green;">&lt;/i>
+&lt;div class="search-results w-100">
+  &lt;% unless @search_results == nil %>
+    &lt;% if @search_results.empty? %>
+      &lt;h3 class="no-results">No results for your search.&lt;/h3>
     &lt;% else %>
-      &lt;i class="fa-solid fa-arrow-up">&lt;/i>
+      &lt;h2>&lt;%= @search_results.size %> results found&lt;/h2>
+      &lt;div class="row all-posts">
+        &lt;% @search_results.each do |post| %>
+            &lt;div class="col all-posts-card">
+              &lt;%= link_to post_path(post), class: "all-posts-link" do %>
+                &lt;%= attached_photo(post, 400) %>
+                &lt;div class="post-details">
+                  &lt;p class="all-posts-location">Oslo&lt;/p>
+                  &lt;p class="all-posts-description">&lt;%= post.post_title.capitalize %>&lt;/p>
+                  &lt;span>€ &lt;%= post.price %>&lt;/span>
+                &lt;/div>
+              &lt;% end %>
+            &lt;/div>
+        &lt;% end %>
+      &lt;/div>
     &lt;% end %>
   &lt;% end %>
-&lt;% end %>
+&lt;/div>
