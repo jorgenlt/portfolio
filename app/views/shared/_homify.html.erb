@@ -52,16 +52,16 @@
 
           <h2>Technologies</h2>
           <p>
-            Homify is built with <%= link_to 'Ruby on Rails', 'https://rubyonrails.org/', target: '_blank' %> on both backend and frontend. Data is stored in a PostgreSQL database and Cloudinary is used for cloud storage of the profile and apartment image files. Authentication and authorization is being handled with the <%= link_to 'Devise gem', 'https://github.com/heartcombo/devise', target: '_blank' %>. The apps search feature is made with the <%= link_to "PgSearch", 'https://github.com/Casecommons/pg_search', target: 'blank' %> gem.
+            Homify is a web application optimized for mobile and built with <%= link_to 'Ruby on Rails', 'https://rubyonrails.org/', target: '_blank' %> on both backend and frontend. Data is stored in a PostgreSQL database and Cloudinary is used for cloud storage of the profile and apartment image files. Authentication and authorization is being handled with the <%= link_to 'Devise gem', 'https://github.com/heartcombo/devise', target: '_blank' %>. The apps search feature is made with the <%= link_to "PgSearch", 'https://github.com/Casecommons/pg_search', target: 'blank' %> gem.
           </p>
           <p>
-            The application is additionally supported by Webpack, simple_form, stimulus and bootstrap.
+            The application is additionally supported by Webpack, simple_form, maps from Mapbox, stimulus and bootstrap.
           </p>
 
           <h2>Technical challenges</h2>
           <h3>Swiping on apartment cards</h3>
           <p>
-            The Tinder-like swipe feature to register a "like" or a "nope" turned out to be quite a challenge. The final code is built upon the Javascript library <%= link_to 'Hammer.js', 'https://hammerjs.github.io/', target: '_blank' %>, which enables touch gestures to web applications. With a lot of hits and misses the final result both looked good and run smoothly in the web browser.
+            The Tinder-like swipe feature to register a "like" or a "nope" turned out to be quite a challenge. The final code is built upon the Javascript library <%= link_to 'Hammer.js', 'https://hammerjs.github.io/', target: '_blank' %>, which enables touch gestures to web applications. With a lot of hits and misses the final result both looked good and was running smoothly in the web browser.
           </p>
           <pre>
             <code class="language-javascript">
@@ -200,6 +200,8 @@ export default class extends Controller {
   }
             </code>
           </pre>
+
+          <h3 class="mt-5">Tech. challenge 2</h3>
           <p class="mt-4 mb-2">
             Text with code below.
           </p>
@@ -209,8 +211,8 @@ Some Code.
             </code>
           </pre>
 
-          <h2>Upcoming features</h2>
-          <ul>
+          <h2 class="d-none">Upcoming features</h2>
+          <ul class="d-none">
             <li><i class="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
             <li><i class="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
             <li><i class="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
