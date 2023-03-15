@@ -9,6 +9,29 @@
       <div class="modal-body modal-template otherProjects-modal-body">
 
         <div class="other-project-container">
+          <h2>Choropleth Map</h2>
+          <div class="otherProjects-description">
+            <div class="otherProjects-text">
+              <p>Choropleth map from Data Visualization course on freeCodeCamp.</p>
+              <p>
+              Visit site:
+              <%= link_to 'Choropleth Map', choropleth_map_path, target: "_blank"  %>
+              </p>
+              <div class="otherProjects-features">
+                <p>Features:</p>
+                <ul>
+                  <div>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                    <li>Choropleth map with data from JSON-file.</li>
+                  </div>
+                </ul>
+              </div>
+              <%= image_tag 'choropleth_map.png', alt: "Choropleth Map", class: "choropleth-map-img" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="other-project-container">
           <h2>URL Shortener</h2>
           <div class="otherProjects-description">
             <div class="otherProjects-text">
@@ -29,7 +52,7 @@
               <%= image_tag 'url_shortener.png', alt: "URL Shortener", class: "urlshortener-img" %>
             </div>
           </div>
-        </div >
+        </div>
 
         <div class="other-project-container">
           <h2>Currency Converter</h2>
