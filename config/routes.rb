@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   # resources :pages, only: :url_shortener, as: :url_shortener
 
   get '/url-shortener', to: 'pages#url_shortener'
+  get '/choropleth_map', to: 'pages#choropleth_map'
   get '/currency_converter', to: 'currency_converter#currency_converter'
 end
