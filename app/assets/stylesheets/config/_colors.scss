@@ -2,11 +2,13 @@
 $black:         #121416;
 $green-light:   #009580;
 $black-dark:    #212531;
+$black-darker:  #14161d;
 $bronze:        #996e5c;
 $white-reg:     #F2F8F2;
 $light-gray:    #dddfe3;
-$dark-gray:     #788191;
+$dark-gray:     #313547;
 $hover-green:   lighten($green-light, 10);
+$hover-scroll:  lighten($black-darker, 15);
 
 // color profile 1
 // $green-light: #009580ff;
