@@ -9,6 +9,70 @@
       <div class="modal-body modal-template otherProjects-modal-body">
 
         <div class="other-project-container">
+          <h2>Pomodoro timer</h2>
+          <div class="otherProjects-description">
+            <div class="otherProjects-text">
+              <p>A pomodoro timer the from Web Development Libraries course on freeCodeCamp.A time management tool that breaks work into 25-minute intervals called "Pomodoros" separated by 5-minute breaks.</p>
+              <p>
+              Visit site:
+              <%= link_to 'Pomodoro timer', 'https://codepen.io/dogonscooter/full/JjaxOwp', target: "_blank"  %>
+              </p>
+              <p>
+              <%= link_to 'GitHub', 'https://github.com/jorgenlt/freecodecamp/tree/master/front-end-development-libraries/25%2B5-clock', target: "_blank"  %>
+              </p>
+              <div class="otherProjects-features">
+                <p>Features:</p>
+                <ul>
+                  <div>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                    <li>A time management tool with 25 + 5 work/break sessions.</li>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                    <li>Adjustable break and session time.</li>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                    <li>End of session is alerted by an alarm.</li>
+                  </div>
+                </ul>
+              </div>
+              <%= link_to 'https://codepen.io/dogonscooter/full/JjaxOwp', target: '_blank' do %>
+                <%= image_tag 'pomodoro_timer.png', alt: "Pomodoro Timer", class: "choropleth-map-img" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+        <div class="other-project-container">
+          <h2>Javascript Calculator</h2>
+          <div class="otherProjects-description">
+            <div class="otherProjects-text">
+              <p>A javascript calculator from the Web Development Libraries course on freeCodeCamp.</p>
+              <p>
+              Visit site:
+              <%= link_to 'Javascript Calculator', 'https://codepen.io/dogonscooter/full/vYzVdbQ', target: "_blank"  %>
+              </p>
+              <p>
+              <%= link_to 'GitHub', 'https://github.com/jorgenlt/freecodecamp/tree/master/front-end-development-libraries/javascript-calculator', target: "_blank"  %>
+              </p>
+              <div class="otherProjects-features">
+                <p>Features:</p>
+                <ul>
+                  <div>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                    <li>Javascript Calculator</li>
+                  </div>
+                </ul>
+              </div>
+              <%= link_to 'https://codepen.io/dogonscooter/full/vYzVdbQ', target: '_blank' do %>
+                <%= image_tag 'javascript_calculator.png', alt: "Javascript Calculator", class: "choropleth-map-img" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+        <div class="other-project-container">
           <h2>Choropleth Map</h2>
           <div class="otherProjects-description">
             <div class="otherProjects-text">
@@ -26,7 +90,34 @@
                   </div>
                 </ul>
               </div>
-              <%= image_tag 'choropleth_map.png', alt: "Choropleth Map", class: "choropleth-map-img" %>
+              <%= link_to choropleth_map_path, target: '_blank' do %>
+                <%= image_tag 'choropleth_map.png', alt: "Choropleth Map", class: "choropleth-map-img" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+        <div class="other-project-container">
+          <h2>Heat Map</h2>
+          <div class="otherProjects-description">
+            <div class="otherProjects-text">
+              <p>Heat map from Data Visualization course on freeCodeCamp.</p>
+              <p>
+              Visit site:
+              <%= link_to 'Heat Map', 'https://codepen.io/dogonscooter/full/OJovJpB', target: "_blank" %>
+              </p>
+              <div class="otherProjects-features">
+                <p>Features:</p>
+                <ul>
+                  <div>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                    <li>Heat map with data from JSON-file.</li>
+                  </div>
+                </ul>
+              </div>
+              <%= link_to 'https://codepen.io/dogonscooter/full/OJovJpB', target: "_blank" do %>
+                <%= image_tag 'heat_map.png', alt: "Heat Map", class: "choropleth-map-img" %>
+              <% end %>
             </div>
           </div>
         </div>
@@ -49,7 +140,9 @@
                   </div>
                 </ul>
               </div>
-              <%= image_tag 'url_shortener.png', alt: "URL Shortener", class: "urlshortener-img" %>
+              <%= link_to url_shortener_path, target: "_blank" do %>
+                <%= image_tag 'url_shortener.png', alt: "URL Shortener", class: "urlshortener-img" %>
+              <% end %>
             </div>
           </div>
         </div>
@@ -72,13 +165,15 @@
                   </div>
                 </ul>
               </div>
-              <%= image_tag 'currency_converter_cropped.png', alt: "Currency Converter web application", class: "currencyconverter-img" %>
+              <%= link_to currency_converter_path, target: "_blank" do %>
+                <%= image_tag 'currency_converter_cropped.png', alt: "Currency Converter web application", class: "currencyconverter-img" %>
+              <% end %>
             </div>
           </div>
         </div>
 
       <div class="photo-credit">
-        Card illustration by <a href="https://unsplash.com/@lucabravo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luca Bravo</a> on <a href="https://unsplash.com/photos/XJXWbfSo2f0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        "Other Projects" card illustration by <a href="https://unsplash.com/@lucabravo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luca Bravo</a> on <a href="https://unsplash.com/photos/XJXWbfSo2f0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
       </div>
       </div>
     </div>
