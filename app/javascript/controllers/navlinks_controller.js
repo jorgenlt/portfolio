@@ -2,25 +2,25 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="navlinks"
 export default class extends Controller {
-  static targets = ["about", "portfolio", "resume", "contact"]
+  static targets = [];
 
   about() {
-    window.location.href = '#about-anchor';
+    window.location.href = '#1'; // anchors created by fullpage.js
     pushbar.close(); // closes the mobile nav-menu
   }
 
   portfolio() {
-    window.location.href = '#portfolio-anchor'
+    window.location.href = '#2'
     pushbar.close();
   }
 
   resume() {
-    window.location.href = '#resume-anchor'
+    window.location.href = '#3'
     pushbar.close();
   }
 
   contact() {
-    window.location.href = '#contact-anchor'
+    window.location.href = '#4'
     pushbar.close();
   }
 }
