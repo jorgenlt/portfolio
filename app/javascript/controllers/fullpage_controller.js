@@ -5931,7 +5931,7 @@ export default class extends Controller {
     scrollBar: false,
     licenseKey: 'gplv3-license',
     scrollingSpeed: 1000,
-    continuousVertical: true,
+    continuousVertical: false,
     navigation: true,
     anchors:['0', '1', '2', '3', '4'],
     credits: {enabled: false},
@@ -5945,5 +5945,4 @@ export default class extends Controller {
   more() {
     window.location.href = '#1'
   }
-
 }
