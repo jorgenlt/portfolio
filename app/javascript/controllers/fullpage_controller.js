@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="fullpage"
 export default class extends Controller {
-  static targets = ["learnmore"];
+  static targets = [];
 
   connect() {
     console.log('fullpage_controller connected');
@@ -5933,7 +5933,7 @@ export default class extends Controller {
     scrollingSpeed: 1000,
     continuousVertical: true,
     navigation: true,
-    anchors:['hero-anchor', 'about-anchor', 'portfolio-anchor', 'resume-anchor', 'contact-anchor'],
+    anchors:['0', '1', '2', '3', '4'],
     credits: {enabled: false},
     normalScrollElements: '.modal-content',
     scrollOverflow: true,
@@ -5943,7 +5943,7 @@ export default class extends Controller {
 
   // scroll to #about-anchor when clicking "learn more"
   more() {
-    window.location.href = '#about-anchor'
+    window.location.href = '#1'
   }
 
 }
