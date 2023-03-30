@@ -29,6 +29,19 @@ $btn-font-weight:         400;
 
 // Override other variables below!
 
+// Btn
+.btn {
+  font-weight: 500 !important;
+}
+
+.btn-primary {
+  color: $white-reg !important;
+
+  &:hover {
+    background-color: $hover-green;
+  }
+}
+
 // Modal - options:
 .modal-header {
   span {
