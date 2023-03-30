@@ -1,19 +1,8 @@
 $d: 700ms;
 $e: cubic-bezier(0.19, 1, 0.22, 1);
-
-// * {
-//   box-sizing: border-box;
-// }
-
-.page-content {
-  /* display: grid;
-  grid-gap: 1rem; */
-  display: flex;
-  gap: 20px;
-  padding: 1rem;
-  /* max-width: 1024px; */
-  margin: 0 auto;
-}
+$bg-transform: scale(10);
+$bg-transition: 30s;
+$bg-transition-back: 15s;
 
 .new-portfolio-card-container {
   display: flex;
@@ -21,16 +10,13 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
   margin: 25px 0px;
 }
 
-
 .new-card {
   position: relative;
   top: -10px;
   display: flex;
   flex-shrink: 0;
   flex-grow: 0;
-  // align-items: flex-end;
   overflow: hidden;
-  // padding: 1rem;
   width: 220px;
   height: 380px;
   text-align: center;
@@ -42,15 +28,12 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 .new-card:before {
   content: "";
   position: absolute;
-  // top: 0;
-  // left: 0;
   width: 100%;
   height: 110%;
-  // background-size: cover;
-  // background-position: 0 0;
   transition: transform calc($d * 1.5) $e;
   pointer-events: none;
 }
+
 .new-card:after {
   content: "";
   display: block;
@@ -64,35 +47,45 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
   transform: translateY(-50%);
   transition: transform calc($d * 2) $e;
 }
+
 .new-card:nth-child(1):before {
   background-image: url(homify-pixel-2-1-rot-rm-bg.png);
   background-position: top -30px left -129px;
   background-repeat: no-repeat;
   background-size: 183% auto;
+  transition: $bg-transition-back;
 }
+
 .new-card:nth-child(2):before {
   background-image: url(messagemate_desktop1.png);
   background-position: top 0px left 0px;
   background-repeat: no-repeat;
   background-size: 175% auto;
+  transition: $bg-transition-back;
 }
+
 .new-card:nth-child(3):before {
   background-image: url(findit_desktop1.png);
   background-position: top 0px left -17px;
   background-repeat: no-repeat;
   background-size: 174% auto;
+  transition: $bg-transition-back;
 }
+
 .new-card:nth-child(4):before {
   background-image: url(tidder_desktop_1.png);
   background-position: top -24px left -158px;
   background-repeat: no-repeat;
   background-size: 295% auto;
+  transition: $bg-transition-back;
 }
+
 .new-card:nth-child(5):before {
   background-image: url(coding-bg.jpg);
   background-position: top -52px left -174px;
   background-repeat: no-repeat;
   background-size: 324% auto;
+  transition: $bg-transition-back;
 }
 
 .new-card-content {
@@ -105,18 +98,15 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
   transition: transform $d $e;
   z-index: 1;
 }
+
 .new-card-content > * + * {
   margin-top: 1rem;
 }
 
-.title {
+.new-card-title {
   font-size: 1.3rem;
   font-weight: bold;
   line-height: 1.2;
-}
-
-.copy {
-
 }
 
 .new-card:after {
@@ -126,7 +116,8 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 .new-card-content {
   transform: translateY(calc(100% - 4.5rem));
 }
-.new-card-content > *:not(.title) {
+
+.new-card-content > *:not(.new-card-title) {
   opacity: 0;
   transform: translateY(1rem);
   transition: transform $d $e, opacity $d $e;
@@ -136,22 +127,25 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 .new-card:focus-within {
   align-items: center;
 }
+
 .new-card:hover:before,
 .new-card:focus-within:before {
-  // transform: translateY(-4%);
-  transform: scale(10);
-  transition: 50s;
+  transform: $bg-transform;
+  transition: $bg-transition;
 }
+
 .new-card:hover:after,
 .new-card:focus-within:after {
   transform: translateY(-50%);
 }
+
 .new-card:hover .new-card-content,
 .new-card:focus-within .new-card-content {
   transform: translateY(0);
 }
-.new-card:hover .new-card-content > *:not(.title),
-.new-card:focus-within .new-card-content > *:not(.title) {
+
+.new-card:hover .new-card-content > *:not(.new-card-title),
+.new-card:focus-within .new-card-content > *:not(.new-card-title) {
   opacity: 1;
   transform: translateY(0);
   transition-delay: calc($d / 8);
@@ -159,6 +153,6 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 
 .new-card:focus-within:before, .new-card:focus-within:after,
 .new-card:focus-within .new-card-content,
-.new-card:focus-within .new-card-content > *:not(.title) {
+.new-card:focus-within .new-card-content > *:not(.new-card-title) {
   transition-duration: 0s;
 }
