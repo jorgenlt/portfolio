@@ -65,6 +65,14 @@ $bg-transition-back: 300ms;
 }
 
 .new-card:nth-child(3):before {
+  background-image: url(spotify-desktop3.png);
+  background-position: top 0px left -7px;
+  background-repeat: no-repeat;
+  background-size: 146% auto;
+  transition: $bg-transition-back;
+}
+
+.new-card:nth-child(4):before {
   background-image: url(findit_desktop1.png);
   background-position: top 0px left -17px;
   background-repeat: no-repeat;
@@ -72,7 +80,7 @@ $bg-transition-back: 300ms;
   transition: $bg-transition-back;
 }
 
-.new-card:nth-child(4):before {
+.new-card:nth-child(5):before {
   background-image: url(tidder_desktop_1.png);
   background-position: top -24px left -158px;
   background-repeat: no-repeat;
@@ -80,7 +88,7 @@ $bg-transition-back: 300ms;
   transition: $bg-transition-back;
 }
 
-.new-card:nth-child(5):before {
+.new-card:nth-child(6):before {
   background-image: url(coding-bg.jpg);
   background-position: top -52px left -174px;
   background-repeat: no-repeat;
