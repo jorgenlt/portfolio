@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jørgen Larsen Tjønnteig, Portfolio (jorgenlt)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Portfolio page of Jørgen Larsen Tjønnteig, fullstack web developer. Skills: Full Stack Web Development, Javascript, SQL, Ruby, Ruby on Rails, HTML, CSS, UX/UI, Product Design, Bootstrap. Visit portfolio for projects and resume / CV.">
+    <link rel="shortcut icon" type="image/jpg" href="./assets/images/favicon.ico"/>
+    <link rel="stylesheet" href="./assets/stylesheets/application.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.js"></script>
+  </head>
+
+  <body id="body">
+    <!-- LOADER -->
+    <div class="loader-container">
+      <div class="spinner"></div>
+    </div>
+
+
+    <!-- STICKY SOME BAR -->
+    <div class="sticky-some-bar">
+      <a href="mailto:contact@jorgenlt.me" class="emailat" target="_blank">
+        <i class="fa-solid fa-at"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/jorgenlt/" target="_blank" class="linkedin">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/jorgenlt" target="_blank" class="github">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://codepen.io/dogonscooter" target="_blank" class="codepen">
+        <i class="fa-brands fa-codepen"></i>
+      </a>
+      <a href="https://www.freecodecamp.org/jorgenlt" target="_blank" class="freecodecamp">
+        <i class="fa-brands fa-free-code-camp"></i>
+      </a>
+    </div>
+
+
+    <div class="container">
+      <!-- NAVBAR -->
+      <!-- all navlinks are created with the navlinks_controller because of conflict between fullpagejs and normal href-links -->
+      <div>
+        <!-- desktop navbar -->
+        <div class="container" id="nav-home">
+          <ul class="nav-links">
+            <li id="nav-about"><span class="link-num">01.</span> about</li>
+            <li id="nav-portfolio"><span class="link-num">02.</span> portfolio</li>
+            <li id="nav-resume"><span class="link-num">03.</span> resume</li>
+            <li id="nav-contact"><span class="link-num">04.</span> contact</li>
+          </ul>
+        </div>
+
+        <!-- mobile navbar -->
+        <div class="" id="mobile-nav-home">
+          <!-- open menu -->
+          <div id="burger" data-pushbar-target="mypushbar1">
+            <span><i class="fa-solid fa-bars"></i></span>
+          </div>
+
+          <!-- pushbar slide menu -->
+          <div id="mobile-menu" data-pushbar-id="mypushbar1" data-pushbar-direction="right">
+            <!-- close menu -->
+            <div id="burger-close" data-pushbar-close>
+              <span><i class="fa-solid fa-xmark"></i></span>
+            </div>
+            <!-- menu content -->
+            <ul class="mobile-nav-links">
+              <li id="mobile-nav-about"><span class="mobile-link-num">01.</span> about</li>
+              <li id="mobile-nav-portfolio"><span class="mobile-link-num">02.</span> portfolio</li>
+              <li id="mobile-nav-resume"><span class="mobile-link-num">03.</span> resume</li>
+              <li id="mobile-nav-contact"><span class="mobile-link-num">04.</span> contact</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div id="fullpage">
+          <div class="section" id="hero">
+            <div id="hero-content">
+              <div><h4>Hello, my name is</h4></div>
+              <div><h1 id="full-name">Jørgen Larsen Tjønnteig</h1></div>
+              <div><h1 id="full-name-subtitle">Full Stack Developer</h1></div>
+              <div>
+                <p>
+                  Full Stack Web Development, Javascript, SQL, Ruby, Ruby on Rails, HTML, CSS, UX/UI, Product Design, Bootstrap.
+                </p>
+              </div>
+            </div>
+            <div id="learn-more-container">
+              <div id=learn-more>
+                <p>Learn more about what I do</p>
+                <span><i class="fa-solid fa-chevron-down bounce2"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section" id="about">
+            <div id="about-content">
+              <h1>About</h1>
+              <p>A highly organized and curious former engineer in construction, now made the transition to become a Full Stack Developer.</p>
+            </div>
+          </div>
+
+          <div class="section" id="portfolio">
+            <div id="portfolio-content">
+              <div id="portfolio-headers">
+                <h1>Portfolio</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+
+              <!-- PORTFOLIO CARDS -->
+              <div id="new-portfolio-cards">
+                <div class="new-portfolio-card-container">
+                  <div class="new-card">
+                    <div class="new-card-content">
+                      <h2 class="new-card-title">Homify</h2>
+                      <p>A tinder-like home finder app. Find your dream home by swiping. An app to make apartment hunting fun and efficient.</p>
+                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#homifyModal">Explore</button>
+                    </div>
+                  </div>
+                  <div class="new-card">
+                    <div class="new-card-content">
+                      <h2 class="new-card-title">Messagemate</h2>
+                      <p>Instant messenger.</p>
+                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#messagemateModal">Explore</button>
+                    </div>
+                  </div>
+                  <div class="new-card">
+                    <div class="new-card-content">
+                      <h2 class="new-card-title">Spotify Artist Page</h2>
+                      <p>The frontend of the Spotify artist page</p>
+                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#spotifyModal">Explore</button>
+                    </div>
+                  </div>
+                  <div class="new-card">
+                    <div class="new-card-content">
+                      <h2 class="new-card-title">Findit</h2>
+                      <p>Buying and selling used things online.</p>
+                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#finditModal">Explore</button>
+                    </div>
+                  </div>
+                  <div class="new-card">
+                    <div class="new-card-content">
+                      <h2 class="new-card-title">Tidder</h2>
+                      <p>A reddit clone.</p>
+                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tidderModal">Explore</button>
+                    </div>
+                  </div>
+                  <div class="new-card">
+                    <div class="new-card-content">
+                      <h2 class="new-card-title">Other Projects</h2>
+                      <p></p>
+                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#otherProjectsModal">Explore</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="section" id="resume">
+            <div id="resume-content">
+              <h1>Resume</h1>
+              <p>Download my resume <a href="./assets/files/jorgenlt_cv_v2.pdf" target="_blank">here</a>(pdf).</p>
+            </div>
+          </div>
+
+          <div class="section" id="contact">
+            <div id="contact-content">
+              <h1>Contact</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                cupiditate accusantium illo exercitationem praesentium illum, fugit
+                aut quas dolorum at magni cum quaerat a, repellendus dolores doloremque
+                amet beatae ipsam?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- MODALS -->
+    <!-- HOMIFY -->
+    <div class="modal fade" id="homifyModal" tabindex="-1" aria-labelledby="homifyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-fullscreen-lg-down modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-2" id="homifyModalLabel">homify</h1>
+            <span data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark hover-brighter-green"></i></span>
+          </div>
+          <div class="modal-body modal-template homify-modal-body">
+            <div class="homify-lede">
+              <div>
+                <p>An app for finding apartments for rent by swiping and matching.</p>
+                <p><a href="https://github.com/jorgenlt/homify" target="_blank">View on GitHub</a></p>
+              </div>
+              <div class="homify-video">
+
+              </div>
+            </div>
+            <div class="homify-media">
+              <div class="homify-phone">
+                <iframe src="https://player.vimeo.com/video/808073105?h=86bec683c0&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                        width="250"
+                        height="556"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen
+                        title="homify demo">
+                </iframe>
+
+                <div class="homify-photos">
+                  <img src="./assets/images/homify-pixel-2-1-rot.png" alt="homify on phone.">
+                </div>
+              </div>
+              <div>
+              </div>
+              <div class="homify-desktop">
+              </div>
+            </div>
+
+            <div class="homify-documentation">
+              <h2>Features</h2>
+                <ul>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Sign up and create a profile with a profile picture.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Create a new search.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Filter search results by editing your search.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Swipe on apartments to find a match.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Instantly book an appointments for viewings on your matches.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Live instant chat feature with matches.</li>
+                </ul>
+
+              <h2>Technologies</h2>
+              <p>
+                Homify is a web application optimized for mobile and built with <a href="https://rubyonrails.org/" target="_blank">Ruby on Rails</a> on both backend and frontend. Data is stored in a PostgreSQL database and Cloudinary is used for cloud storage of the profile and apartment image files. Authentication and authorization is being handled with the <a href="https://github.com/heartcombo/devise" target="_blank">Devise gem</a>. The apps search feature is made with the <a href="https://github.com/Casecommons/pg_search" target="_blank">PgSearch </a>gem.
+              </p>
+              <p>
+                The application is additionally supported by Webpack, simple_form, maps from Mapbox, stimulus and bootstrap.
+              </p>
+
+              <h2>Technical challenges</h2>
+              <h3>Swiping on apartment cards</h3>
+              <p>
+                The Tinder-like swipe feature to register a "like" or a "nope" turned out to be quite a challenge. The final code is built upon the Javascript library <a href="https://hammerjs.github.io/" target="_blank">Hammer.js</a>, which enables touch gestures to web applications. With a lot of hits and misses the final result both looked good and was running smoothly in the web browser.
+              </p>
+              <pre>
+                <code class="language-javascript">
+    // app/javascript/controllers/swipe_controller.js
+
+    import { Controller } from "@hotwired/stimulus"
+    import '../swipe_animation'
+
+    // Connects to data-controller="swipe"
+    export default class extends Controller {
+      static targets = ["match", "like", "nope"]
+
+      // modal pop-up with show listing
+      toggle(event) {
+        document.getElementById(`button${event.path[2].dataset.id}`).click()
+      }
+
+
+      connect() {
+        // Swiping function is made with Hammer.JS, see below.
+
+        /*! Hammer.JS - v2.0.8 - 2016-04-23
+        * http://hammerjs.github.io/
+        *
+        * Copyright (c) 2016 Jorik Tangelder;
+        * Licensed under the MIT license */
+
+        // function to show match-animation for a set time
+        let matchCounter = 0;
+        let matchAnimation = () => {
+          matchCounter += 1;
+          if (matchCounter > 2) {
+            const match = document.getElementById("match-animation");
+            match.classList.remove('d-none');
+            setTimeout(() => {
+              match.classList.add('d-none')
+            }, 2300);
+          }
+        }
+
+
+        //function to fade in/out "like"
+        let fadeInOutLike = () => {
+          const like = document.getElementById("fade-in-out-like");
+          like.classList.remove('d-none');
+          setTimeout(() => {
+            like.classList.add('d-none');
+          },2000);
+        }
+
+        //function to fade in/out "like"
+        let fadeInOutNope = () => {
+          const nope = document.getElementById("fade-in-out-nope");
+          nope.classList.remove('d-none');
+          setTimeout(() => {
+            nope.classList.add('d-none');
+          }, 2000);
+        }
+
+        // selecting element with class profile to let profiles
+        let profiles = document.querySelectorAll('.profile');
+
+        const maxAngle = 42;
+        const smooth = 0.3;
+        const threshold = 42;
+        const thresholdMatch = 150;
+        profiles.forEach(setupDragAndDrop);
+
+        function setupDragAndDrop(profile) {
+          const hammertime = new Hammer(profile);
+
+          hammertime.on('pan', function (e) {
+            profile.classList.remove('profile--back');
+            let posX = e.deltaX;
+            let posY = Math.max(0, Math.abs(posX * smooth) - 42);
+            let angle = Math.min(Math.abs(e.deltaX * smooth / 100), 1) * maxAngle;
+            if (e.deltaX < 0) {
+              angle *= -1;
+            }
+
+            // user is selecting and holding the card and can move it left or right, back and forth.
+            profile.style.transform = `translateX(${posX}px) translateY(${posY}px) rotate(${angle}deg)`;
+            profile.classList.remove('profile--matching');
+            profile.classList.remove('profile--nexting');
+            if (posX > thresholdMatch) {
+              profile.classList.add('profile--matching');
+              console.log('✅ User is about to swipe yes')
+
+              fadeInOutLike();
+            } else if (posX < -thresholdMatch) {
+              profile.classList.add('profile--nexting');
+              console.log('⛔ User is about to swipe no');
+
+              fadeInOutNope();
+            }
+
+            // user releases card on the left (nope),
+            // near the middle (back to middle, no action),
+            // or on the right (yes)
+            if (e.isFinal) {
+              // right side, yes.
+              profile.style.transform = ``;
+              if (posX > thresholdMatch) {
+                profile.classList.add('profile--match');
+                console.log('✅ Yes (user is created in matches table)');
+
+                matchAnimation();
+
+                if (matchCounter > 2) {
+                  // creating a new match in matches-table.
+                  console.log( `matchCounter is ${matchCounter}`);
+                  console.dir(document.location.search.split('=')[1]);
+                  const searchId = document.location.search.split('=')[1];
+                  const url =  `/listings/${profile.dataset.id}/matches`;
+                  const body = {match: {listing_id: profile.dataset.id, search_id: searchId}};
+                  fetch(url, {
+                    method: "POST",
+                    body: JSON.stringify(body),
+                    headers: {
+                      'Content-Type': 'application/json',
+                      "X-CSRF-Token": document.querySelector("meta[name=csrf-token]").content}
+                    })
+                  }
+
+                  // left side, nope
+                } else if (posX < -thresholdMatch) {
+                  profile.classList.add('profile--next');
+                  console.log('⛔ No!');
+                } else {
+                  profile.classList.add('profile--back');
+                }
+              }
+            });
+          }
+        }
+      }
+                </code>
+              </pre>
+
+              <h3 class="mt-5">Tech. challenge 2</h3>
+              <p class="mt-4 mb-2">
+                Text with code below.
+              </p>
+              <pre>
+                <code class="language-ruby">
+    Some Code.
+                </code>
+              </pre>
+
+              <h2 class="d-none">Upcoming features</h2>
+              <ul class="d-none">
+                <li><i class="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- MESSAGEMATE -->
+    <div class="modal fade" id="messagemateModal" tabindex="-1" aria-labelledby="messagemateModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-fullscreen-lg-down modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-2" id="messagemateModalLabel">MessageMate</h1>
+            <span data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark hover-brighter-green"></i></span>
+          </div>
+          <div class="modal-body modal-template messagemate-modal-body">
+            <div class="messagemate-lede">
+              <div>
+                <p>A responsive instant messenger application for desktop and mobile.</p>
+                <p>Visit site: <a href="https://www.messagemate.me" target="_blank">messagemate.me</a></p>
+                <p>Download for android: <a href="./assets/files/messagemate.apk" target="_blank">messagemate.apk</a></p>
+                <p><a href="https://github.com/jorgenlt/messagemate" target="_blank">View on GitHub</a></p>
+              </div>
+              <div class="messagemate-video">
+                <iframe src="https://player.vimeo.com/video/793256271?h=70456f8a85&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                        width="290"
+                        height="644"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen title="Screenrecorder-2023-01-27-14-23-07-727">
+                </iframe>
+              </div>
+            </div>
+            <div class="messagemate-media">
+              <div class="messagemate-phone">
+                <div class="messagemate-photos">
+                  <img src="./assets/images/messagemate_phone1.png" alt="messagemate on phone.">
+                  <img src="./assets/images/messagemate_phone2.png" alt="messagemate on phone.">
+                </div>
+              </div>
+              <div>
+              </div>
+              <div class="messagemate-desktop">
+                  <img src="./assets/images/messagemate_desktop1.png" alt="messagemate on desktop.">
+              </div>
+            </div>
+
+            <div class="messagemate-documentation">
+              <h2>Features</h2>
+                <ul>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>A user can sign up and sign in, and add a picture to their profile. Account information and profile picture can be edited by the user at a later time.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>A user can add another user to start a new conversation ("chatroom").</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>A user can send and receive messages in real-time.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Secure authentication and authorization.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Mobile responsiveness to ensure optimal user experience. The app can be downloaded as an apk-file for android or used in the browser on desktop or mobile.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Lightweight, fast and simple messaging web application.</li>
+                </ul>
+
+              <h2>Technologies</h2>
+              <p>
+                MessageMate is built with <a href="https://rubyonrails.org/" target="_blank">Ruby on Rails</a> on both backend and frontend.
+                Data is stored in a PostgreSQL database and Cloudinary is used for cloud storage of the profile image files. Authentication and authorization
+                is being handled with the <a href="https://github.com/heartcombo/devise" target="_blank">Devise gem</a>. This ensures the user to
+                securely sign in and sign up to the application, authorization is given to the user so that they can only view their own content. The
+                application is using Websocket with Action Cable for real-time, two-way communication between the server and client. This allows the exchange of
+                messages in both directions without the need for a new request to be made for each message.
+
+                The application is additionally supported by Webpack, simple_form, stimulus and bootstrap.
+              </p>
+
+              <h2>Technical challenges</h2>
+              <h3>Making the messages appear in real time for sender and receiver</h3>
+              <p>
+                <a href="https://guides.rubyonrails.org/action_cable_overview.html" target="_blank">Action Cable</a> is a feature of
+                Ruby on Rails that provides a framework for using WebSockets in a Rails application. It allows us to create "channels" in our
+                application, which can receive and broadcast messages in real-time. This makes it possible to build real-time applications,
+                such as chat apps, posts, comments, and other features that requires real-time updates and notifications.
+              </p>
+              <p>
+                On connection to the chatrooom page the user is subscribed to the channel Chatroom. Using javascript the messages are inserted
+                into the DOM.
+              </p>
+    <pre>
+    <code class="language-javascript">
+    // app/javascript/controllers/chatroom_subscription_controller.js
+
+    // when the user connects to the page a subscription to the channel is made.
+      connect() {
+        this.channel = createConsumer().subscriptions.create(
+          { channel: "ChatroomChannel", id: this.chatroomIdValue },
+          { received: data => this.#insertMessageAndScrollDown(data) }
+          )
+          console.log(`Subscribed to the chatroom with the id ${this.chatroomIdValue}.`)
+      }
+
+      #insertMessageAndScrollDown(data) {
+        // logic to know if the sender is the current_user
+        const currentUserIsSender = this.currentUserIdValue === data.sender_id
+
+        // creating the whole message from the `data.message` string
+        const messageElement = this.#buildMessageElement(currentUserIsSender, data.message)
+
+        // inserting the `message` in the DOM
+        this.messagesTarget.insertAdjacentHTML("beforeend", messageElement)
+        window.scrollTo(0, document.body.scrollHeight);
+      }
+
+      // function to build a complete message with its two wrapping div,
+      // passing it the currentUserIsSender boolean, and the message string
+      // coming from the data:
+      #buildMessageElement(currentUserIsSender, message) {
+        return `
+        &lt;div class="message-row d-flex ${this.#justifyClass(currentUserIsSender)}">
+        &lt;div class="${this.#userStyleClass(currentUserIsSender)}">
+        ${message}
+        &lt;/div>
+        &lt;/div>
+        `
+      }
+
+      // two functions to return the relevant classes to position and style the message
+      // the user on the right and the recipient on the left, like other popular messaging services.
+      #justifyClass(currentUserIsSender) {
+        return currentUserIsSender ? "justify-content-end" : "justify-content-start"
+      }
+
+      #userStyleClass(currentUserIsSender) {
+        return currentUserIsSender ? "sender-style" : "receiver-style"
+      }
+
+      // reset the send message input field after the message is sent
+      resetForm(event) {
+        event.target.reset()
+      }
+
+      // unsubscribe from the channel when user leaves the page
+      disconnect() {
+        console.log("Unsubscribed from the chatroom")
+        this.channel.unsubscribe()
+      }
+    }
+
+    </code>
+    </pre>
+              <p class="mt-4 mb-2">On the server-side each new message is broadcasted if the message is created and saved successfully.</p>
+    <pre>
+    <code class="language-ruby">
+    # app/controllers/messages_controller.rb
+
+    def create
+      @chatroom = Chatroom.find(params[:chatroom_id])
+      @message = Message.new(message_params)
+      @message.chatroom_id = @chatroom.id
+      @message.user_id = current_user.id
+
+      if message_params[:message_body].empty?
+        # submit button 'send' does nothing.
+      else
+        # setting sender/receiver of the message
+        if current_user.id == @chatroom.user_id
+          @message.recipient_id = @chatroom.recipient_id
+        else
+          @message.recipient_id = @chatroom.user_id
+        end
+
+        # if the message is saved successfully the message is broadcasted to the Chatroom channel.
+        if @message.save
+          ChatroomChannel.broadcast_to(
+            @chatroom,
+            message: render_to_string(partial: "message", locals: { message: @message }),
+            sender_id: @message.user.id
+          )
+          head :ok
+        else
+          render "chatrooms/show", status: :unprocessable_entity
+          flash.alert = "Error. Message was not sent."
+        end
+      end
+    end
+    </code>
+    </pre>
+              <p class="mt-4 mb-2">The messages are displayed in the chatroom show view.</p>
+    <pre>
+    <code class="language-html">
+    &lt;!-- app/views/chatrooms/show.html.erb -->
+
+    &lt;div class="chat"
+      data-controller="chatroom-subscription"
+      data-chatroom-subscription-chatroom-id-value="&lt;%= @chatroom.id %>"
+      data-chatroom-subscription-current-user-id-value="&lt;%= current_user.id %>"
+    >
+      &lt;div class="messages" data-chatroom-subscription-target="messages">
+        &lt;% @chatroom.messages.each do |message| %>
+          &lt;div class="d-flex &lt;%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+            &lt;div class="&lt;%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
+              &lt;div data-controller="messagesent">
+                &lt;div data-messagesent-target="messagesent" class="d-none message-sent-at">
+                  &lt;span>
+                  Sent &lt;%= time_ago_in_words(message.created_at) %> ago.
+                  &lt;/span>
+                &lt;/div>
+                &lt;div class="message" data-action="click->messagesent#messageSent">
+                  &lt;div class="message-content">
+                    &lt;p>&lt;%= message.message_body %>&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;% end %>
+      &lt;/div>
+
+      &lt;div id="new-message">
+        &lt;%= simple_form_for [@chatroom, @message],
+          html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" },
+          class: "d-flex" } do |f| %>
+          &lt;div id="message-form">
+            &lt;div class="message-text">
+              &lt;%= f.input :message_body,
+                          as: :text,
+                          label: false,
+                          placeholder: "New message",
+                          input_html: { rows: 1 }
+                        %>
+            &lt;/div>
+            &lt;div class="send-message">
+              &lt;%= f.button :submit, 'SEND', class: "submit-button"%>
+            &lt;/div>
+          &lt;/div >
+        &lt;% end %>
+      &lt;/div>
+    &lt;/div>
+    </code>
+    </pre>
+              <h2>Upcoming features</h2>
+              <ul>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>A user can see other users profile.</li>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>A user can add personal information to their profile.</li>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>Notifications in android app.</li>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>A user can start a group chat.</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- SPOTIFY ARTIST PAGE -->
+    <div class="modal fade" id="spotifyModal" tabindex="-1" aria-labelledby="spotifyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-fullscreen-lg-down modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-2" id="spotifyModalLabel">Spotify Artist Page</h1>
+            <span data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark hover-brighter-green"></i></span>
+          </div>
+          <div class="modal-body modal-spotify spotify-modal-body">
+            <div class="spotify-lede">
+              <div>
+                <p>Frontend clone of the Spotify artist page.</p>
+                <p>Visit site: <a href="http://spotify.jorgenlt.me" target="_blank">Spotify Artist Page</a></p>
+                <p><a href="https://github.com/jorgenlt/spotify-artist-page" target="_blank">View on GitHub</a></p>
+              </div>
+              <div class="spotify-video">
+              </div>
+            </div>
+            <div class="spotify-media">
+              <div>
+              </div>
+              <div class="spotify-desktop">
+                  <img src="./assets/images/spotify-desktop.png" alt="Spotify on desktop.">
+                  <img src="./assets/images/spotify-desktop2.png" alt="Spotify on desktop.">
+              </div>
+            </div>
+
+            <div class="spotify-documentation">
+              <h2>Technologies</h2>
+              <p>
+
+              </p>
+
+              <h2>Technical challenges</h2>
+              <h3>Technical challenge 1</h3>
+              <p>
+                Text with code below.
+              </p>
+              <pre>
+                <code class="language-javascript">
+    Some Code.
+                </code>
+              </pre>
+              <p class="mt-4 mb-2">
+                Text with code below.
+              </p>
+              <pre>
+                <code class="language-ruby">
+    Some Code.
+                </code>
+              </pre>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- FINDIT -->
+    <div class="modal fade" id="finditModal" tabindex="-1" aria-labelledby="finditModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-fullscreen-lg-down modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-2" id="finditModalLabel">findit</h1>
+            <span data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark hover-brighter-green"></i></span>
+          </div>
+          <div class="modal-body modal-findit findit-modal-body">
+            <div class="findit-lede">
+              <div>
+                <p>An online classified web application. Made with inspiration from <a href="http://www.finn.no" target="_blank">Finn.no</a>.</p>
+                <p>Visit site: <a href="http://findit.herokuapp.com" target="_blank">findit</a>.</p>
+                <p><a href="https://github.com/jorgenlt/findit" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+              </div>
+              <div class="findit-video">
+              </div>
+            </div>
+            <div class="findit-media">
+              <div class="findit-phone">
+                <div class="findit-photos">
+                </div>
+              </div>
+              <div>
+              </div>
+              <div class="findit-desktop">
+                  <img src="./assets/images/findit_desktop1.png" alt="findit on desktop.">
+              </div>
+            </div>
+
+            <div class="findit-documentation">
+              <h2>Features</h2>
+                <ul>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Sign up and sign in.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Search for ads.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Browse ads by categories and subcategories.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>View ads with pictures and information.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Contact seller.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Add a new ad.</li>
+                </ul>
+
+              <h2>Technologies</h2>
+              <p>
+                Findit is built with <a href="https://rubyonrails.org/" target="_blank" rel="noopener noreferrer">Ruby on Rails</a> on both backend and frontend. Data is stored in a PostgreSQL database and all pictures are uploaded to <%= link_to "Cloudinary", 'https://cloudinary.com/', target: '_blank' %> and handled using <%= link_to "Active Storage integration", 'https://cloudinary.com/documentation/rails_activestorage' %>.
+                The <a href="https://github.com/Casecommons/pg_search" target="_blank" rel="noopener noreferrer">PgSearch</a> gem are used for searching for posts.
+                The application is additionally supported by Webpack, simple_form, stimulus and bootstrap.
+              </p>
+
+              <h2>Technical challenges</h2>
+              <h3>The search feature</h3>
+              <p>
+                The search feature on the dashboard page is made simple using the <a href="https://github.com/Casecommons/pg_search" target="_blank" rel="noopener noreferrer">PgSearch</a> gem. The Post model includes the pg_search and specifies what to search against (title, body, category and subcategory).
+              </p>
+              <pre>
+                <code class="language-ruby">
+    # app/models/post.rb
+
+    class Post < ApplicationRecord
+      belongs_to :user
+      belongs_to :category
+
+      validates :post_title, :post_body, :price, presence: true
+
+      include PgSearch::Model
+      pg_search_scope :search_posts,
+        against: [ :post_title, :post_body, :category_name, :sub_category_name ],
+          using: { tsearch: { prefix: true } }
+
+      has_one_attached :photo
+    end
+                </code>
+              </pre>
+              <p class="mt-4 mb-2">
+                The Pages controller action 'dashboard' handles the search if a query is present.
+              </p>
+              <pre>
+                <code class="language-ruby">
+    # app/controllers/pages_controller.rb
+
+    class PagesController < ApplicationController
+      skip_before_action :authenticate_user!, only: [ :dashboard ]
+
+      def dashboard
+        if params[:query].present?
+          @search_results = Post.search_posts(params[:query])
+        else
+          @search_results = nil
+        end
+      end
+    end
+                </code>
+              </pre>
+              <p class="mt-4 mb-2">
+                If '@search_results' in the Pages controller is not nil the search results are displayed in the dashboard view.
+              </p>
+              <pre>
+                <code class="language-html">
+    &lt;!-- app/views/pages/dashboard.html.erb -->
+
+    &lt;div class="search-results w-100">
+      &lt;% unless @search_results == nil %>
+        &lt;% if @search_results.empty? %>
+          &lt;h3 class="no-results">No results for your search.&lt;/h3>
+        &lt;% else %>
+          &lt;h2>&lt;%= @search_results.size %> results found&lt;/h2>
+          &lt;div class="row all-posts">
+            &lt;% @search_results.each do |post| %>
+                &lt;div class="col all-posts-card">
+                  &lt;%= link_to post_path(post), class: "all-posts-link" do %>
+                    &lt;%= attached_photo(post, 400) %>
+                    &lt;div class="post-details">
+                      &lt;p class="all-posts-location">Oslo&lt;/p>
+                      &lt;p class="all-posts-description">&lt;%= post.post_title.capitalize %>&lt;/p>
+                      &lt;span>€ &lt;%= post.price %>&lt;/span>
+                    &lt;/div>
+                  &lt;% end %>
+                &lt;/div>
+            &lt;% end %>
+          &lt;/div>
+        &lt;% end %>
+      &lt;% end %>
+    &lt;/div>
+                </code>
+              </pre>
+
+              <h3 class="mt-5">Populating categories and subcategories</h3>
+              <p>
+                When making a new post available subcategories to choose from should change with the category chosen. This was solved using javascript. The categories are populated when the site is loaded and the subcategories are populated when choosing a category. A stimulus controller handles the javascript code.
+              </p>
+              <pre>
+                <code class="language-javascript">
+    // app/javascript/controllers/new_post_controller.js
+
+    const data = [
+      {
+        category: 'Bicycles',
+        subcategories: ["Electrical", "Hybrid", "Offroad", "Racer", "Other"]
+      },
+      {
+        category: 'Electronics',
+        subcategories: ["Computers", "Photo", "TV", "Household", "Smartphones"]
+      },
+      {
+        category: 'Home',
+        subcategories: ["Furniture", "Lamps", "Kitchen"]
+      },
+      {
+        category: 'Pets',
+        subcategories: ["Bird", "Cat", "Dog", "Fish", "Horse"]
+      },
+      {
+        category: 'Sports',
+        subcategories: ["Ballsport", "Golf", "Outdoors", "Winter", "Water"]
+      },
+      {
+        category: 'Vehicles',
+        subcategories: ["Car", "Motorcycle", "Truck"]
+      },
+      {
+        category: 'Work',
+        subcategories: ["Fulltime", "Parttime"]
+      },
+      {
+        category: 'Boats',
+        subcategories: ["Sailboat", "Speedboat", "Yacht"]
+      }
+    ];
+
+    // Connects to data-controller="new-post"
+    export default class extends Controller {
+
+      static targets = ["category", "subcategory"]
+
+      connect() {
+        data.forEach(item => {
+          const option = document.createElement('option');
+          option.text = item.category;
+          this.categoryTarget.add(option);
+        });
+      }
+
+      changeSub(event) {
+        const category = event.target.value;
+        const selectedData = data.find(item => item.category === category);
+        this.subcategoryTarget.innerHTML = '';
+        selectedData.subcategories.forEach(subcategory => {
+          const option = document.createElement('option');
+          option.text = subcategory;
+          this.subcategoryTarget.add(option);
+        });
+      }
+    }
+                </code>
+              </pre>
+              <h2>Upcoming features</h2>
+              <ul>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>Edit and delete your own posts.</li>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>Creating a user profile with a profile picture.</li>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>Interactive map function on the post page.</li>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>Live chat between users.</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- TIDDER -->
+    <div class="modal fade" id="tidderModal" tabindex="-1" aria-labelledby="tidderModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-fullscreen-lg-down modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-2" id="tidderModalLabel">tidder</h1>
+            <span data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark hover-brighter-green"></i></span>
+          </div>
+          <div class="modal-body modal-template tidder-modal-body">
+            <div class="tidder-lede">
+              <div>
+                <p>A responsive reddit clone web application.</p>
+                <p>Visit site: <a href="https://www.tidder.eu" target="_blank" rel="noopener noreferrer">tidder.eu</a></p>
+                <p><a href="https://github.com/jorgenlt/tidder" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+              </div>
+            </div>
+
+            <div class="tidder-media">
+              <div class="tidder-phone">
+                <div class="tidder-video">
+                <iframe src="https://player.vimeo.com/video/798677053?h=ea04464374&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                        width="290"
+                        height="644"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen title="tidder_demo">
+                </iframe>
+                </div>
+                <div class="tidder-photos">
+                  <img src="./assets/images/tidder_phone_1.png" alt="Tidder on phone.">
+                </div>
+              </div>
+
+              <div class="tidder-desktop">
+                <img src="./assets/images/tidder_desktop_1.png" alt="Tidder on desktop.">
+              </div>
+            </div>
+
+            <div class="tidder-documentation">
+              <h2>Features</h2>
+                <ul>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>A user can sign up and sign in. Email and password can be edited by the user at a later time.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>A user can create a new post.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>A user can upvote or downvote a post.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>A user can create a new comment on a post.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>A user can upvote or downvote a comment on a post.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Secure authentication.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Mobile responsiveness to ensure optimal user experience.</li>
+                </ul>
+
+              <h2>Technologies</h2>
+              <p>
+                Tidder is built with <a href="https://rubyonrails.org/" target="_blank" rel="noopener noreferrer">Ruby on Rails</a> on both backend and frontend.
+                Data is stored in a PostgreSQL database and Cloudinary is used for cloud storage of the profile image files. Authentication is being
+                handled with the <a href="https://github.com/heartcombo/devise" target="_blank" rel="noopener noreferrer">Devise gem</a>. This ensures the user to
+                securely sign in and sign up to the application.
+
+                The application is additionally supported by Webpack, simple_form, act_as_votable, stimulus and bootstrap.
+              </p>
+
+              <h2>Technical challenges</h2>
+              <h3>Upvote and downvote</h3>
+              <p>
+                The inclusion of the renowned upvote and downvote system, which was first introduced by <a href="https://everything2.com/title/An+Introduction+to+Everything2" target="_blank" rel="noopener noreferrer">Everything2</a>
+                and later adopted by Reddit and other platforms, has become an essential feature in the development of a Reddit-like platform, as it has gained widespread popularity across various
+                websites and applications. The first approach to achieve this feature was done by making everything from scratch with the appropriate database tables and making the logic in the
+                controllers. After some research it was decided to go with the Ruby on Rails gem <a href="https://github.com/ryanto/acts_as_votable" target="_blank" rel="noopener noreferrer">acts_as_votable</a> which was developed by
+                <a href="https://github.com/ryanto" target="_blank" rel="noopener noreferrer">Ryan Toronto</a>.
+              </p>
+              <p>
+                At first glance, the acts_as_votable gem provides a straightforward solution to the upvote and downvote feature.
+                However, it doesn't offer an immediate solution for displaying the votes in real-time to the user. To achieve this functionality, additional technologies such as AJAX needs to be implemented.
+              </p>
+              <p>
+                First the databases are created according to the act_as_votable documentation. Then simply the terms "acts_as_voter" or "acts_as_votable" are added to the
+                appropriate models. The voting logic is implemented in the controllers. For instance, in the posts controller, the upvote and downvote functions are defined.
+                Whenever a user clicks the upvote or downvote button, the respective function is called, updating the post with the user's vote. The code for the upvote and
+                downvote functions is similar for other controllers that utilize the voting feature. The code below is from the posts controller.
+              </p>
+              <pre>
+                <code class="language-ruby">
+    # app/controllers/posts_controller.rb
+
+      def upvote
+        @post = Post.find(params[:id])
+        if current_user.voted_up_on? @post
+          @post.unvote_by current_user
+        else
+          @post.upvote_by current_user
+        end
+        redirect_to root_path
+
+      end
+
+      def downvote
+        @post = Post.find(params[:id])
+        if current_user.voted_down_on? @post
+          @post.unvote_by current_user
+        else
+          @post.downvote_by current_user
+        end
+        redirect_to root_path
+      end
+                </code>
+              </pre>
+              <p class="mt-4 mb-2">
+                Upvote and downvote in the views. Below shown by an example of upvote a post.
+              </p>
+              <pre>
+                <code class="language-html">
+    &lt;!-- app/views/posts/_upvote_link.html.erb -->
+
+    &lt;%= content_tag "div", id: "upvote-#{post.id}" do %>
+      &lt;%= link_to upvote_post_path(post), method: :patch, remote: true, data: { disable_with: "voting..." } do %>
+        &lt;% if current_user.voted_up_on? post %>
+          &lt;i class="fa-solid fa-arrow-up" style="color: green;">&lt;/i>
+        &lt;% else %>
+          &lt;i class="fa-solid fa-arrow-up">&lt;/i>
+        &lt;% end %>
+      &lt;% end %>
+    &lt;% end %>
+                </code>
+              </pre>
+
+              <h2>Upcoming features and fixes</h2>
+              <ul>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>Sort out authorization issues and dependencies.</li>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>AJAX on upvote and downvote.</li>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>Create a profile and add a profile picture.</li>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>Search for a post.</li>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>Save a post.</li>
+                <li><i class="fa-solid fa-circle-arrow-right"></i>Share a post.</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- OTHER PROJECTS -->
+    <div class="modal fade" id="otherProjectsModal" tabindex="-1" aria-labelledby="otherProjectsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-fullscreen-lg-down modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-2" id="otherProjectsModalLabel"></h1>
+            <span data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark hover-brighter-green"></i></span>
+          </div>
+          <div class="modal-body modal-template otherProjects-modal-body">
+
+            <div class="other-project-container">
+              <h2>Pomodoro timer</h2>
+              <div class="otherProjects-description">
+                <div class="otherProjects-text">
+                  <p>A pomodoro timer the from Web Development Libraries course on freeCodeCamp.A time management tool that breaks work into 25-minute intervals called "Pomodoros" separated by 5-minute breaks.</p>
+                  <p>
+                  Visit site: <a href="https://codepen.io/dogonscooter/full/JjaxOwp" target="_blank" rel="noopener noreferrer">Pomodoro timer</a>
+                  </p>
+                  <p><a href="https://github.com/jorgenlt/freecodecamp/tree/master/front-end-development-libraries/25%2B5-clock" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+                  <div class="otherProjects-features">
+                    <p>Features:</p>
+                    <ul>
+                      <div>
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        <li>A time management tool with 25 + 5 work/break sessions.</li>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        <li>Adjustable break and session time.</li>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        <li>End of session is alerted by an alarm.</li>
+                      </div>
+                    </ul>
+                  </div>
+                  <a href="https://codepen.io/dogonscooter/full/JjaxOwp" target="_blank" rel="noopener noreferrer">
+                      <img src="./assets/images/pomodoro_timer.png" alt="Pomodoro Timer" class="choropleth-map-img">
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="other-project-container">
+              <h2>Javascript Calculator</h2>
+              <div class="otherProjects-description">
+                <div class="otherProjects-text">
+                  <p>A javascript calculator from the Web Development Libraries course on freeCodeCamp.</p>
+                  <p>Visit site: <a href="https://codepen.io/dogonscooter/full/vYzVdbQ" target="_blank" rel="noopener noreferrer">Javascript Calculator</a></p>
+                  <p><a href="https://github.com/jorgenlt/freecodecamp/tree/master/front-end-development-libraries/javascript-calculator" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+                  <div class="otherProjects-features">
+                    <p>Features:</p>
+                    <ul>
+                      <div>
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        <li>Javascript Calculator</li>
+                      </div>
+                    </ul>
+                  </div>
+                  <a href="https://codepen.io/dogonscooter/full/vYzVdbQ" target="_blank" rel="noopener noreferrer">
+                      <img src="./assets/images/javascript_calculator.png" alt="" class="choropleth-map-img">
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="other-project-container">
+              <h2>Choropleth Map</h2>
+              <div class="otherProjects-description">
+                <div class="otherProjects-text">
+                  <p>Choropleth map from Data Visualization course on freeCodeCamp.</p>
+                  <p>Visit site: <a href="https://codepen.io/dogonscooter/full/XWPEmpX" target="_blank" rel="noopener noreferrer">Choropleth Map</a></p>
+                  <div class="otherProjects-features">
+                    <p>Features:</p>
+                    <ul>
+                      <div>
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        <li>Choropleth map with data from JSON-file.</li>
+                      </div>
+                    </ul>
+                  </div>
+                  <a href="https://codepen.io/dogonscooter/full/XWPEmpX" target="_blank" rel="noopener noreferrer">
+                      <img src="./assets/images/choropleth_map.png" alt="Choropleth Map" class="choropleth-map-img">
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="other-project-container">
+              <h2>Heat Map</h2>
+              <div class="otherProjects-description">
+                <div class="otherProjects-text">
+                  <p>Heat map from Data Visualization course on freeCodeCamp.</p>
+                  <p>Visit site: <a href="https://codepen.io/dogonscooter/full/OJovJpB'" target="_blank" rel="noopener noreferrer">Heat Map</a></p>
+                  <div class="otherProjects-features">
+                    <p>Features:</p>
+                    <ul>
+                      <div>
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        <li>Heat map with data from JSON-file.</li>
+                      </div>
+                    </ul>
+                  </div>
+                  <a href="https://codepen.io/dogonscooter/full/OJovJpB" target="_blank" rel="noopener noreferrer">
+                      <img class="choropleth-map-img" src="./assets/images/heat_map.png" alt="Heat Map">
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="other-project-container">
+              <h2>URL Shortener</h2>
+              <div class="otherProjects-description">
+                <div class="otherProjects-text">
+                  <p>A lightweight URL shortener using API from <a href="https://app.short.io/" target="_blank" rel="noopener noreferrer">app.short.io</a></p>
+                  <p>Visit site: <a href="./pages/url_shortener/url_shortener.html" target="_blank" rel="noopener noreferrer">URL Shortener</a></p>
+                  <div class="otherProjects-features">
+                    <p>Features:</p>
+                    <ul>
+                      <div>
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        <li>URL Shortener with the domain url.jorgenlt.me/SHORTENED-URL</li>
+                      </div>
+                    </ul>
+                  </div>
+                  <a href="./pages/url_shortener/url_shortener.html" target="_blank" rel="noopener noreferrer">
+                      <img src="./assets/images/url_shortener.png" alt="URL Shortener">
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="other-project-container">
+              <h2>Currency Converter</h2>
+              <div class="otherProjects-description">
+                <div class="otherProjects-text">
+                  <p>A lightweight currency converter using API from <a href="https://www.exchangerate-api.com/" target="_blank" rel="noopener noreferrer">exchangerate-api.com</a>.</p>
+                  <p>Visit site: <a href="./pages/currency_converter/currency_converter.html" target="_blank" rel="noopener noreferrer">Currency Converter</a>
+                  </p>
+                  <div class="otherProjects-features">
+                    <p>Features:</p>
+                    <ul>
+                      <div>
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        <li>Currency converter</li>
+                      </div>
+                    </ul>
+                  </div>
+                  <a href="./pages/currency_converter/currency_converter.html" target="_blank" rel="noopener noreferrer">
+                      <img  class="currencyconverter-img" src="./assets/images/currency_converter_cropped.png" alt="Currency Converter web application">
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          <div class="photo-credit">
+            "Other Projects" card illustration by <a href="https://unsplash.com/@lucabravo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luca Bravo</a> on <a href="https://unsplash.com/photos/XJXWbfSo2f0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- SCRIPTS -->
+    <script src="./assets/javascript/prism.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./assets/javascript/fullpage.min.js"></script>
+    <script src="./assets/javascript/index.js"></script>
+  </body>
+</html>
