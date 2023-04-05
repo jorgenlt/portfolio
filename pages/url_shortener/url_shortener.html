@@ -1,59 +1,40 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.js" integrity="sha512-ePtegHW811NTnZd0Er1UxtBb8dizKEdSzANYy/UhxM40FC2yCWwb1CQrj03BPbrs6XdUkcHuyVn9Xq9q0Lm34g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<div id="url-bg">
-  <div id="url-container">
-    <div id="url-shortener">
-      <h1 class="test-copy">URL Shortener</h1>
-      <div>
-        <form>
-          <input class="form-control" name="text" type="url" value  id="linkinput" placeholder="Paste a URL to shorten" >
-          <div>
-            <input class="btn btn-primary" type="submit" id="myinput" value="Go!">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>URL Shortener</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="URL Shortener">
+  <link rel="shortcut icon" type="image/jpg" href="./assets/images/favicon.ico"/>
+  <link rel="stylesheet" href="../../assets/stylesheets/application.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body id="body">
+  <div id="url-bg">
+    <div id="url-container">
+      <div id="url-shortener">
+        <h1 class="test-copy">URL Shortener</h1>
+        <div>
+          <form>
+            <input class="form-control" name="text" type="url" id="linkinput" onfocus="this.value=''" placeholder="Paste a URL to shorten" >
+            <div>
+              <input class="btn btn-primary" type="submit" id="myinput" value="Go!">
+            </div>
+          </form>
+        </div>
+        <div id="url-result" data-clipboard-target="#message" class="hidden">
+          <p>Your URL is: <span id="message"></span></p><i id="copy-url" class="fa-solid fa-copy"></i>
+          <div id="copied-container">
+            <span id="copied" class="d-none">URL copied to clipboard.</span>
           </div>
-        </form>
-      </div>
-      <div id="url-result" data-clipboard-target="#message" class="hidden">
-        <p>Your URL is: <span id="message"></span></p><i id="copy-url" class="fa-solid fa-copy"></i>
-        <div id="copied-container">
-          <span id="copied" class="d-none">URL copied to clipboard.</span>
         </div>
       </div>
     </div>
   </div>
-</div>
-<script>
-  function show() {
-    document.querySelector("#url-result").style.visibility = "visible";
-  }
 
-  document.getElementById("myinput").onclick = function() {
-    var link = document.getElementById("linkinput").value;
-    var data = {
-      "domain":"url.jorgenlt.me",
-      "originalURL": link,
-      "allowDuplicates":false };
-  fetch('https://api.short.cm/links/public', {
-      method: 'post',
-      headers: {
-        'accept': 'application/json',
-        'Content-Type': 'application/json',
-        'authorization': 'pk_0Un0di4WhxYgCjwn'
-      },
-      body: JSON.stringify(data)
-    }) .then(function(response) {
-          return response.json();
-      })
-      .then(function(data){
-        document.getElementById("message").innerHTML = data.shortURL;
-        show();
-        new ClipboardJS("#url-result");
-
-        const copyTrigger = document.querySelector("#url-result");
-        copyTrigger.addEventListener("click", function() {
-          document.querySelector("#copied").classList.remove("d-none");
-        });
-      });
-
-    document.getElementById("linkinput").value='';
-  }
-</script>
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.js" integrity="sha512-ePtegHW811NTnZd0Er1UxtBb8dizKEdSzANYy/UhxM40FC2yCWwb1CQrj03BPbrs6XdUkcHuyVn9Xq9q0Lm34g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./url_shortener.js"></script>
+  <script src="../../assets/javascript/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 

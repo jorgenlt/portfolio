@@ -10,12 +10,6 @@ $url-copy-btn: $url-pri;
 $url-tooltip-bg: #81B29A;
 $url-tooltip-color: $url-sec;
 
-$eggshell: #f4f1deff;
-$terra-cotta: #e07a5fff;
-$independence: #3d405bff;
-$green-sheen: #81b29aff;
-$deep-champagne: #f2cc8fff;
-
 .hidden {
   visibility: hidden;
 }
@@ -33,6 +27,10 @@ $deep-champagne: #f2cc8fff;
   align-items: center;
   height: 100vh;
   color: $url-color;
+
+  input::placeholder {
+    color: black;
+  }
 }
 
 #url-shortener {
