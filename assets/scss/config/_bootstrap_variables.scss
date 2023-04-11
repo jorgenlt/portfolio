@@ -41,7 +41,7 @@ $btn-font-weight:         400;
   }
 }
 
-// Modal - options:
+// MODAL
 .modal-header {
   span {
     display: flex;
@@ -104,3 +104,21 @@ $modal-fade-transform:                translateX(100%);
 // $modal-show-transform:              none;
 $modal-transition:                    transform 0.2s ease-out;
 // $modal-scale-transform:             scale(1.02);
+
+
+// TOOLTIP
+// $tooltip-font-size:                 $font-size-sm;
+// $tooltip-max-width:                 200px;
+$tooltip-color:                     $white;
+$tooltip-bg:                        $green-light;
+// $tooltip-border-radius:             $border-radius;
+// $tooltip-opacity:                   .9;
+$tooltip-padding-y:                 5px;
+$tooltip-padding-x:                 5px;
+// $tooltip-margin:                    null; // TODO: remove this in v6
+
+$tooltip-arrow-width:               20px;
+$tooltip-arrow-height:              10px;
+// fusv-disable
+// $tooltip-arrow-color:               null; // Deprecated in Bootstrap 5.2.0 for CSS variables
+// fusv-enable

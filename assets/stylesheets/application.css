@@ -1726,6 +1726,10 @@ pre[class*=language-] {
   top: 10vh;
 }
 
+#contact--links {
+  display: flex;
+}
+
 .modal-header i {
   color: #009580;
   font-size: 30px;
@@ -1769,7 +1773,7 @@ pre[class*=language-] {
   #resume h1, #resume .h1 {
     font-size: 35px;
   }
-  #contact #contact-content {
+  #contact #contact-wrapper {
     margin: 0px 40px;
   }
   #contact h1, #contact .h1 {
@@ -1820,7 +1824,7 @@ pre[class*=language-] {
   #resume h1, #resume .h1 {
     font-size: 26px;
   }
-  #contact #contact-content {
+  #contact #contact-wrapper {
     margin: 0px 10px;
   }
   #contact h1, #contact .h1 {
@@ -4859,7 +4863,7 @@ textarea.form-control-lg {
   z-index: 5;
   display: none;
   max-width: 100%;
-  padding: 0.25rem 0.5rem;
+  padding: 5px 5px;
   margin-top: 0.1rem;
   font-size: 0.875rem;
   color: #fff;
@@ -4949,7 +4953,7 @@ textarea.form-control-lg {
   z-index: 5;
   display: none;
   max-width: 100%;
-  padding: 0.25rem 0.5rem;
+  padding: 5px 5px;
   margin-top: 0.1rem;
   font-size: 0.875rem;
   color: #fff;
@@ -7819,16 +7823,16 @@ textarea.form-control-lg {
 .tooltip {
   --bs-tooltip-zindex: 1080;
   --bs-tooltip-max-width: 200px;
-  --bs-tooltip-padding-x: 0.5rem;
-  --bs-tooltip-padding-y: 0.25rem;
+  --bs-tooltip-padding-x: 5px;
+  --bs-tooltip-padding-y: 5px;
   --bs-tooltip-margin: ;
   --bs-tooltip-font-size: 0.875rem;
-  --bs-tooltip-color: var(--bs-body-bg);
-  --bs-tooltip-bg: var(--bs-emphasis-color);
+  --bs-tooltip-color: #F2F8F2;
+  --bs-tooltip-bg: #009580;
   --bs-tooltip-border-radius: var(--bs-border-radius);
   --bs-tooltip-opacity: 0.9;
-  --bs-tooltip-arrow-width: 0.8rem;
-  --bs-tooltip-arrow-height: 0.4rem;
+  --bs-tooltip-arrow-width: 20px;
+  --bs-tooltip-arrow-height: 10px;
   z-index: var(--bs-tooltip-zindex);
   display: block;
   margin: var(--bs-tooltip-margin);

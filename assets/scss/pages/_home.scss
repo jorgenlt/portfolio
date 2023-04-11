@@ -60,6 +60,14 @@
   top: 10vh;
 }
 
+#contact-wrapper {
+
+}
+
+#contact--links {
+  display: flex;
+}
+
 
 // modal excl. bootstrap variables
 .modal-header {
@@ -130,7 +138,7 @@
   }
 
   #contact {
-    #contact-content {
+    #contact-wrapper {
       margin: 0px 40px;
     }
 
@@ -209,7 +217,7 @@
   }
 
   #contact {
-    #contact-content {
+    #contact-wrapper {
       margin: 0px 10px;
     }
 

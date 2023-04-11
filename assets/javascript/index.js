@@ -5,7 +5,7 @@ setTimeout(() => {
   loaderContainer.classList.add('d-none');
   const body = document.querySelector('#body');
   body.classList.add('focus-in');
-  }, 1100 );
+}, 1100 );
 
 
 // pushbar
@@ -75,3 +75,6 @@ mobileNavContact.addEventListener('click', () => {
 const learnMore = document.querySelector('#learn-more');
 learnMore.addEventListener('click', () => window.location.href = '#1');
 
+// initializing bootstrap tooltip
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
