@@ -821,8 +821,7 @@ legend ~ div.form-check:first-of-type {
 
 .sticky-some-bar {
   position: fixed;
-  bottom: -10%;
-  transform: translateY(-50%);
+  bottom: 0px;
   z-index: 100;
 }
 .sticky-some-bar a {
@@ -833,15 +832,39 @@ legend ~ div.form-check:first-of-type {
   color: #F2F8F2;
   opacity: 0.5;
   font-size: 20px;
+  transition: 200ms;
 }
 .sticky-some-bar a:hover {
   color: #009580;
   opacity: 1;
+  transform: translateY(-5px);
+  transition: 200ms;
+}
+
+.contact--some {
+  display: none;
+  justify-content: space-evenly;
+  padding: 40px 20px;
+}
+.contact--some a {
+  color: #F2F8F2;
+  transition: 200ms;
+}
+.contact--some a:hover {
+  color: #009580;
+  transform: translateY(-5px);
+  transition: 200ms;
+}
+.contact--some i {
+  font-size: 28px;
 }
 
 @media only screen and (max-width: 600px) {
   .sticky-some-bar {
     display: none;
+  }
+  .contact--some {
+    display: flex;
   }
 }
 .loader-container {
