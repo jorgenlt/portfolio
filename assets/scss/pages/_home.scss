@@ -60,10 +60,6 @@
   top: 10vh;
 }
 
-#contact-wrapper {
-
-}
-
 #contact--links {
   display: flex;
 }
@@ -223,6 +219,14 @@
 
     h1 {
       font-size: 26px;
+    }
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .modal-body{
+    p {
+      font-size: 16px;
     }
   }
 }

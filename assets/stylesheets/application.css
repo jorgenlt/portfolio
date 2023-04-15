@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;600&display=swap");
 body p {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
@@ -1068,11 +1068,6 @@ legend ~ div.form-check:first-of-type {
     margin-top: 20px;
   }
 }
-@media only screen and (max-width: 670px) {
-  .modal-body p {
-    font-size: 16px;
-  }
-}
 .spotify-modal-body {
   display: flex;
   flex-direction: column;
@@ -1337,24 +1332,24 @@ legend ~ div.form-check:first-of-type {
     margin-top: 20px;
   }
 }
-.otherProjects-modal-body {
+.other-projects--modal-body {
   display: flex;
   flex-direction: column;
   padding-top: 0px;
 }
-.otherProjects-modal-body a {
+.other-projects--modal-body a {
   font-weight: 400;
 }
-.otherProjects-modal-body i {
+.other-projects--modal-body i {
   font-size: 12px;
   margin-right: 10px;
   color: #009580;
 }
-.otherProjects-modal-body ul div {
+.other-projects--modal-body ul div {
   display: flex;
   align-items: baseline;
 }
-.otherProjects-modal-body li {
+.other-projects--modal-body li {
   list-style: none;
   margin: 15px 0px 0px 0px;
 }
@@ -1363,47 +1358,65 @@ legend ~ div.form-check:first-of-type {
   margin-bottom: 50px;
 }
 
-.otherProjects-description {
+.other-projects--description {
   display: flex;
   margin-top: 20px;
   max-width: 750px;
 }
 
-.otherProjects-features {
+.other-projects--features {
   margin-top: 20px;
 }
-.otherProjects-features p {
+.other-projects--features p {
   margin: 0px;
 }
-.otherProjects-features ul {
+.other-projects--features ul {
   margin: 0px;
 }
-.otherProjects-features ul div {
+.other-projects--features ul div {
   margin: 5px 0px;
 }
-.otherProjects-features li {
+.other-projects--features li {
   margin: 0px;
 }
 
-.currencyconverter-img, .urlshortener-img, .choropleth-map-img {
-  width: 400px;
-  margin: 20px 0px;
+.other-projects--full-img {
+  width: 700px;
+  height: auto;
+  margin-top: 40px;
 }
 
-@media only screen and (max-width: 670px) {
-  .otherProjects-modal-body {
+.meme-screenshots {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+}
+.meme-screenshots img {
+  height: 440px;
+  width: auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .meme-screenshots {
     flex-direction: column;
   }
-  .otherProjects-description {
-    flex-direction: column;
-  }
-  .currencyconverter-img, .urlshortener-img {
+  .meme-screenshots img {
+    height: auto;
     width: 300px;
+  }
+  .other-projects--full-img {
+    width: 400px;
   }
 }
 @media only screen and (max-width: 670px) {
-  .modal-body p {
-    font-size: 16px;
+  .otherProjects--modal-body {
+    flex-direction: column;
+  }
+  .otherProjects--description {
+    flex-direction: column;
+  }
+  .other-projects--full-img {
+    width: 300px;
   }
 }
 /* PrismJS 1.29.0
@@ -1852,6 +1865,11 @@ pre[class*=language-] {
   }
   #contact h1, #contact .h1 {
     font-size: 26px;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .modal-body p {
+    font-size: 16px;
   }
 }
 .focus-in {

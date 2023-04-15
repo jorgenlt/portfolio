@@ -1,4 +1,4 @@
-.otherProjects-modal-body {
+.other-projects--modal-body {
   display: flex;
   flex-direction: column;
   padding-top: 0px;
@@ -30,13 +30,13 @@
   margin-bottom:50px
 }
 
-.otherProjects-description {
+.other-projects--description {
   display: flex;
   margin-top: 20px;
   max-width: 750px;
 }
 
-.otherProjects-features {
+.other-projects--features {
   margin-top: 20px;
 
   p {
@@ -56,29 +56,49 @@
   }
 }
 
-.currencyconverter-img, .urlshortener-img, .choropleth-map-img {
+.other-projects--full-img {
+  width: 700px;
+  height: auto;
+  margin-top: 40px;
+}
+
+.meme-screenshots {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+
+  img {
+    height: 440px;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .meme-screenshots {
+    flex-direction: column;
+
+    img {
+      height: auto;
+      width: 300px;
+    }
+  }
+
+.other-projects--full-img {
   width: 400px;
-  margin: 20px 0px
+  }
 }
 
 @media only screen and (max-width: 670px) {
-  .otherProjects-modal-body {
+  .otherProjects--modal-body {
     flex-direction: column;
   }
 
-  .otherProjects-description {
+  .otherProjects--description {
     flex-direction: column;
   }
 
-  .currencyconverter-img, .urlshortener-img {
+  .other-projects--full-img {
     width: 300px;
   }
 }
 
-@media only screen and (max-width: 670px) {
-  .modal-body{
-    p {
-      font-size: 16px;
-    }
-  }
-}
