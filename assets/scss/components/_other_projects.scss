@@ -1,31 +1,3 @@
-.other-projects--modal-body {
-  display: flex;
-  flex-direction: column;
-  padding-top: 0px;
-
-  a {
-    font-weight: 400;
-  }
-
-  i {
-    font-size: 12px;
-    margin-right: 10px;
-    color: $green-light;
-  }
-
-  ul {
-    div {
-      display: flex;
-      align-items: baseline;
-    }
-  }
-
-  li {
-    list-style: none;
-    margin: 15px 0px 0px 0px;
-  }
-}
-
 .other-project-container {
   margin-bottom:50px
 }
@@ -56,12 +28,6 @@
   }
 }
 
-.other-projects--full-img {
-  width: 700px;
-  height: auto;
-  margin-top: 40px;
-}
-
 .meme-screenshots {
   margin-top: 40px;
   display: flex;
@@ -83,22 +49,9 @@
     }
   }
 
-.other-projects--full-img {
-  width: 400px;
+  @media only screen and (max-width: 670px) {
+    .otherProjects--description {
+      flex-direction: column;
+    }
   }
 }
-
-@media only screen and (max-width: 670px) {
-  .otherProjects--modal-body {
-    flex-direction: column;
-  }
-
-  .otherProjects--description {
-    flex-direction: column;
-  }
-
-  .other-projects--full-img {
-    width: 300px;
-  }
-}
-

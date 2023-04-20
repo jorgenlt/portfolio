@@ -1,41 +1,3 @@
-.messagemate-modal-body {
-  display: flex;
-  flex-direction: column;
-
-  a {
-    font-weight: 400;
-  }
-
-  i {
-    font-size: 12px;
-    margin-right: 10px;
-    color: $green-light;
-  }
-
-  ul {
-    div {
-      display: flex;
-      align-items: baseline;
-    }
-  }
-
-  li {
-    list-style: none;
-    margin: 15px 0px 0px 0px;
-  }
-}
-
-.messagemate-lede {
-  display: flex;
-  margin-bottom: 20px;
-  max-width: 750px;
-}
-
-.messagemate-media {
-  display: flex;
-  flex-direction: column;
-}
-
 .messagemate-desktop {
   display: flex;
   justify-content: center;
@@ -68,14 +30,6 @@
 }
 
 @media only screen and (max-width: 670px) {
-  .messagemate-modal-body {
-    flex-direction: column;
-  }
-
-  .messagemate-lede {
-    flex-direction: column;
-  }
-
   .messagemate-video {
     justify-content: center;
     display: flex;

@@ -89,6 +89,14 @@ $bg-transition-back: 300ms;
 }
 
 .new-card:nth-child(6):before {
+  background-image: url(../images/tenzies-desktop2.png);
+  background-position: top -30px left -111px;
+  background-repeat: no-repeat;
+  background-size: 199% auto;
+  transition: $bg-transition-back;
+}
+
+.new-card:nth-child(7):before {
   background-image: url(../images/coding-bg.jpg);
   background-position: top -52px left -174px;
   background-repeat: no-repeat;

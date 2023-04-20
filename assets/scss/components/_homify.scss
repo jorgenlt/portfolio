@@ -1,41 +1,3 @@
-.homify-modal-body {
-  display: flex;
-  flex-direction: column;
-
-  a {
-    font-weight: 400;
-  }
-
-  i {
-    font-size: 12px;
-    margin-right: 10px;
-    color: $green-light;
-  }
-
-  ul {
-    div {
-      display: flex;
-      align-items: baseline;
-    }
-  }
-
-  li {
-    list-style: none;
-    margin: 15px 0px 0px 0px;
-  }
-}
-
-.homify-lede {
-  display: flex;
-  margin-bottom: 20px;
-  max-width: 750px;
-}
-
-.homify-media {
-  display: flex;
-  flex-direction: column;
-}
-
 .homify-desktop {
   display: flex;
   justify-content: center;
@@ -67,14 +29,6 @@
 }
 
 @media only screen and (max-width: 670px) {
-  .homify-modal-body {
-    flex-direction: column;
-  }
-
-  .homify-lede {
-    flex-direction: column;
-  }
-
   .homify-video {
     justify-content: center;
     display: flex;
@@ -99,5 +53,4 @@
       margin-top: 20px;
     }
   }
-
 }

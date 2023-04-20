@@ -1,0 +1,89 @@
+// MODAL
+.modal-header {
+    span {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.modal-content {
+    padding: 15px;
+
+    h2 {
+        font-size: 24px;
+        margin: 30px 0px 10px 0px;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin: 0px 0px 5px 0px;
+    }
+}
+
+.projects-modal--body {
+    display: flex;
+    flex-direction: column;
+
+    a {
+        font-weight: 400;
+    }
+
+    i {
+        font-size: 12px;
+        margin-right: 10px;
+        color: $green-light;
+    }
+
+    ul {
+        div {
+            display: flex;
+            align-items: baseline;
+        }
+    }
+
+    li {
+        list-style: none;
+        margin: 15px 0px 0px 0px;
+    }
+}
+
+.projects-modal--lede {
+    display: flex;
+    margin-bottom: 20px;
+    max-width: 750px;
+}
+
+.projects-modal--full-img {
+    width: 700px;
+    height: auto;
+    margin-top: 40px;
+}
+
+.projects-modal--media {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 800px) {
+  .projects-modal--full-img {
+    width: 400px;
+    }
+  }
+
+@media only screen and (max-width: 670px) {
+    .projects-modal--body{
+        flex-direction: column;
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .projects-modal--lede {
+        flex-direction: column;
+    }
+
+    .projects-modal--full-img {
+        width: 300px;
+    }
+}
