@@ -11,12 +11,12 @@
 
     h2 {
         font-size: 24px;
-        margin: 30px 0px 10px 0px;
+        margin: 50px 0px 10px 0px;
     }
 
     h3 {
         font-size: 20px;
-        margin: 0px 0px 5px 0px;
+        margin: 30px 0px 10px 0px;
     }
 }
 
@@ -53,6 +53,10 @@
     max-width: 750px;
 }
 
+.lede--video {
+    margin: 10px 10px;
+}
+
 .projects-modal--full-img {
     width: 700px;
     height: auto;
@@ -62,6 +66,17 @@
 .projects-modal--media {
     display: flex;
     flex-direction: column;
+}
+
+.media--desktop {
+    display: flex;
+    justify-content: center;
+    max-width: 750px;
+
+    img {
+      margin: 40px 0px;
+      width: 640px;
+    }
 }
 
 @media only screen and (max-width: 800px) {

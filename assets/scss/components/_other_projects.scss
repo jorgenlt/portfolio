@@ -1,5 +1,5 @@
-.other-project-container {
-  margin-bottom:50px
+.other-projects--wrapper {
+  margin-bottom: 100px;
 }
 
 .other-projects--description {
@@ -37,6 +37,10 @@
     height: 440px;
     width: auto;
   }
+}
+
+.photo-credit {
+  font-size: 12px;
 }
 
 @media only screen and (max-width: 800px) {
