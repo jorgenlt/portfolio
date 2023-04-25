@@ -25,7 +25,7 @@ new fullpage('#fullpage', {
   scrollingSpeed: 1000,
   continuousVertical: true,
   navigation: true,
-  anchors:['0', '1', '2', '3', '4'],
+  anchors:['0', '1', '2', '3', '4', '5'],
   credits: {enabled: false},
   normalScrollElements: '.modal-content',
   scrollOverflow: true,
