@@ -693,7 +693,7 @@
             <div class="projects-modal--lede">
               <div>
                 <p>A native Android app powered by ChatGPT.</p>
-                <p><a href="https://github.com/jorgenlt/messagemate" target="_blank">View on GitHub</a></p>
+                <p><a href="https://github.com/jorgenlt/smartbot" target="_blank">View on GitHub</a></p>
               </div>
               <div class="lede--video">
 
@@ -706,27 +706,87 @@
             <div>
               <h2>Features</h2>
                 <ul>
-                  <li><i class="fa-solid fa-circle-arrow-right"></i></li>
-                  <li><i class="fa-solid fa-circle-arrow-right"></i></li>
-                  <li><i class="fa-solid fa-circle-arrow-right"></i></li>
-                  <li><i class="fa-solid fa-circle-arrow-right"></i></li>
-                  <li><i class="fa-solid fa-circle-arrow-right"></i></li>
-                  <li><i class="fa-solid fa-circle-arrow-right"></i></li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>To get started, insert your personal ChatGPT API key, create your app, and install it on your device.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Acess to a powerful conversational AI through the power of the GPT 3.5 Turbo model.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>ChatGPT has the ability to read message history with the inclusion of chat logs with each prompt.</li>
+                  <li><i class="fa-solid fa-circle-arrow-right"></i>Conversation will saved in the android local storage.</li>
                 </ul>
 
               <h2>Technologies</h2>
               <p>
-                SmartBot is built with...
+                SmartBot is built with React Native on the Expo framework. The app is connected to the OpenAI API.
               </p>
 
               <h2>Technical challenges</h2>
-              <h3>Tech. challenge 1</h3>
+              <h3>API call</h3>
               <p>
                 Description.
               </p>
     <pre>
     <code class="language-javascript">
+// App.js
 
+// API call
+useEffect(() => {
+  if(userMessage !== '') {
+    // get the last 10 messages as context (chat history)
+    let contextMessages;
+
+    if(messages.length > 10) {
+      contextMessages = messages.slice(-10);
+    } else {
+      contextMessages = messages;
+    };
+
+    const requestMessages = [
+      ...contextMessages,
+      {
+        role: "user",
+        content: userMessage
+      }
+    ];
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${API_KEY}`
+      },
+      body: JSON.stringify({
+        model: "gpt-3.5-turbo",
+        messages: requestMessages,
+        max_tokens: 1000
+      })
+    };
+
+    setLoading(true);
+
+    fetch('https://api.openai.com/v1/chat/completions', options)
+      .then(response => response.json())
+      .then(data => {
+        setMessages(prevMessages => {
+          const responseMessage = data.choices[0].message;
+          const newMessages = [
+            ...prevMessages,
+            {
+              role: responseMessage.role,
+              content: responseMessage.content,
+            }
+          ];
+
+          // storing message in async storage
+          storeMessages(newMessages);
+
+          // setting the messages state
+          return newMessages;
+        });
+
+        // stopping loading animation
+        setLoading(false);
+      })
+      .catch(error => console.error(error));
+  }
+}, [userMessage]);
     </code>
     </pre>
 
