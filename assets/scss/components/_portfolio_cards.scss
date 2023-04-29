@@ -65,6 +65,14 @@ $bg-transition-back: 300ms;
 }
 
 .portfolio-cards--card:nth-child(3):before {
+  background-image: url(../images/smartbot-mobile.jpg);
+  background-position: top 0px left -7px;
+  background-repeat: no-repeat;
+  background-size: 105% auto;
+  transition: $bg-transition-back;
+}
+
+.portfolio-cards--card:nth-child(4):before {
   background-image: url(../images/spotify-desktop3.png);
   background-position: top 0px left -7px;
   background-repeat: no-repeat;
@@ -72,7 +80,7 @@ $bg-transition-back: 300ms;
   transition: $bg-transition-back;
 }
 
-.portfolio-cards--card:nth-child(4):before {
+.portfolio-cards--card:nth-child(5):before {
   background-image: url(../images/findit_desktop1.png);
   background-position: top 0px left -17px;
   background-repeat: no-repeat;
@@ -80,7 +88,7 @@ $bg-transition-back: 300ms;
   transition: $bg-transition-back;
 }
 
-.portfolio-cards--card:nth-child(5):before {
+.portfolio-cards--card:nth-child(6):before {
   background-image: url(../images/tidder_desktop_1.png);
   background-position: top -24px left -158px;
   background-repeat: no-repeat;
@@ -88,7 +96,7 @@ $bg-transition-back: 300ms;
   transition: $bg-transition-back;
 }
 
-.portfolio-cards--card:nth-child(6):before {
+.portfolio-cards--card:nth-child(7):before {
   background-image: url(../images/tenzies-desktop2.png);
   background-position: top -30px left -111px;
   background-repeat: no-repeat;
@@ -96,7 +104,7 @@ $bg-transition-back: 300ms;
   transition: $bg-transition-back;
 }
 
-.portfolio-cards--card:nth-child(7):before {
+.portfolio-cards--card:nth-child(8):before {
   background-image: url(../images/coding-bg.jpg);
   background-position: top -52px left -174px;
   background-repeat: no-repeat;
