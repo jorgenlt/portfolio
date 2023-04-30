@@ -1384,6 +1384,12 @@ pre[class*=language-] {
   font-size: 16px;
   max-width: 55%;
 }
+#hero #hero-graphics {
+  position: absolute;
+  z-index: -1;
+  top: calc(50% - 200px);
+  right: 0px;
+}
 #hero #learn-more-container {
   position: fixed;
   bottom: 0;

@@ -23,6 +23,17 @@
     max-width: 55%;
   }
 
+  #hero-content {
+    // position: relative;
+  }
+
+  #hero-graphics {
+    position: absolute;
+    z-index: -1;
+    top: calc(50% - 200px);
+    right: 0px;
+  }
+
   #learn-more-container {
     position: fixed;
     bottom: 0;
