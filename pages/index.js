@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>edit title</title>
-        <meta name="description" content="edit content" />
+        <title>Jørgen Larsen Tjønnteig, Portfolio (jorgenlt)</title>
+        <meta name="description" content="Portfolio page of Jørgen Larsen Tjønnteig, fullstack web developer. Skills: Full Stack Web Development, Javascript, SQL, Ruby, Ruby on Rails, HTML, CSS, UX/UI, Product Design, Bootstrap. Visit portfolio for projects and resume / CV." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
