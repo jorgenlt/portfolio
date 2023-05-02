@@ -1,0 +1,35 @@
+.homify-photos {
+  display: flex;
+  justify-content: space-between;
+  max-width: 750px;
+  margin: 0px;
+}
+
+.homify-phone {
+  display: flex;
+
+  img {
+    margin: 0px;
+    height: 644px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .homify-video {
+    justify-content: center;
+    display: flex;
+  }
+
+  .homify-phone {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homify-photos {
+    flex-direction: column;
+
+    img {
+      height: 450px;
+    }
+  }
+}

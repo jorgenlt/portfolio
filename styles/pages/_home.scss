@@ -1,0 +1,232 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  background-color: $black-dark;
+  color: $white;
+  
+  a {
+    color: $green-light;
+    font-weight: 500;
+    transition: 200ms;
+    text-decoration: none;
+    
+    &:hover {
+      color: $hover-green;
+    }
+  }
+}
+
+.hover-brighter-green {
+  &:hover {
+    color: $hover-green
+  }
+}
+
+#hero {
+  h4 {
+    font-weight: 100;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-weight: 700;
+    font-size: 60px;
+  }
+  
+  #full-name {
+    font-size: 60px;
+  }
+  
+  #full-name-subtitle {
+    font-size: 60px;
+    color: $green-light;
+    margin-bottom: 20px;
+  }
+  
+  #learn-more-container {
+    position: fixed;
+    bottom: 20px;
+    left: 0px;
+    width: 100vw;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #learn-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    p {
+      margin-bottom: 5px;
+    }
+  }
+  
+  .bounce2 {
+    animation: bounce2 2s ease infinite;
+  }
+  
+  @keyframes bounce2 {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+  }
+  
+}
+
+#portfolio-headers {
+  position: absolute;
+  top: 10vh;
+}
+
+#contact--links {
+  display: flex;
+}
+
+// animations
+// focus in
+.focus-in {
+  animation: focus-in 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+// Responsive design
+
+@media only screen and (max-width: 1000px) {
+  #hero {
+    #hero-content {
+      margin: 0px 40px;
+    }
+    
+    h4 {
+      font-size: 20px;
+    }
+    
+    #full-name {
+      font-size: 35px;
+    }
+    
+    #full-name-subtitle {
+      font-size: 35px;
+    }
+  }
+  
+  #about {
+    #about-content {
+      margin: 0px 40px;
+    }
+  }
+  
+  #portfolio {
+    #portfolio-content {
+      margin: 20px 0px;
+    }
+    
+    #portfolio-headers {
+      top: 8vh;
+    }
+  }
+  
+  #resume {
+    #resume-content {
+      margin: 0px 40px;
+    }
+  }
+  
+  #contact {
+    #contact-wrapper {
+      margin: 0px 40px;
+    }
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+  body p {
+    font-size: 14px;
+  }
+  
+  .section {
+    padding: 50px 10px;
+  }
+  
+  #fp-nav.fp-right {
+    right: 0px !important;
+  }
+  
+  #hero {
+    #hero-content {
+      margin: 0px 10px;
+    }
+    
+    h4 {
+      font-size: 16px;
+    }
+    
+    #full-name {
+      font-size: 26px;
+    }
+    
+    #full-name-subtitle {
+      font-size: 26px;
+    }
+    
+    #learn-more-container {
+      font-size: 14px;
+    }
+  }
+  
+  #about {
+    #about-content {
+      margin: 0px 10px;
+    }
+    
+    h1 {
+      font-size: 26px;
+    }
+  }
+  
+  #portfolio {
+    #portfolio-content {
+      margin: 0px 10px;
+    }
+    
+    h1 {
+      font-size: 26px;
+    }
+  }
+  
+  #resume {
+    #resume-content {
+      margin: 0px 10px;
+    }
+    
+    h1 {
+      font-size: 26px;
+    }
+  }
+  
+  #contact {
+    #contact-wrapper {
+      margin: 0px 10px;
+    }
+    
+    h1 {
+      font-size: 26px;
+    }
+  }
+}
+

@@ -1,0 +1,25 @@
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;600&display=swap');
+
+// Currency-converter
+$currency-font: 'Kanit', sans-serif;
+
+// Define fonts for body and headers
+$nav-font: 'Space Mono', monospace;
+
+// colors
+$black:         #101319;
+$green-light:   #009580;
+$black-dark:    #212531;
+$black-darker:  #14161d;
+$bronze:        #996e5c;
+$white-reg:     #F2F8F2;
+$white:         #F2F8F2;
+$light-gray:    #dddfe3;
+$dark-gray:     #313547;
+$hover-green:   lighten($green-light, 10);
+$hover-scroll:  lighten($black-darker, 15);
+
+// other variables

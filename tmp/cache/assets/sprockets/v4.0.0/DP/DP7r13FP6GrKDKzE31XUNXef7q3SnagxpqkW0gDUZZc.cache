@@ -1,22 +1,0 @@
-{:uriI"áfile://app/assets/builds/application.js.LICENSE.txt?type=text/plain&id=a055c7859b6afb798ddf7edb77a1ee21b5888321b775889e2201b4f2e3d6ea43:ET:load_pathI"app/assets/builds;T:filenameI"1app/assets/builds/application.js.LICENSE.txt;T:	nameI"application.js.LICENSE;T:logical_pathI"application.js.LICENSE.txt;T:content_typeI"text/plain;T:sourceI"6/*!
-    * fullPage 4.0.15
-    * https://github.com/alvarotrigo/fullPage.js
-    *
-    * @license GPLv3 for open source use only
-    * or Fullpage Commercial License for commercial use
-    * http://alvarotrigo.com/fullPage/pricing/
-    *
-    * Copyright (C) 2018 http://alvarotrigo.com/fullPage - A project by Alvaro Trigo
-    */
-
-/*!
-  * Bootstrap v5.2.3 (https://getbootstrap.com/)
-  * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-  */
-;T:metadata{
-:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"4processors:type=text/plain&file_type=text/plain;TTI"?file-digest://app/assets/builds/application.js.LICENSE.txt;TTF:charsetI"
-utf-8;F:digest"%—zi´É∏uq≠xm%4)M—ÆóÔÂãgzu÷˘∫†í:lengthi6:environment_versionI"1.0;T:dependencies_digest"%*ê…9åU—e _Ñ*•k
-¶V≤œ˙›Á≠*L!ó◊p’:idI"Ea055c7859b6afb798ddf7edb77a1ee21b5888321b775889e2201b4f2e3d6ea43;F

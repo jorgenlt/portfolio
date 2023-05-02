@@ -1,0 +1,135 @@
+// MODAL
+.modal-header {
+    border-bottom: none;
+    padding: 0px;
+
+    span {
+        display: flex;
+        align-items: center;
+    }
+
+    i {
+        color: $green-light;
+        font-size: 30px;
+        cursor: pointer;
+      }
+}
+
+.modal-title {
+    font-size: 40px;
+}
+
+.modal-content {
+    padding: 0px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+
+    background-color: $black-dark;
+    color: $white;
+
+    h2 {
+        font-size: 24px;
+        margin: 50px 0px 10px 0px;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin: 30px 0px 10px 0px;
+    }
+
+    h1, h2, h3, h4 {
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+.projects-modal--body {
+    display: flex;
+    flex-direction: column;
+
+    i {
+        font-size: 12px;
+        margin-right: 10px;
+        color: $green-light;
+    }
+
+    ul {
+        div {
+            display: flex;
+            align-items: baseline;
+        }
+    }
+
+    li {
+        list-style: none;
+        margin: 15px 0px 0px 0px;
+    }
+}
+
+.projects-modal--lede {
+    display: flex;
+    margin-bottom: 20px;
+    max-width: 750px;
+}
+
+.lede--video {
+    margin: 10px 10px;
+}
+
+.projects-modal--full-img {
+    width: 700px;
+    height: auto;
+    margin-top: 40px;
+}
+
+.projects-modal--media {
+    display: flex;
+    flex-direction: column;
+}
+
+.media--desktop {
+    display: flex;
+    justify-content: center;
+    max-width: 750px;
+
+    img {
+      margin: 40px 0px;
+      width: 640px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .projects-modal--full-img {
+    width: 400px;
+    }
+  }
+
+@media only screen and (max-width: 670px) {
+    .projects-modal--body{
+        flex-direction: column;
+
+        ul {
+            padding: 0px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+
+        pre {
+            font-size: 12px;
+            background-color: $black !important;
+        }
+    }
+
+    .modal-title {
+        font-size: 30px;
+    }
+
+    .projects-modal--lede {
+        flex-direction: column;
+    }
+
+    .projects-modal--full-img {
+        width: 300px;
+    }
+}
