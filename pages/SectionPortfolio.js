@@ -1,11 +1,11 @@
-import Homify from './components/Homify';
-import Messagemate from './components/Messagemate';
-import Smartbot from './components/Smartbot';
-import Spotify from './components/Spotify';
-import Findit from './components/Findit';
-import Tidder from './components/Tidder';
-import Tenzies from './components/Tenzies';
-import OtherProjects from './components/OtherProjects'
+import Homify from '@/components/Homify';
+import Messagemate from '@/components/Messagemate';
+import Smartbot from '@/components/Smartbot';
+import Spotify from '@/components/Spotify';
+import Findit from '@/components/Findit';
+import Tidder from '@/components/Tidder';
+import Tenzies from '@/components/Tenzies';
+import OtherProjects from '@/components/OtherProjects';
 
 export default function SectionPortfolio() {
     return (

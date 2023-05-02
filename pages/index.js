@@ -5,9 +5,9 @@ import SectionAbout from './SectionAbout';
 import SectionPortfolio from './SectionPortfolio';
 import SectionResume from './SectionResume';
 import SectionContact from './SectionContact';
-import Loader from './components/Loader';
-import SomeBar from './components/SomeBar'
-import Nav from './components/Nav';
+import Loader from '@/components/Loader';
+import SomeBar from '@/components/SomeBar'
+import Nav from '@/components/Nav';
 
 export default function Home() {
   return (
