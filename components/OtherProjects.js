@@ -250,7 +250,7 @@ export default function OtherProjects() {
                                         </ul>
                                     </div>
                                     <a href="https://currency-converter.jorgenlt.me/" target="_blank" rel="noopener noreferrer">
-                                        <img src="/images/currency_converter_cropped.png" alt="Currency Converter web application" class="projects-modal--full-img" />
+                                        <img src="/images/currency_converter.png" alt="Currency Converter web application" class="projects-modal--full-img" />
                                     </a>
                                 </div>
                             </div>
