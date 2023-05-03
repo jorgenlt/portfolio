@@ -226,7 +226,7 @@ export default function OtherProjects() {
                                             </div>
                                         </ul>
                                     </div>
-                                    <a href="./pages/url_shortener/url_shortener.html" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://url.jorgenlt.me" target="_blank" rel="noopener noreferrer">
                                         <img src="/images/url_shortener.png" alt="URL Shortener" class="projects-modal--full-img" />
                                     </a>
                                 </div>
@@ -238,7 +238,7 @@ export default function OtherProjects() {
                             <div class="other-projects--description">
                                 <div>
                                     <p>A lightweight currency converter using API from <a href="https://www.exchangerate-api.com/" target="_blank" rel="noopener noreferrer">exchangerate-api.com</a>.</p>
-                                    <p>Visit site: <a href="./pages/currency_converter/currency_converter.html" target="_blank" rel="noopener noreferrer">Currency Converter</a>
+                                    <p>Visit site: <a href="https://currency-converter.jorgenlt.me/" target="_blank" rel="noopener noreferrer">Currency Converter</a>
                                     </p>
                                     <div class="other-projects--features">
                                         <p>Features:</p>
@@ -249,7 +249,7 @@ export default function OtherProjects() {
                                             </div>
                                         </ul>
                                     </div>
-                                    <a href="./pages/currency_converter/currency_converter.html" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://currency-converter.jorgenlt.me/" target="_blank" rel="noopener noreferrer">
                                         <img src="/images/currency_converter_cropped.png" alt="Currency Converter web application" class="projects-modal--full-img" />
                                     </a>
                                 </div>
