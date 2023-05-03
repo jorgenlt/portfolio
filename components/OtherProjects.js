@@ -216,7 +216,7 @@ export default function OtherProjects() {
                             <div class="other-projects--description">
                                 <div>
                                     <p>A lightweight URL shortener using API from <a href="https://app.short.io/" target="_blank" rel="noopener noreferrer">app.short.io</a></p>
-                                    <p>Visit site: <a href="./pages/url_shortener/url_shortener.html" target="_blank" rel="noopener noreferrer">URL Shortener</a></p>
+                                    <p>Visit site: <a href="https://url.jorgenlt.me" target="_blank" rel="noopener noreferrer">URL Shortener</a></p>
                                     <div class="other-projects--features">
                                         <p>Features:</p>
                                         <ul>
