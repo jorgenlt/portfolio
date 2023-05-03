@@ -1,104 +1,20 @@
-// General style
-// $font-size-base: 1rem;
-
-// Colors
-// $primary:    $green-light;
-// $secondary:  $black-dark;
-// $success:    $green-light;
-// $info:       $green-light;
-// $danger:     $green-light;
-// $warning:    $green-light;
-
-// Buttons & inputs' radius
-$border-radius:           3px;
-$border-radius-lg:        3px;
-$border-radius-sm:        3px;
-$btn-font-weight:         400;
-
-// $btn-link-color:          $white-reg;
-// $btn-link-hover-color:    $white-reg;
-
-// Override other variables below!
-
 // Btn
 .btn {
   font-weight: 500 !important;
 }
 
 .btn-primary {
-  background-color: $green-light;
+  background-color: $pri;
   border: none;
   border-radius: 3px;
-  color: $white-reg !important;
+  color: $sec !important;
 
   &:hover {
-    background-color: $hover-green;
+    background-color: $hover;
   }
 
   &:active {
-    background-color: $hover-green !important;
+    background-color: $hover !important;
     transform: scale(1.05) !important;
   }
 }
-
-// MODAL
-
-// $modal-inner-padding:               $spacer;
-
-// $modal-footer-margin-between:       .5rem;
-
-// $modal-dialog-margin:               .5rem;
-// $modal-dialog-margin-y-sm-up:       1.75rem;
-
-// $modal-title-line-height:           $line-height-base;
-
-// $modal-content-color:               null;
-$modal-content-bg:                  $black-dark;
-// $modal-content-border-color:        var(--#{$prefix}border-color-translucent);
-// $modal-content-border-width:        $border-width;
-// $modal-content-border-radius:       $border-radius-lg;
-// $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width);
-// $modal-content-box-shadow-xs:       $box-shadow-sm;
-// $modal-content-box-shadow-sm-up:    $box-shadow;
-
-// $modal-backdrop-bg:                 $black;
-// $modal-backdrop-opacity:            .5;
-
-$modal-header-border-color:         none;
-// $modal-header-border-width:         $modal-content-border-width;
-$modal-header-padding-y:            0px;
-$modal-header-padding-x:            10px;
-// $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
-
-// $modal-footer-bg:                   null;
-$modal-footer-border-color:         $modal-header-border-color;
-// $modal-footer-border-width:         $modal-header-border-width;
-
-// $modal-sm:                          300px;
-// $modal-md:                          500px;
-// $modal-lg:                          800px;
-// $modal-xl:                          1140px;
-
-// $modal-fade-transform:                translate(0, -500px);
-$modal-fade-transform:                translateX(100%);
-// $modal-show-transform:              none;
-$modal-transition:                    transform 0.2s ease-out;
-// $modal-scale-transform:             scale(1.02);
-
-
-// TOOLTIP
-// $tooltip-font-size:                 $font-size-sm;
-// $tooltip-max-width:                 200px;
-$tooltip-color:                     $white;
-$tooltip-bg:                        $green-light;
-// $tooltip-border-radius:             $border-radius;
-// $tooltip-opacity:                   .9;
-$tooltip-padding-y:                 5px;
-$tooltip-padding-x:                 5px;
-// $tooltip-margin:                    null; // TODO: remove this in v6
-
-$tooltip-arrow-width:               20px;
-$tooltip-arrow-height:              10px;
-// fusv-disable
-// $tooltip-arrow-color:               null; // Deprecated in Bootstrap 5.2.0 for CSS variables
-// fusv-enable

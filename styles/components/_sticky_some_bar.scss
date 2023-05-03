@@ -1,7 +1,6 @@
 .sticky-some-bar {
   position: fixed;
   bottom: 0px;
-  // transform: translateY(-50%);
   z-index: 100;
 
   a {
@@ -9,13 +8,13 @@
     text-align: center;
     padding: 5px 15px;
     transition: all 0.3s ease;
-    color: $white-reg;
+    color: $white;
     opacity: 0.5;
     font-size: 20px;
     transition: 200ms;
     
     &:hover {
-      color: $green-light;
+      color: $pri;
       opacity: 1;
       transform: translateY(-5px);
       transition: 200ms;
@@ -30,11 +29,11 @@
   padding: 40px 20px;
 
   a {
-    color: $white-reg;
+    color: $white;
     transition: 200ms;
 
     &:hover {
-      color: $green-light;
+      color: $pri;
       transform: translateY(-5px);
       transition: 200ms;
     }

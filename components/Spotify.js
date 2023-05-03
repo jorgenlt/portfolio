@@ -35,16 +35,16 @@ export default function Spotify() {
                     <span className='modal-close' onClick={handleClose}><i className="fa-solid fa-xmark hover-brighter-green"></i></span>
                 </Modal.Header>
                 <Modal.Body>
-                    <div class="projects-modal--body">
-                        <div class="projects-modal--lede">
+                    <div className="projects-modal--body">
+                        <div className="projects-modal--lede">
                             <div>
                                 <p>Frontend clone of the Spotify artist page.</p>
                                 <p>Visit site: <a href="https://spotify.jorgenlt.me" target="_blank">Spotify Artist Page</a></p>
                                 <p><a href="https://github.com/jorgenlt/spotify-artist-page" target="_blank">View on GitHub</a></p>
                             </div>
                         </div>
-                        <div class="projects-modal--media">
-                            <div class="media--spotify-desktop">
+                        <div className="projects-modal--media">
+                            <div className="media--spotify-desktop">
                                 <img src="/images/spotify-desktop.png" alt="Spotify on desktop." />
                                 <img src="/images/spotify-desktop2.png" alt="Spotify on desktop." />
                             </div>
@@ -61,7 +61,7 @@ export default function Spotify() {
                             <SyntaxHighlighter language="javascript" style={tomorrowNightBright}>
                                 'Code snippet'
                             </SyntaxHighlighter>
-                            <p class="mt-4 mb-2">
+                            <p className="mt-4 mb-2">
                                 Text with code below.
                             </p>
                             <SyntaxHighlighter language="javascript" style={tomorrowNightBright}>

@@ -36,15 +36,15 @@ export default function Messagemate() {
                     <span className='modal-close' onClick={handleClose}><i className="fa-solid fa-xmark hover-brighter-green"></i></span>
                 </Modal.Header>
                 <Modal.Body>
-                    <div class="projects-modal--body">
-                        <div class="projects-modal--lede">
+                    <div className="projects-modal--body">
+                        <div className="projects-modal--lede">
                             <div>
                                 <p>A responsive instant messenger application for desktop and mobile.</p>
                                 <p>Visit site: <a href="https://www.messagemate.me" target="_blank">messagemate.me</a></p>
                                 <p>Download for android: <a href="/files/messagemate.apk" target="_blank">messagemate.apk</a></p>
                                 <p><a href="https://github.com/jorgenlt/messagemate" target="_blank">View on GitHub</a></p>
                             </div>
-                            <div class="lede--video">
+                            <div className="lede--video">
                                 <iframe src="https://player.vimeo.com/video/793256271?h=70456f8a85&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                                         width="290"
                                         height="644"
@@ -54,16 +54,16 @@ export default function Messagemate() {
                                 </iframe>
                             </div>
                         </div>
-                        <div class="projects-modal--media">
-                            <div class="messagemate-phone">
-                                <div class="messagemate-photos">
+                        <div className="projects-modal--media">
+                            <div className="messagemate-phone">
+                                <div className="messagemate-photos">
                                 <img src="/images/messagemate_phone1.png" alt="messagemate on phone." />
                                 <img src="/images/messagemate_phone2.png" alt="messagemate on phone." />
                                 </div>
                             </div>
                             <div>
                             </div>
-                            <div class="media--desktop">
+                            <div className="media--desktop">
                                 <img src="/images/messagemate_desktop1.png" alt="messagemate on desktop." />
                             </div>
                         </div>
@@ -71,12 +71,12 @@ export default function Messagemate() {
                         <div>
                             <h2>Features</h2>
                                 <ul>
-                                <li><i class="fa-solid fa-circle-arrow-right"></i>A user can sign up and sign in, and add a picture to their profile. Account information and profile picture can be edited by the user at a later time.</li>
-                                <li><i class="fa-solid fa-circle-arrow-right"></i>A user can add another user to start a new conversation ("chatroom").</li>
-                                <li><i class="fa-solid fa-circle-arrow-right"></i>A user can send and receive messages in real-time.</li>
-                                <li><i class="fa-solid fa-circle-arrow-right"></i>Secure authentication and authorization.</li>
-                                <li><i class="fa-solid fa-circle-arrow-right"></i>Mobile responsiveness to ensure optimal user experience. The app can be downloaded as an apk-file for android or used in the browser on desktop or mobile.</li>
-                                <li><i class="fa-solid fa-circle-arrow-right"></i>Lightweight, fast and simple messaging web application.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>A user can sign up and sign in, and add a picture to their profile. Account information and profile picture can be edited by the user at a later time.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>A user can add another user to start a new conversation ("chatroom").</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>A user can send and receive messages in real-time.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>Secure authentication and authorization.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>Mobile responsiveness to ensure optimal user experience. The app can be downloaded as an apk-file for android or used in the browser on desktop or mobile.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>Lightweight, fast and simple messaging web application.</li>
                                 </ul>
 
                             <h2>Technologies</h2>
@@ -109,21 +109,21 @@ export default function Messagemate() {
                                 {messagemateCode1}
                             </SyntaxHighlighter>
                             
-                            <p class="mt-4 mb-2">On the server-side each new message is broadcasted if the message is created and saved successfully.</p>
+                            <p className="mt-4 mb-2">On the server-side each new message is broadcasted if the message is created and saved successfully.</p>
                             <SyntaxHighlighter language="ruby" style={tomorrowNightBright}>
                                 {messagemateCode2}
                             </SyntaxHighlighter>
                             
-                            <p class="mt-4 mb-2">The messages are displayed in the chatroom show view.</p>
+                            <p className="mt-4 mb-2">The messages are displayed in the chatroom show view.</p>
                             <SyntaxHighlighter language="django" style={tomorrowNightBright}>
                                 {messagemateCode3}
                             </SyntaxHighlighter>
                             <h2>Upcoming features</h2>
                             <ul>
-                                <li><i class="fa-solid fa-circle-arrow-right"></i>A user can see other users profile.</li>
-                                <li><i class="fa-solid fa-circle-arrow-right"></i>A user can add personal information to their profile.</li>
-                                <li><i class="fa-solid fa-circle-arrow-right"></i>Notifications in android app.</li>
-                                <li><i class="fa-solid fa-circle-arrow-right"></i>A user can start a group chat.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>A user can see other users profile.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>A user can add personal information to their profile.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>Notifications in android app.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>A user can start a group chat.</li>
                             </ul>
                         </div>
                     </div>

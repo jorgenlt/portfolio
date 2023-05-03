@@ -1,6 +1,8 @@
+$nav-font: 'Space Mono', monospace;
+
 #nav-home {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   background: none;
 
   ul {
@@ -19,18 +21,18 @@
     padding-top: 3px;
     padding-left: 30px;
     text-decoration: none;
-    color: $white-reg;
+    color: $white;
     font-size: 14px;
     transition: all 0.3s ease;
     cursor: pointer;
 
     &:hover {
-      color: $green-light;
+      color: $pri;
     }
   }
 
   .link-num {
-    color: $green-light;
+    color: $pri;
   }
 }
 
@@ -39,7 +41,7 @@
   display: none;
 
   #burger {
-    color: $green-light;
+    color: $pri;
     font-size: 30px;
     position: absolute;
     top: 5px;
@@ -48,7 +50,7 @@
   }
 
   #burger-close {
-    color: $green-light;
+    color: $pri;
     font-size: 30px;
     position: absolute;
     top: 5px;
@@ -65,18 +67,18 @@
   }
 
   .mobile-link-num {
-    color: $green-light;
+    color: $pri;
   }
 
   li {
     padding-left: 0px;
     text-decoration: none;
-    color: $white-reg;
+    color: $white;
     font-size: 22px;
     cursor: pointer;
 
     &:hover {
-      color: $green-light;
+      color: $pri;
     }
   }
 
@@ -86,7 +88,7 @@
 }
 
 #mobile-menu {
-  background-color: $black-dark;
+  background-color: $sec;
 }
 
 @media only screen and (max-width: 600px) {

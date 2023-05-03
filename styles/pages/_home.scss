@@ -1,24 +1,24 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  background-color: $black-dark;
+  background-color: $sec;
   color: $white;
   
   a {
-    color: $green-light;
+    color: $pri;
     font-weight: 500;
     transition: 200ms;
     text-decoration: none;
     
     &:hover {
-      color: $hover-green;
+      color: $hover;
     }
   }
 }
 
 .hover-brighter-green {
   &:hover {
-    color: $hover-green
+    color: $hover
   }
 }
 
@@ -40,7 +40,7 @@ body {
   
   #full-name-subtitle {
     font-size: 60px;
-    color: $green-light;
+    color: $pri;
     margin-bottom: 20px;
   }
   

@@ -35,8 +35,8 @@ export default function Tidder() {
                     <span className='modal-close' onClick={handleClose}><i className="fa-solid fa-xmark hover-brighter-green"></i></span>
                 </Modal.Header>
                 <Modal.Body>
-                    <div class="projects-modal--body">
-                        <div class="projects-modal--lede">
+                    <div className="projects-modal--body">
+                        <div className="projects-modal--lede">
                             <div>
                                 <p>A responsive reddit clone web application.</p>
                                 <p>Visit site: <a href="https://www.tidder.eu" target="_blank" rel="noopener noreferrer">tidder.eu</a></p>
@@ -44,9 +44,9 @@ export default function Tidder() {
                             </div>
                         </div>
                         
-                        <div class="projects-modal--media">
-                            <div class="tidder-phone">
-                                <div class="tidder-video">
+                        <div className="projects-modal--media">
+                            <div className="tidder-phone">
+                                <div className="tidder-video">
                                     <iframe src="https://player.vimeo.com/video/798677053?h=ea04464374&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                                     width="290"
                                     height="644"
@@ -55,12 +55,12 @@ export default function Tidder() {
                                     allowfullscreen title="tidder_demo">
                                 </iframe>
                             </div>
-                            <div class="tidder-photos">
+                            <div className="tidder-photos">
                                 <img src="/images/tidder_phone_1.png" alt="Tidder on phone." />
                             </div>
                         </div>
                         
-                        <div class="media--desktop">
+                        <div className="media--desktop">
                             <img src="/images/tidder_desktop_1.png" alt="Tidder on desktop." />
                         </div>
                     </div>
@@ -68,13 +68,13 @@ export default function Tidder() {
                     <div>
                         <h2>Features</h2>
                         <ul>
-                            <li><i class="fa-solid fa-circle-arrow-right"></i>A user can sign up and sign in. Email and password can be edited by the user at a later time.</li>
-                            <li><i class="fa-solid fa-circle-arrow-right"></i>A user can create a new post.</li>
-                            <li><i class="fa-solid fa-circle-arrow-right"></i>A user can upvote or downvote a post.</li>
-                            <li><i class="fa-solid fa-circle-arrow-right"></i>A user can create a new comment on a post.</li>
-                            <li><i class="fa-solid fa-circle-arrow-right"></i>A user can upvote or downvote a comment on a post.</li>
-                            <li><i class="fa-solid fa-circle-arrow-right"></i>Secure authentication.</li>
-                            <li><i class="fa-solid fa-circle-arrow-right"></i>Mobile responsiveness to ensure optimal user experience.</li>
+                            <li><i className="fa-solid fa-circle-arrow-right"></i>A user can sign up and sign in. Email and password can be edited by the user at a later time.</li>
+                            <li><i className="fa-solid fa-circle-arrow-right"></i>A user can create a new post.</li>
+                            <li><i className="fa-solid fa-circle-arrow-right"></i>A user can upvote or downvote a post.</li>
+                            <li><i className="fa-solid fa-circle-arrow-right"></i>A user can create a new comment on a post.</li>
+                            <li><i className="fa-solid fa-circle-arrow-right"></i>A user can upvote or downvote a comment on a post.</li>
+                            <li><i className="fa-solid fa-circle-arrow-right"></i>Secure authentication.</li>
+                            <li><i className="fa-solid fa-circle-arrow-right"></i>Mobile responsiveness to ensure optimal user experience.</li>
                         </ul>
                         
                         <h2>Technologies</h2>
@@ -109,7 +109,7 @@ export default function Tidder() {
                         <SyntaxHighlighter language="ruby" style={tomorrowNightBright}>
                             {tidderCode1}
                         </SyntaxHighlighter>
-                        <p class="mt-4 mb-2">
+                        <p className="mt-4 mb-2">
                             Upvote and downvote in the views. Below shown by an example of upvote a post.
                         </p>
                         <SyntaxHighlighter language="django" style={tomorrowNightBright}>
@@ -118,12 +118,12 @@ export default function Tidder() {
                         
                         <h2>Upcoming features and fixes</h2>
                         <ul>
-                            <li><i class="fa-solid fa-circle-arrow-right"></i>Sort out authorization issues and dependencies.</li>
-                            <li><i class="fa-solid fa-circle-arrow-right"></i>AJAX on upvote and downvote.</li>
-                            <li><i class="fa-solid fa-circle-arrow-right"></i>Create a profile and add a profile picture.</li>
-                            <li><i class="fa-solid fa-circle-arrow-right"></i>Search for a post.</li>
-                            <li><i class="fa-solid fa-circle-arrow-right"></i>Save a post.</li>
-                            <li><i class="fa-solid fa-circle-arrow-right"></i>Share a post.</li>
+                            <li><i className="fa-solid fa-circle-arrow-right"></i>Sort out authorization issues and dependencies.</li>
+                            <li><i className="fa-solid fa-circle-arrow-right"></i>AJAX on upvote and downvote.</li>
+                            <li><i className="fa-solid fa-circle-arrow-right"></i>Create a profile and add a profile picture.</li>
+                            <li><i className="fa-solid fa-circle-arrow-right"></i>Search for a post.</li>
+                            <li><i className="fa-solid fa-circle-arrow-right"></i>Save a post.</li>
+                            <li><i className="fa-solid fa-circle-arrow-right"></i>Share a post.</li>
                         </ul>
                         
                     </div>

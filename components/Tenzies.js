@@ -35,8 +35,8 @@ export default function Tenzies() {
                     <span className='modal-close' onClick={handleClose}><i className="fa-solid fa-xmark hover-brighter-green"></i></span>
                 </Modal.Header>
                 <Modal.Body>
-                    <div class="modal-body projects-modal--body">
-                        <div class="projects-modal--lede">
+                    <div className="modal-body projects-modal--body">
+                        <div className="projects-modal--lede">
                             <div>
                                 <p>An online tenzies game made with React.</p>
                                 <p>Visit site: <a href="https://tenzies.jorgenlt.me" target="_blank">React Tenzies Game</a></p>
@@ -46,16 +46,16 @@ export default function Tenzies() {
                             <div>
                                 <div>
                                     <a href="https://tenzies.jorgenlt.me" target="_blank">
-                                    <img src="/images/tenzies-desktop.png" alt="Tenzies on desktop." class="projects-modal--full-img" />
+                                    <img src="/images/tenzies-desktop.png" alt="Tenzies on desktop." className="projects-modal--full-img" />
                                 </a>
                             </div>
                         </div>
                         <div>
                             <h2>Features</h2>
                             <ul>
-                                <li><i class="fa-solid fa-circle-arrow-right"></i>Roll dices.</li>
-                                <li><i class="fa-solid fa-circle-arrow-right"></i>Click to hold dices between rolls.</li>
-                                <li><i class="fa-solid fa-circle-arrow-right"></i>Animation on winning.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>Roll dices.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>Click to hold dices between rolls.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>Animation on winning.</li>
                             </ul>
                             
                             <h2>Technologies</h2>
@@ -71,7 +71,7 @@ export default function Tenzies() {
                                 {tenziesCode1}
                             </SyntaxHighlighter>
                             <h3>The die, Die.js</h3>
-                            <p class="mt-4 mb-2">
+                            <p className="mt-4 mb-2">
                             </p>
                             <SyntaxHighlighter language="javascript" style={tomorrowNightBright}>
                                 {tenziesCode2}
