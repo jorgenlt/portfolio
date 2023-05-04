@@ -42,13 +42,13 @@ export default function Smartbot() {
                                 <p>A native Android app powered by ChatGPT.</p>
                                 <p><a href="https://github.com/jorgenlt/smartbot" target="_blank">View on GitHub</a></p>
                             </div>
-                            <div className="lede--video">
+                            <div className="lede--video d-none">
                                 
                             </div>
                         </div>
                         <div className="projects-modal--media">
                             <div>
-                                <img className="projects-modal--full-img" src="/images/smartbot-mobile.jpg" alt="Smartbot screenshot" />
+                                <img className="smartbot-mobile" src="/images/smartbot-mobile-frame.png" alt="Smartbot screenshot" />
                             </div>
                             
                         </div>
