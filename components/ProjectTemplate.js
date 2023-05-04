@@ -16,9 +16,14 @@ export default function Smartbot() {
 
     return (
         <>
-
-            <button type="button" className="btn btn-primary btn-sm" onClick={handleShow}>Explore</button>
-
+            <div className="portfolio-cards--card">
+                <div className='portfolio-cards--card-overlay'></div>
+                <div className="portfolio-cards--card-content">
+                    <h2 className="portfolio-cards--card-title">Title</h2>
+                    <p>Description</p>
+                    <div type="button" className="btn btn-primary" onClick={handleShow}>Explore</div>
+                </div>
+            </div>
             
             <Modal 
                 show={show} 

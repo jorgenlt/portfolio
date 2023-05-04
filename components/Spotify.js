@@ -17,10 +17,11 @@ export default function Spotify() {
     return (
         <>
             <div className="portfolio-cards--card">
+                <div className='portfolio-cards--card-overlay'></div>
                 <div className="portfolio-cards--card-content">
                     <h2 className="portfolio-cards--card-title">Spotify Artist Page</h2>
                     <p>The frontend of the Spotify artist page</p>
-                    <button type="button" className="btn btn-primary btn-sm" onClick={handleShow}>Explore</button>
+                    <div type="button" className="btn btn-primary btn-sm" onClick={handleShow}>Explore</div>
                 </div>
             </div>
             <Modal 

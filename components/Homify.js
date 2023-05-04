@@ -17,10 +17,11 @@ export default function Homify() {
     return (
         <>
             <div className="portfolio-cards--card">
+                <div className='portfolio-cards--card-overlay'></div>
                 <div className="portfolio-cards--card-content">
                     <h2 className="portfolio-cards--card-title">Homify</h2>
                     <p>A tinder-like home finder app. Find your dream home by swiping. An app to make apartment hunting fun and efficient.</p>
-                    <button type="button" className="btn btn-primary btn-sm" onClick={handleShow}>Explore</button>
+                    <div type="button" className="btn btn-primary" onClick={handleShow}>Explore</div>
                 </div>
             </div>
             <Modal 

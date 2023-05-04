@@ -17,10 +17,11 @@ export default function Smartbot() {
     return (
         <>
             <div className="portfolio-cards--card">
+                <div className='portfolio-cards--card-overlay'></div>
                 <div className="portfolio-cards--card-content">
                     <h2 className="portfolio-cards--card-title">SmartBot</h2>
                     <p>A native Android app powered by ChatGPT.</p>
-                    <button type="button" className="btn btn-primary btn-sm" onClick={handleShow}>Explore</button>
+                    <div type="button" className="btn btn-primary btn-sm" onClick={handleShow}>Explore</div>
                 </div>
             </div>
             <Modal 
