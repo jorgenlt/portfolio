@@ -21,7 +21,7 @@ export default function OtherProjects() {
                 <div className="portfolio-cards--card-content">
                     <h2 className="portfolio-cards--card-title">Other Projects</h2>
                     <p></p>
-                    <div type="button" className="btn btn-primary btn-sm" onClick={handleShow}>Explore</div>
+                    <div type="button" className="btn btn-primary" onClick={handleShow}>Explore</div>
                 </div>
             </div>
 

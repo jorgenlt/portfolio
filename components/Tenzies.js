@@ -21,7 +21,7 @@ export default function Tenzies() {
                 <div className="portfolio-cards--card-content">
                     <h2 className="portfolio-cards--card-title">React Tenzies Game</h2>
                     <p>The classic tenzies game made with React.</p>
-                    <div type="button" className="btn btn-primary btn-sm" onClick={handleShow}>Explore</div>
+                    <div type="button" className="btn btn-primary" onClick={handleShow}>Explore</div>
                 </div>
             </div>
             <Modal 

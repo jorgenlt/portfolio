@@ -21,7 +21,7 @@ export default function Tidder() {
                 <div className="portfolio-cards--card-content">
                     <h2 className="portfolio-cards--card-title">Tidder</h2>
                     <p>A reddit clone.</p>
-                    <div type="button" className="btn btn-primary btn-sm" onClick={handleShow}>Explore</div>
+                    <div type="button" className="btn btn-primary" onClick={handleShow}>Explore</div>
                 </div>
             </div>
             <Modal 
