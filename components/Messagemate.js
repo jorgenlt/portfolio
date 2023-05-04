@@ -41,7 +41,7 @@ export default function Messagemate() {
                         <div className="projects-modal--lede">
                             <div>
                                 <p>A responsive instant messenger application for desktop and mobile.</p>
-                                <p>Visit site: <a href="https://www.messagemate.me" target="_blank">messagemate.me</a></p>
+                                <p>Visit site: <a href="https://messagemate.herokuapp.com" target="_blank">messagemate.me</a></p>
                                 <p>Download for android: <a href="/files/messagemate.apk" target="_blank">messagemate.apk</a></p>
                                 <p><a href="https://github.com/jorgenlt/messagemate" target="_blank">View on GitHub</a></p>
                             </div>

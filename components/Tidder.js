@@ -40,7 +40,7 @@ export default function Tidder() {
                         <div className="projects-modal--lede">
                             <div>
                                 <p>A responsive reddit clone web application.</p>
-                                <p>Visit site: <a href="https://www.tidder.eu" target="_blank" rel="noopener noreferrer">tidder.eu</a></p>
+                                <p>Visit site: <a href="https://tidderapp.herokuapp.com/" target="_blank" rel="noopener noreferrer">tidder.eu</a></p>
                                 <p><a href="https://github.com/jorgenlt/tidder" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
                             </div>
                         </div>
