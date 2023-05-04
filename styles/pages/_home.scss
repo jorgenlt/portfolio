@@ -14,6 +14,13 @@ body {
       color: $hover;
     }
   }
+
+  .disable-select {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+  }
 }
 
 .hover-brighter-green {
@@ -34,12 +41,7 @@ body {
     font-size: 60px;
   }
   
-  #full-name {
-    font-size: 60px;
-  }
-  
-  #full-name-subtitle {
-    font-size: 60px;
+  #hero--subtitle {
     color: $pri;
     margin-bottom: 20px;
   }
@@ -59,7 +61,11 @@ body {
     align-items: center;
     
     p {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    p, i {
+      font-size: 14px;
     }
   }
   
@@ -73,6 +79,38 @@ body {
     60% {transform: translateY(-5px);}
   }
   
+}
+
+#hero--content {
+  margin: 10px;
+}
+
+#hero--cta {
+  cursor: pointer;
+  background-color: transparent;
+  color: $pri;
+  font-weight: 500;
+  width: fit-content;
+  padding: 8px 12px;
+  margin-top: 20px;
+  border-radius: 3px;
+  border: 1px solid $pri;
+  transition: 300ms;
+  
+  &:hover {
+    background-color: $pri;
+    color: $sec;
+  }
+
+  &:active {
+    transform: scale(1.1);
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  #hero--cta {
+    font-size: 14px;
+  }
 }
 
 #contact--links {
@@ -117,7 +155,7 @@ body {
 
     h1 {
       font-size: 26px;
-      margin: 10px 0px 0px 10px;
+      margin: 10px 0px 10px 0px;
     }
   }
   
@@ -125,8 +163,8 @@ body {
     right: 3px !important;
   }
 
-  #hero-content, #about-content, #resume-content, #contact-wrapper {
-    margin: 0px 10px;
+  #hero--content, #about-content, #resume-content, #contact-wrapper {
+    margin: 20px;
   }
   
   #hero {    
@@ -134,16 +172,18 @@ body {
       font-size: 16px;
     }
     
-    #full-name {
+    #hero--title {
       font-size: 26px;
     }
     
-    #full-name-subtitle {
+    #hero--subtitle {
       font-size: 26px;
     }
     
     #learn-more-container {
-      font-size: 14px;
+      p, i {
+        font-size: 12px;
+      }
     }
   }
 

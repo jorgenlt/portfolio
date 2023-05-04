@@ -1,12 +1,17 @@
 export default function SectionHero() {
     return (
         <div className="section" id="hero">
-            <div id="hero-content">
-                <div><h4>Hello, my name is</h4></div>
-                <div><h1 id="full-name">Jørgen Larsen Tjønnteig</h1></div>
-                <div><h1 id="full-name-subtitle">Full Stack Developer</h1></div>
-                <div>
-                    <p>Full Stack Web Development, Javascript, SQL, Ruby, Ruby on Rails, HTML, CSS, UX/UI, Product Design, Bootstrap.</p>
+            <div id="hero--content">
+                <h4>Hello, my name is</h4>
+                <h1 id="hero--title">Jørgen Larsen Tjønnteig</h1>
+                <h1 id="hero--subtitle">Full Stack Developer</h1>
+                <p>Full Stack Web Development, Javascript, React, Ruby, Rails, SQL, HTML, CSS, UX/UI, Bootstrap, Sass</p>
+                <div 
+                    id="hero--cta" 
+                    className="disable-select"
+                    onClick={() => window.location.href = '#2'}
+                >
+                    See my projects
                 </div>
             </div>
             <div id="learn-more-container" onClick={() => window.location.href = '#1'}>
