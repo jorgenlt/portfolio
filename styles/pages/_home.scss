@@ -3,7 +3,7 @@ body {
   font-weight: 400;
   background-color: $sec;
   color: $white;
-  
+
   a {
     color: $pri;
     font-weight: 500;
@@ -75,13 +75,16 @@ body {
   
 }
 
-#portfolio-headers {
-  position: absolute;
-  top: 10vh;
-}
-
 #contact--links {
   display: flex;
+}
+
+#portfolio-headers {
+  margin: 0px 0px 60px 0px;
+
+  h1, p {
+    margin: 0px;
+  }
 }
 
 // animations
@@ -104,74 +107,29 @@ body {
 }
 
 // Responsive design
-
-@media only screen and (max-width: 1000px) {
-  #hero {
-    #hero-content {
-      margin: 0px 40px;
-    }
-    
-    h4 {
-      font-size: 20px;
-    }
-    
-    #full-name {
-      font-size: 35px;
-    }
-    
-    #full-name-subtitle {
-      font-size: 35px;
-    }
-  }
-  
-  #about {
-    #about-content {
-      margin: 0px 40px;
-    }
-  }
-  
-  #portfolio {
-    #portfolio-content {
-      margin: 20px 0px;
-    }
-    
-    #portfolio-headers {
-      top: 8vh;
-    }
-  }
-  
-  #resume {
-    #resume-content {
-      margin: 0px 40px;
-    }
-  }
-  
-  #contact {
-    #contact-wrapper {
-      margin: 0px 40px;
-    }
-  }
-  
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 670px) {
   body p {
     font-size: 14px;
   }
   
   .section {
-    padding: 50px 10px;
+    padding: 0px 5px;
+
+    h1 {
+      font-size: 26px;
+      margin: 10px 0px 0px 10px;
+    }
   }
   
   #fp-nav.fp-right {
-    right: 0px !important;
+    right: 3px !important;
+  }
+
+  #hero-content, #about-content, #resume-content, #contact-wrapper {
+    margin: 0px 10px;
   }
   
-  #hero {
-    #hero-content {
-      margin: 0px 10px;
-    }
-    
+  #hero {    
     h4 {
       font-size: 16px;
     }
@@ -188,45 +146,13 @@ body {
       font-size: 14px;
     }
   }
-  
-  #about {
-    #about-content {
-      margin: 0px 10px;
-    }
-    
-    h1 {
-      font-size: 26px;
-    }
+
+  #portfolio-content {
+    margin: 40px 0px 90px 0px;
   }
-  
-  #portfolio {
-    #portfolio-content {
-      margin: 0px 10px;
-    }
-    
-    h1 {
-      font-size: 26px;
-    }
-  }
-  
-  #resume {
-    #resume-content {
-      margin: 0px 10px;
-    }
-    
-    h1 {
-      font-size: 26px;
-    }
-  }
-  
-  #contact {
-    #contact-wrapper {
-      margin: 0px 10px;
-    }
-    
-    h1 {
-      font-size: 26px;
-    }
+
+  #portfolio-headers {
+    margin: 0px 0px 40px 20px;
   }
 }
 
