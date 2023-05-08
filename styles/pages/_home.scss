@@ -87,8 +87,8 @@ body {
 
 #hero--cta {
   cursor: pointer;
-  background-color: transparent;
-  color: $pri;
+  background-color: $pri;
+  color: $sec;
   font-weight: 500;
   width: fit-content;
   padding: 8px 12px;
@@ -98,8 +98,8 @@ body {
   transition: 300ms;
   
   &:hover {
-    background-color: $pri;
-    color: $sec;
+    background-color: transparent;
+    color: $pri;
   }
 
   &:active {
