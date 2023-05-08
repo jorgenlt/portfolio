@@ -1,4 +1,5 @@
 import Modal from 'react-bootstrap/Modal';
+import PortfolioCard from '../components/PortfolioCard';
 import { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { messagemateCode1, messagemateCode2, messagemateCode3 } from './code-snippets/messagemateCode';
@@ -16,14 +17,12 @@ export default function Messagemate() {
 
     return (
         <>
-            <div className="portfolio-cards--card">
-                <div className='portfolio-cards--card-overlay'></div>
-                <div className="portfolio-cards--card-content">
-                    <h2 className="portfolio-cards--card-title">Messagemate</h2>
-                    <p>Instant messenger.</p>
-                    <div type="button" className="btn btn-primary" onClick={handleShow}>Explore</div>
-                </div>
-            </div>
+            <PortfolioCard
+                title="Messagemate"
+                description="Instant messenger."
+                backgroundImage='/images/messagemate_desktop1.png'
+                handleShow={handleShow}
+            />
             <Modal 
                 show={show} 
                 onHide={handleClose}

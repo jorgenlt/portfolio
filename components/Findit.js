@@ -1,4 +1,5 @@
 import Modal from 'react-bootstrap/Modal';
+import PortfolioCard from '../components/PortfolioCard';
 import { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { finditCode1, finditCode2, finditCode3, finditCode4 } from './code-snippets/finditCode';
@@ -16,15 +17,12 @@ export default function Findit() {
 
     return (
         <>
-            <div className="portfolio-cards--card">
-                <div className='portfolio-cards--card-overlay'></div>
-                <div className="portfolio-cards--card-content">
-                    <h2 className="portfolio-cards--card-title">Findit</h2>
-                    <p>Buying and selling used things online.</p>
-                    <div type="button" className="btn btn-primary" onClick={handleShow}>Explore</div>
-                </div>
-            </div>
-
+            <PortfolioCard
+                title="Findit"
+                description="Buying and selling used things online."
+                backgroundImage='/images/findit_desktop1.png'
+                handleShow={handleShow}
+            />
             
             <Modal 
                 show={show} 

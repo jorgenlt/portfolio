@@ -1,4 +1,5 @@
 import Modal from 'react-bootstrap/Modal';
+import PortfolioCard from '../components/PortfolioCard';
 import { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { tidderCode1, tidderCode2 } from './code-snippets/tidderCode';
@@ -16,14 +17,12 @@ export default function Tidder() {
 
     return (
         <>
-            <div className="portfolio-cards--card">
-                <div className='portfolio-cards--card-overlay'></div>
-                <div className="portfolio-cards--card-content">
-                    <h2 className="portfolio-cards--card-title">Tidder</h2>
-                    <p>A reddit clone.</p>
-                    <div type="button" className="btn btn-primary" onClick={handleShow}>Explore</div>
-                </div>
-            </div>
+            <PortfolioCard
+                title="Tidder"
+                description="A reddit clone."
+                backgroundImage='/images/tidder_desktop_1.png'
+                handleShow={handleShow}
+            />
             <Modal 
                 show={show} 
                 onHide={handleClose}

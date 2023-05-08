@@ -3,7 +3,7 @@ body {
   font-weight: 400;
   background-color: $sec;
   color: $white;
-
+  
   a {
     color: $pri;
     font-weight: 500;
@@ -14,7 +14,7 @@ body {
       color: $hover;
     }
   }
-
+  
   .disable-select {
     -webkit-user-select: none;  
     -moz-user-select: none;    
@@ -63,7 +63,7 @@ body {
     p {
       margin-bottom: 10px;
     }
-
+    
     p, i {
       font-size: 14px;
     }
@@ -95,21 +95,15 @@ body {
   margin-top: 20px;
   border-radius: 3px;
   border: 1px solid $pri;
-  transition: 300ms;
+  transition: 100ms;
   
   &:hover {
     background-color: transparent;
     color: $pri;
   }
-
+  
   &:active {
-    transform: scale(1.1);
-  }
-}
-
-@media only screen and (max-width: 670px) {
-  #hero--cta {
-    font-size: 14px;
+    transform: scale(0.9);
   }
 }
 
@@ -117,11 +111,48 @@ body {
   display: flex;
 }
 
-#portfolio-headers {
-  margin: 0px 0px 60px 0px;
+#portfolio--content {
+  min-height: 89vh;
+}
 
+#portfolio--header {
+  margin: 0px 0px 60px 0px;
+  
   h1, p {
     margin: 0px;
+  }
+}
+
+#portfolio--filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    color: $pri;
+    font-weight: 500;
+    width: fit-content;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border: 1px solid $pri;
+    transition: 100ms;
+    
+    &:hover {
+      background-color: $pri;
+      color: $sec;
+    }
+    
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+  
+  .selected {
+    background-color: $pri !important;
+    color: $sec;
   }
 }
 
@@ -152,7 +183,7 @@ body {
   
   .section {
     padding: 0px 5px;
-
+    
     h1 {
       font-size: 26px;
       margin: 10px 0px 10px 0px;
@@ -162,7 +193,7 @@ body {
   #fp-nav.fp-right {
     right: 3px !important;
   }
-
+  
   #hero--content, #about-content, #resume-content, #contact-wrapper {
     margin: 20px;
   }
@@ -186,12 +217,16 @@ body {
       }
     }
   }
-
-  #portfolio-content {
+  
+  #hero--cta {
+    font-size: 14px;
+  }
+  
+  #portfolio--content {
     margin: 40px 0px 90px 0px;
   }
-
-  #portfolio-headers {
+  
+  #portfolio--header {
     margin: 0px 0px 40px 20px;
   }
 }

@@ -1,5 +1,6 @@
-import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import PortfolioCard from '../components/PortfolioCard';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { tenziesCode1, tenziesCode2 } from './code-snippets/tenziesCode';
 import { tomorrowNightBright } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
@@ -16,14 +17,12 @@ export default function Tenzies() {
 
     return (
         <>
-            <div className="portfolio-cards--card">
-                <div className='portfolio-cards--card-overlay'></div>
-                <div className="portfolio-cards--card-content">
-                    <h2 className="portfolio-cards--card-title">React Tenzies Game</h2>
-                    <p>The classic tenzies game made with React.</p>
-                    <div type="button" className="btn btn-primary" onClick={handleShow}>Explore</div>
-                </div>
-            </div>
+            <PortfolioCard
+                title="React Tenzies Game"
+                description="The classic tenzies game made with React."
+                backgroundImage='/images/tenzies-desktop2.png'
+                handleShow={handleShow}
+            />
             <Modal 
                 show={show} 
                 onHide={handleClose}

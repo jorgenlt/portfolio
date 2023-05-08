@@ -1,4 +1,5 @@
 import Modal from 'react-bootstrap/Modal';
+import PortfolioCard from '../components/PortfolioCard';
 import { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 // import { } from './code-snippets/messagemateCode';
@@ -16,14 +17,12 @@ export default function Spotify() {
 
     return (
         <>
-            <div className="portfolio-cards--card">
-                <div className='portfolio-cards--card-overlay'></div>
-                <div className="portfolio-cards--card-content">
-                    <h2 className="portfolio-cards--card-title">Spotify Artist Page</h2>
-                    <p>The frontend of the Spotify artist page</p>
-                    <div type="button" className="btn btn-primary" onClick={handleShow}>Explore</div>
-                </div>
-            </div>
+            <PortfolioCard
+                title="Spotify Artist Page"
+                description="The frontend of the Spotify artist page."
+                backgroundImage='/images/spotify-desktop3.png'
+                handleShow={handleShow}
+            />
             <Modal 
                 show={show} 
                 onHide={handleClose}

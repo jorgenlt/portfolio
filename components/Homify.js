@@ -1,4 +1,5 @@
 import Modal from 'react-bootstrap/Modal';
+import PortfolioCard from '../components/PortfolioCard';
 import { useState } from 'react'
 import { homifyCode1, homifyCode2 } from './code-snippets/homifyCode'
 import SyntaxHighlighter from 'react-syntax-highlighter';
@@ -16,14 +17,12 @@ export default function Homify() {
 
     return (
         <>
-            <div className="portfolio-cards--card">
-                <div className='portfolio-cards--card-overlay'></div>
-                <div className="portfolio-cards--card-content">
-                    <h2 className="portfolio-cards--card-title">Homify</h2>
-                    <p>A tinder-like home finder app. Find your dream home by swiping. An app to make apartment hunting fun and efficient.</p>
-                    <div type="button" className="btn btn-primary" onClick={handleShow}>Explore</div>
-                </div>
-            </div>
+            <PortfolioCard
+                title="Homify"
+                description="A tinder-like home finder app. Find your dream home by swiping. An app to make apartment hunting fun and efficient."
+                backgroundImage='/images/homify-pixel-2-1-rot-rm-bg.png'
+                handleShow={handleShow}
+            />
             <Modal 
                 show={show} 
                 onHide={handleClose}
