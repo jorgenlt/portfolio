@@ -98,62 +98,6 @@ $timing-function: ease;
   transition: $bg-duration $timing-function;
 }
 
-// .portfolio-cards--card:nth-child(1) {
-//   background-image: url(/images/homify-pixel-2-1-rot-rm-bg.png);
-//   background-position: top -30px left -129px;
-//   background-repeat: no-repeat;
-//   background-size: 183% auto;
-// }
-
-// .portfolio-cards--card:nth-child(2) {
-//   background-image: url(/images/messagemate_desktop1.png);
-//   background-position: top 0px left 0px;
-//   background-repeat: no-repeat;
-//   background-size: 175% auto;
-// }
-
-// .portfolio-cards--card:nth-child(3) {
-//   background-image: url(/images/smartbot-mobile.jpg);
-//   background-position: top 0px left -7px;
-//   background-repeat: no-repeat;
-//   background-size: 105% auto;
-// }
-
-// .portfolio-cards--card:nth-child(4) {
-//   background-image: url(/images/spotify-desktop3.png);
-//   background-position: top 0px left -7px;
-//   background-repeat: no-repeat;
-//   background-size: 146% auto;
-// }
-
-// .portfolio-cards--card:nth-child(5) {
-//   background-image: url(/images/findit_desktop1.png);
-//   background-position: top 0px left -17px;
-//   background-repeat: no-repeat;
-//   background-size: 174% auto;
-// }
-
-// .portfolio-cards--card:nth-child(6) {
-//   background-image: url(/images/tidder_desktop_1.png);
-//   background-position: top -24px left -158px;
-//   background-repeat: no-repeat;
-//   background-size: 295% auto;
-// }
-
-// .portfolio-cards--card:nth-child(7) {
-//   background-image: url(/images/tenzies-desktop2.png);
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: 199% auto;
-// }
-
-// .portfolio-cards--card:nth-child(8) {
-//   background-image: url(/images/coding-bg.jpg);
-//   background-position: top -52px left -174px;
-//   background-repeat: no-repeat;
-//   background-size: 324% auto;
-// }
-
 @media only screen and (max-width: 670px) {
   .portfolio-cards--container {
     justify-content: center;
