@@ -1,8 +1,8 @@
 import Modal from 'react-bootstrap/Modal';
-import PortfolioCard from '../components/PortfolioCard';
+import PortfolioCard from '@/components/PortfolioCard';
 import { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { finditCode1, finditCode2, finditCode3, finditCode4 } from './code-snippets/finditCode';
+import { finditCode1, finditCode2, finditCode3, finditCode4 } from '@/components/code-snippets/finditCode';
 import { tomorrowNightBright } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 export default function Findit() {

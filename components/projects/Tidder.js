@@ -1,8 +1,8 @@
 import Modal from 'react-bootstrap/Modal';
-import PortfolioCard from '../components/PortfolioCard';
+import PortfolioCard from '@/components/PortfolioCard';
 import { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { tidderCode1, tidderCode2 } from './code-snippets/tidderCode';
+import { tidderCode1, tidderCode2 } from '@/components/code-snippets/tidderCode';
 import { tomorrowNightBright } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 export default function Tidder() {

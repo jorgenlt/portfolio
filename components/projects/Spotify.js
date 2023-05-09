@@ -1,8 +1,8 @@
 import Modal from 'react-bootstrap/Modal';
-import PortfolioCard from '../components/PortfolioCard';
+import PortfolioCard from '@/components/PortfolioCard';
 import { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-// import { } from './code-snippets/messagemateCode';
+// import { } from '@/components/code-snippets/messagemateCode';
 import { tomorrowNightBright } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 export default function Spotify() {

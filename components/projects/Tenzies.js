@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import PortfolioCard from '../components/PortfolioCard';
+import PortfolioCard from '@/components/PortfolioCard';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { tenziesCode1, tenziesCode2 } from './code-snippets/tenziesCode';
+import { tenziesCode1, tenziesCode2 } from '@/components/code-snippets/tenziesCode';
 import { tomorrowNightBright } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 export default function Tenzies() {

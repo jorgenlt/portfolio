@@ -40,34 +40,51 @@ export default function Nav() {
             {/* desktop navbar */}
             <div className="container" id="nav-home">
             <ul className="nav-links">
-                <li id="nav-about" onClick={() => window.location.href = '#1'}><span className="link-num">01.</span> about</li>
-                <li id="nav-portfolio" onClick={() => window.location.href = '#2'}><span className="link-num">02.</span> portfolio</li>
-                <li id="nav-resume" onClick={() => window.location.href = '#3'}><span className="link-num">03.</span> resume</li>
-                <li id="nav-contact" onClick={() => window.location.href = '#4'}><span className="link-num">04.</span> contact</li>
+                <li id="nav-about" onClick={() => window.location.href = '#1'}><span className="link-num">01.</span>about</li>
+                <li id="nav-portfolio" onClick={() => window.location.href = '#2'}><span className="link-num">02.</span>portfolio</li>
+                <li id="nav-resume" onClick={() => window.location.href = '#3'}><span className="link-num">03.</span>resume</li>
+                <li id="nav-contact" onClick={() => window.location.href = '#4'}><span className="link-num">04.</span>contact</li>
             </ul>
             </div>
 
             {/* mobile navbar */}
             <div className="" id="mobile-nav-home">
-            {/* open menu */}
-            <div id="burger" data-pushbar-target="mypushbar1">
-                <span><i className="fa-solid fa-bars"></i></span>
-            </div>
-
-            {/* pushbar slide menu */}
-            <div id="mobile-menu" data-pushbar-id="mypushbar1" data-pushbar-direction="right">
-                {/* close menu */}
-                <div id="burger-close" data-pushbar-close>
-                <span><i className="fa-solid fa-xmark"></i></span>
+                {/* open menu */}
+                <div id="burger" data-pushbar-target="mypushbar1">
+                    <span><i className="fa-solid fa-bars"></i></span>
                 </div>
-                {/* menu content */}
-                <ul className="mobile-nav-links">
-                <li id="mobile-nav-about" ><span className="mobile-link-num">01.</span> about</li>
-                <li id="mobile-nav-portfolio"><span className="mobile-link-num">02.</span> portfolio</li>
-                <li id="mobile-nav-resume"><span className="mobile-link-num">03.</span> resume</li>
-                <li id="mobile-nav-contact"><span className="mobile-link-num">04.</span> contact</li>
-                </ul>
-            </div>
+
+                {/* pushbar slide menu */}
+                <div id="mobile-menu" data-pushbar-id="mypushbar1" data-pushbar-direction="right">
+                    {/* close menu */}
+                    <div id="burger-close" data-pushbar-close>
+                        <span><i className="fa-solid fa-xmark"></i></span>
+                    </div>
+                    {/* menu content */}
+                    <ul id="mobile-nav-links">
+                        <li id="mobile-nav-about" ><span className="mobile-link-num">01.</span>about</li>
+                        <li id="mobile-nav-portfolio"><span className="mobile-link-num">02.</span>portfolio</li>
+                        <li id="mobile-nav-resume"><span className="mobile-link-num">03.</span>resume</li>
+                        <li id="mobile-nav-contact"><span className="mobile-link-num">04.</span>contact</li>
+                    </ul>
+                    <ul id='mobile-some-links'>
+                        <a href="mailto:contact@jorgenlt.me" target="_blank">
+                            <li><i className="fa-solid fa-at"></i><span>email</span></li>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jorgenlt/" target="_blank">
+                            <li><i className="fa-brands fa-linkedin-in"></i><span>linkedin</span></li>
+                        </a>
+                        <a href="https://github.com/jorgenlt" target="_blank">
+                            <li><i className="fa-brands fa-github"></i><span>github</span></li>
+                        </a>
+                        <a href="https://codepen.io/dogonscooter" target="_blank">
+                            <li><i className="fa-brands fa-codepen"></i><span>codepen</span></li>
+                        </a>
+                        <a href="https://www.freecodecamp.org/jorgenlt" target="_blank">
+                            <li><i className="fa-brands fa-free-code-camp"></i><span>freeCodeCamp</span></li>
+                        </a>
+                    </ul>
+                </div>
             </div>
         </div>
     )

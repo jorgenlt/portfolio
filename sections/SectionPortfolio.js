@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import Homify from '@/components/Homify';
-import Messagemate from '@/components/Messagemate';
-import Smartbot from '@/components/Smartbot';
-import Spotify from '@/components/Spotify';
-import Findit from '@/components/Findit';
-import Tidder from '@/components/Tidder';
-import Tenzies from '@/components/Tenzies';
-import OtherProjects from '@/components/OtherProjects';
+import Homify from '@/components/projects/Homify';
+import Messagemate from '@/components/projects/Messagemate';
+import Smartbot from '@/components/projects/Smartbot';
+import Spotify from '@/components/projects/Spotify';
+import Findit from '@/components/projects/Findit';
+import Tidder from '@/components/projects/Tidder';
+import Tenzies from '@/components/projects/Tenzies';
+import OtherProjects from '@/components/projects/OtherProjects';
 
 const portfolioCards = [
     { id: 1, name: 'Homify', tech: ['rails', 'javascript', 'ruby'] },
