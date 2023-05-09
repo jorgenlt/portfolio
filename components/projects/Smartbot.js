@@ -1,8 +1,8 @@
 import Modal from 'react-bootstrap/Modal';
-import PortfolioCard from '../components/PortfolioCard';
+import PortfolioCard from '@/components/PortfolioCard';
 import { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { smartbotCode1 } from './code-snippets/smartbotCode';
+import { smartbotCode1 } from '@/components/code-snippets/smartbotCode';
 import { tomorrowNightBright } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 export default function Smartbot() {

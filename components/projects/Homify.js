@@ -1,7 +1,7 @@
 import Modal from 'react-bootstrap/Modal';
-import PortfolioCard from '../components/PortfolioCard';
+import PortfolioCard from '@/components/PortfolioCard';
 import { useState } from 'react'
-import { homifyCode1, homifyCode2 } from './code-snippets/homifyCode'
+import { homifyCode1, homifyCode2 } from '@/components/code-snippets/homifyCode'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { tomorrowNightBright } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 

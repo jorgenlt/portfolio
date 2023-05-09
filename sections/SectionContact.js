@@ -6,7 +6,7 @@ export default function SectionContact() {
                 <div id="contact--links">
                     <p>Send me an <a href="mailto:contact@jorgenlt.me" className="emailat" target="_blank">email.</a></p>
                 </div>
-                <div className="contact--some">
+                <div className="contact--some d-none">
                     <a href="mailto:contact@jorgenlt.me" className="emailat" target="_blank">
                         <i className="fa-solid fa-at"></i>
                     </a>
