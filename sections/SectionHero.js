@@ -4,7 +4,7 @@ export default function SectionHero() {
             <div id="hero--content">
                 <h4>Hello, my name is</h4>
                 <h1 id="hero--title">Jørgen Larsen Tjønnteig</h1>
-                <h1 id="hero--subtitle">Full Stack Developer</h1>
+                <h1 id="hero--subtitle">Full Stack Web Developer</h1>
                 <p>Full Stack Web Development, Javascript, React, Ruby, Rails, SQL, HTML, CSS, UX/UI, Bootstrap, Sass</p>
                 <div 
                     id="hero--cta" 
