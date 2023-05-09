@@ -67,6 +67,7 @@ export default function Nav() {
                         <li id="mobile-nav-resume"><span className="mobile-link-num">03.</span>resume</li>
                         <li id="mobile-nav-contact"><span className="mobile-link-num">04.</span>contact</li>
                     </ul>
+                    {/* mobile some links */}
                     <ul id='mobile-some-links'>
                         <a href="mailto:contact@jorgenlt.me" target="_blank">
                             <li><i className="fa-solid fa-at"></i><span>email</span></li>
