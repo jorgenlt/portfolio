@@ -5,6 +5,7 @@ import Smartbot from '@/components/projects/Smartbot';
 import Spotify from '@/components/projects/Spotify';
 import Findit from '@/components/projects/Findit';
 import Tidder from '@/components/projects/Tidder';
+import NodejsChatgpt from '@/components/projects/NodejsChatgpt';
 import Tenzies from '@/components/projects/Tenzies';
 import OtherProjects from '@/components/projects/OtherProjects';
 
@@ -17,6 +18,7 @@ const portfolioCards = [
     { id: 6, name: 'Tidder', tech: ['rails', 'javascript', 'ruby'] },
     { id: 7, name: 'Tenzies', tech: ['react', 'javascript'] },
     { id: 8, name: 'OtherProjects', tech: ['react', 'javascript'] },
+    { id: 9, name: 'NodejsChatgpt', tech: ['node.js', 'javascript'] }
 ];
 
 export default function SectionPortfolio() {
@@ -52,6 +54,7 @@ export default function SectionPortfolio() {
                         <button onClick={handleTechButtonClick} value="ruby" className={selectedTech.includes('ruby') ? 'selected' : ''}>Ruby</button>
                         <button onClick={handleTechButtonClick} value="rails" className={selectedTech.includes('rails') ? 'selected' : ''}>Rails</button>
                         <button onClick={handleTechButtonClick} value="android" className={selectedTech.includes('android') ? 'selected' : ''}>Android</button>
+                        <button onClick={handleTechButtonClick} value="node.js" className={selectedTech.includes('node.js') ? 'selected' : ''}>Node.js</button>
                     </div>
                 </div>
                 <div className="portfolio-cards--container">
@@ -73,6 +76,8 @@ export default function SectionPortfolio() {
                             return <Tenzies key={card.id} tech={card.tech} />;
                         case 'OtherProjects':
                             return <OtherProjects key={card.id} tech={card.tech} />;
+                        case 'NodejsChatgpt':
+                            return <NodejsChatgpt key={card.id} tech={card.tech} />;
                         default:
                             return null;
                         }
