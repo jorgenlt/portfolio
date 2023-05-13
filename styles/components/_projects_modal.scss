@@ -92,7 +92,7 @@
     max-width: 750px;
 
     img {
-      margin: 40px 0px;
+      margin: 0px;
       width: 640px;
     }
 }
@@ -131,5 +131,11 @@
 
     .projects-modal--full-img {
         width: 300px;
+    }
+
+    .media--desktop {
+        img {
+          width: 85vw;
+        }
     }
 }
