@@ -86,7 +86,7 @@ export default function PortfolioWebsite(props) {
                             </SyntaxHighlighter>
 
                             <h3>Project modals</h3>
-                            <p>An example of how the project modals are made. Here show with Smartbot.js</p>
+                            <p>An example of how the project modals are made. Here shown with Smartbot.js</p>
                             <SyntaxHighlighter language="javascript" style={tomorrowNightBright}>
                                 {portfolioWebsiteCode4}
                             </SyntaxHighlighter>
