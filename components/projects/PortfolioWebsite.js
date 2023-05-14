@@ -51,7 +51,7 @@ export default function PortfolioWebsite(props) {
                         </div>
                         <div className="projects-modal--media">
                             <div className="media--desktop">
-                                <img src="/images/portfolio-website-desktop2.png" alt="Screeshot, Portfolio website." style={{border: '1px solid #151515'}} />
+                                <img src="/images/portfolio-website-desktop2.png" alt="Screeshot, Portfolio website." style={{boxShadow: "1px 1px 30px 0px #20202087"}} />
                             </div>
                         </div>
 

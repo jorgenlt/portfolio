@@ -38,12 +38,20 @@ export default function Homify() {
                     <div className="projects-modal--body">
                         <div className="projects-modal--lede">
                             <div>
-                                <p>An app for finding apartments for rent by swiping and matching.</p>
+                                <p>Our final project at the Le Wagon Web Development Coding Bootcamp I attended in the fall of 2022. Homify is an app for finding apartments for rent by swiping and matching. The web application was made in two weeks and resulted in a MVP that was presented to an audience at the bootcamp's demo day. See embeded video from YouTube.</p>
                                 <p><a href="https://github.com/jorgenlt/homify" target="_blank">View on GitHub</a></p>
+                                <p>Project team:</p>
+                                <ul>
+                                    <li><i className="fa-solid fa-circle-arrow-right"></i><a href="https://github.com/AlexDrew90" target="_blank" referrer="noreferrer">Alex Drew</a></li>
+                                    <li><i className="fa-solid fa-circle-arrow-right"></i><a href="https://github.com/juliasnd" target="_blank" referrer="noreferrer">Julia Sandmann</a></li>
+                                    <li><i className="fa-solid fa-circle-arrow-right"></i><a href="https://github.com/alexandernk1555" target="_blank" referrer="noreferrer">Alexander Neukomm</a> (speaker)</li>
+                                    <li><i className="fa-solid fa-circle-arrow-right"></i><a href="https://github.com/jorgenlt" target="_blank" referrer="noreferrer">Jørgen Larsen Tjønnteig</a></li>
+                                </ul>
                             </div>
                         </div>
                         <div className="projects-modal--media">
-                            <div className="homify-phone">
+                            <iframe className="homify--demo-day" src="https://www.youtube.com/embed/T3OJIEels1E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <div className="homify--phone">
                                 <iframe src="https://player.vimeo.com/video/808073105?h=86bec683c0&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                                         width="250"
                                         height="556"
@@ -53,10 +61,14 @@ export default function Homify() {
                                         title="homify demo">
                                 </iframe>
 
-                                <div className="homify-photos">
+                                <div className="homify--photos ">
                                     <img src="/images/homify-pixel-2-1-rot-rm-bg.png" alt="homify on phone." />
                                 </div>
                             </div>
+                            <figure>
+                                <img src="https://cdn-images-1.medium.com/v2/resize:fit:1094/1*bJi3Qkl1lpwOerOA5YRYHQ.png" className='projects-modal--full-img' />
+                                <figcaption>Wireframe and design in Figma.</figcaption>
+                            </figure>
                         </div>
 
                         <div>

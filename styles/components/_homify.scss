@@ -1,11 +1,11 @@
-.homify-photos {
+.homify--photos  {
   display: flex;
   justify-content: space-between;
   max-width: 750px;
   margin: 0px;
 }
 
-.homify-phone {
+.homify--phone {
   display: flex;
 
   img {
@@ -14,22 +14,32 @@
   }
 }
 
-@media only screen and (max-width: 1000px) {
+.homify--demo-day {
+  width: 700px;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 990px) {
   .homify-video {
     justify-content: center;
     display: flex;
   }
 
-  .homify-phone {
+  .homify--phone {
     flex-direction: column;
     align-items: center;
   }
 
-  .homify-photos {
+  .homify--photos  {
     flex-direction: column;
 
     img {
       height: 450px;
     }
+  }
+
+  .homify--demo-day {
+    width: 90vw;
   }
 }
