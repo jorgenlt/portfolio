@@ -107,6 +107,27 @@ body {
   }
 }
 
+#about {
+  display: flex;
+  flex-direction: row;
+}
+
+#about--content {
+  max-width: 1100px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+
+#about--graphic {
+  img {
+    width: 30vw;
+    min-width: 300px;
+    height: fit-content;
+  }
+}
+
 #contact--links {
   display: flex;
 }
@@ -176,6 +197,12 @@ body {
 }
 
 // Responsive design
+@media only screen and (max-width: 1000px) {
+  #about--graphic {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 670px) {
   body p {
     font-size: 14px;
@@ -194,7 +221,7 @@ body {
     right: 3px !important;
   }
   
-  #hero--content, #about-content, #resume-content, #contact-wrapper {
+  #hero--content, #about--content, #resume-content, #contact-wrapper {
     margin: 20px;
   }
   
