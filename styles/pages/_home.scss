@@ -83,6 +83,17 @@ body {
 
 #hero--content {
   margin: 10px;
+  position: relative;
+}
+
+#hero--graphics {
+  position: absolute;
+  top: calc(50vh - 200px);
+  right: calc(25vw - 200px);
+  z-index: -1;
+  width: 570px;
+  height: fit-content;
+  // <a href="https://www.freepik.com/free-vector/code-typing-concept-illustration_10259340.htm#query=coding&position=7&from_view=search&track=sph#position=7&query=coding">Image by storyset</a> on Freepik
 }
 
 #hero--cta {
@@ -247,6 +258,12 @@ body {
   
   #hero--cta {
     font-size: 14px;
+  }
+
+  #hero--graphics {
+    top: calc(50vh - 38vw);
+    right: -30vw;
+    width: 90vw;
   }
   
   #portfolio--content {

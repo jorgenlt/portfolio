@@ -16,10 +16,11 @@ export default function SectionHero() {
             </div>
             <div id="learn-more-container" onClick={() => window.location.href = '#1'}>
                 <div id="learn-more">
-                        <p>Learn more about what I do</p>
-                        <span><i className="fa-solid fa-chevron-down bounce2"></i></span>
+                    <p>Learn more about what I do</p>
+                    <span><i className="fa-solid fa-chevron-down bounce2"></i></span>
                 </div>
             </div>
+                <img src="/images/hero-graphics.png" id="hero--graphics" />
         </div>
     )
 }
