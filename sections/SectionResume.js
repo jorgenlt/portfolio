@@ -5,6 +5,7 @@ export default function SectionResume() {
                 <h1>Resume</h1>
                 <p>Download my resume <a href="/files/jorgenlt_cv_v5.pdf" target="_blank">here</a> (pdf).</p>
             </div>
+            <img src="/images/resume-graphics.png" id="resume--graphics" />
         </div>
     )
 }

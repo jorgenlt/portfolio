@@ -20,7 +20,7 @@ export default function SectionHero() {
                     <span><i className="fa-solid fa-chevron-down bounce2"></i></span>
                 </div>
             </div>
-                <img src="/images/hero-graphics.png" id="hero--graphics" />
+            <img src="/images/hero-graphics.png" id="hero--graphics" />
         </div>
     )
 }

@@ -183,6 +183,24 @@ body {
   }
 }
 
+#resume--graphics {
+  position: absolute;
+  top: calc(50vh - 290px);
+  right: calc(25vw - 200px);
+  z-index: -1;
+  width: 620px;
+  height: fit-content;
+}
+
+#contact--graphics {
+  position: absolute;
+  top: calc(50vh - 260px);
+  right: calc(25vw - 140px);
+  z-index: -1;
+  width: 510px;
+  height: fit-content;
+}
+
 #contact--links {
   display: flex;
 }
@@ -296,6 +314,18 @@ body {
   
   #portfolio--header {
     margin: 0px 0px 40px 20px;
+  }
+
+  #resume--graphics {
+    top: calc(50vh - 180px);
+    right: calc(25vw - 220px);
+    width: 420px;
+  }
+
+  #contact--graphics {
+    top: calc(50vh - 150px);
+    right: calc(25vw - 80px);
+    width: 300px;
   }
 
   #credits {
