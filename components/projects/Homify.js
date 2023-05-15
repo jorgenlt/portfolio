@@ -42,10 +42,10 @@ export default function Homify() {
                                 <p><a href="https://github.com/jorgenlt/homify" target="_blank">View on GitHub</a></p>
                                 <p>Project team:</p>
                                 <ul>
-                                    <li><i className="fa-solid fa-circle-arrow-right"></i><a href="https://github.com/AlexDrew90" target="_blank" referrer="noreferrer">Alex Drew</a></li>
-                                    <li><i className="fa-solid fa-circle-arrow-right"></i><a href="https://github.com/juliasnd" target="_blank" referrer="noreferrer">Julia Sandmann</a></li>
-                                    <li><i className="fa-solid fa-circle-arrow-right"></i><a href="https://github.com/alexandernk1555" target="_blank" referrer="noreferrer">Alexander Neukomm</a> (speaker)</li>
-                                    <li><i className="fa-solid fa-circle-arrow-right"></i><a href="https://github.com/jorgenlt" target="_blank" referrer="noreferrer">Jørgen Larsen Tjønnteig</a></li>
+                                    <li><i className="fa-solid fa-circle-arrow-right"></i><a href="https://github.com/AlexDrew90" target="_blank" rel="noreferrer">Alex Drew</a></li>
+                                    <li><i className="fa-solid fa-circle-arrow-right"></i><a href="https://github.com/juliasnd" target="_blank" rel="noreferrer">Julia Sandmann</a></li>
+                                    <li><i className="fa-solid fa-circle-arrow-right"></i><a href="https://github.com/alexandernk1555" target="_blank" rel="noreferrer">Alexander Neukomm</a> (speaker)</li>
+                                    <li><i className="fa-solid fa-circle-arrow-right"></i><a href="https://github.com/jorgenlt" target="_blank" rel="noreferrer">Jørgen Larsen Tjønnteig</a></li>
                                 </ul>
                             </div>
                         </div>

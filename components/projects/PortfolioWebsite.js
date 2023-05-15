@@ -63,8 +63,8 @@ export default function PortfolioWebsite(props) {
 
                             <h2>Technologies</h2>
                             <p>
-                                The portfolio website is built with <a href="https://react.dev/" target="_blank" referrer="noreferrer">React</a> on the <a href="https://nextjs.org/" target="_blank" referrer="noreferrer">Next.js</a> framework.
-                                The website is additionally supported by Webpack, Bootstrap, SASS, <a href="https://github.com/alvarotrigo/fullPage.js/" target='_blank' referrer="noreferrer" >Fullpage.js</a> and <a href="https://github.com/react-syntax-highlighter/react-syntax-highlighter" target='_blank' referrer="noreferrer">React Syntax Highlighter</a>.
+                                The portfolio website is built with <a href="https://react.dev/" target="_blank" rel="noreferrer">React</a> on the <a href="https://nextjs.org/" target="_blank" rel="noreferrer">Next.js</a> framework.
+                                The website is additionally supported by Webpack, Bootstrap, SASS, <a href="https://github.com/alvarotrigo/fullPage.js/" target='_blank' rel="noreferrer" >Fullpage.js</a> and <a href="https://github.com/react-syntax-highlighter/react-syntax-highlighter" target='_blank' rel="noreferrer">React Syntax Highlighter</a>.
                             </p>
 
                             <h2>Details and examples</h2>
