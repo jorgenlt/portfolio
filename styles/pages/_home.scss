@@ -88,11 +88,15 @@ body {
 
 #hero--graphics {
   position: absolute;
-  top: calc(50vh - 200px);
-  right: calc(25vw - 200px);
+  left: 0;
+  right: -30vw;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   z-index: -1;
-  width: 570px;
+  width: 50vw;
   height: fit-content;
+  opacity: 0.6;
 }
 
 #hero--cta {
@@ -135,6 +139,7 @@ body {
     width: 30vw;
     min-width: 300px;
     height: fit-content;
+    opacity: 0.6;
   }
 }
 
@@ -183,22 +188,24 @@ body {
   }
 }
 
-#resume--graphics {
+#resume--graphics, #contact--graphics {
   position: absolute;
-  top: calc(50vh - 290px);
-  right: calc(25vw - 200px);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   z-index: -1;
-  width: 620px;
   height: fit-content;
+  opacity: 0.6;
+}
+
+#resume--graphics {
+  width: 620px;
 }
 
 #contact--graphics {
-  position: absolute;
-  top: calc(50vh - 260px);
-  right: calc(25vw - 140px);
-  z-index: -1;
   width: 510px;
-  height: fit-content;
 }
 
 #contact--links {
@@ -303,9 +310,9 @@ body {
   }
 
   #hero--graphics {
-    top: calc(50vh - 38vw);
-    right: -30vw;
-    width: 90vw;
+    right: 0;
+    width: 140vw;
+    opacity: 0.4;
   }
   
   #portfolio--content {
@@ -316,16 +323,10 @@ body {
     margin: 0px 0px 40px 20px;
   }
 
-  #resume--graphics {
-    top: calc(50vh - 180px);
-    right: calc(25vw - 220px);
-    width: 420px;
-  }
-
-  #contact--graphics {
-    top: calc(50vh - 150px);
-    right: calc(25vw - 80px);
-    width: 300px;
+  #resume--graphics, #contact--graphics {
+    width: 100vw;
+    right: 0;
+    opacity: 0.25;
   }
 
   #credits {
