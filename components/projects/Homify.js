@@ -74,12 +74,12 @@ export default function Homify() {
                         <div>
                             <h2>Features</h2>
                             <ul>
-                            <li><i className="fa-solid fa-circle-arrow-right"></i>Sign up and create a profile with a profile picture.</li>
-                            <li><i className="fa-solid fa-circle-arrow-right"></i>Create a new search.</li>
-                            <li><i className="fa-solid fa-circle-arrow-right"></i>Filter search results by editing your search.</li>
-                            <li><i className="fa-solid fa-circle-arrow-right"></i>Swipe on apartments to find a match.</li>
-                            <li><i className="fa-solid fa-circle-arrow-right"></i>Instantly book an appointments for viewings on your matches.</li>
-                            <li><i className="fa-solid fa-circle-arrow-right"></i>Live instant chat feature with matches.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>Sign up and create a profile with a profile picture.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>Create a new search.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>Filter search results by editing your search.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>Swipe on apartments to find a match.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>Instantly book an appointments for viewings on your matches.</li>
+                                <li><i className="fa-solid fa-circle-arrow-right"></i>Live instant chat feature with matches.</li>
                             </ul>
                             
                             <h2>Technologies</h2>
