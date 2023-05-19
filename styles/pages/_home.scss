@@ -99,6 +99,11 @@ body {
   opacity: 0.6;
 }
 
+#hero--actions {
+  display: flex;
+  gap: 20px;
+}
+
 #hero--cta {
   cursor: pointer;
   background-color: $pri;
@@ -114,6 +119,28 @@ body {
   &:hover {
     background-color: transparent;
     color: $pri;
+  }
+  
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+#hero--contact {
+  cursor: pointer;
+  background-color: transparent;
+  color: $pri;
+  font-weight: 500;
+  width: fit-content;
+  padding: 8px 12px;
+  margin-top: 20px;
+  border-radius: 3px;
+  border: 1px solid $pri;
+  transition: 100ms;
+  
+  &:hover {
+    background-color: $pri;
+    color: $sec;
   }
   
   &:active {
