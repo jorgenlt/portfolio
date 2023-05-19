@@ -1,7 +1,7 @@
 import Modal from 'react-bootstrap/Modal';
 import PortfolioCard from '@/components/PortfolioCard';
 import { useState } from 'react'
-import { homifyCode1, homifyCode2 } from '@/components/code-snippets/homifyCode'
+import { homifyCode1, homifyCode2, homifyCode3 } from '@/components/code-snippets/homifyCode'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { tomorrowNightBright } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
@@ -99,22 +99,21 @@ export default function Homify() {
                                 {homifyCode1}
                             </SyntaxHighlighter>
 
-                            <h3 className="mt-5">Tech. challenge 2</h3>
+                            <h3 className="mt-5">Show listings (cards to swipe) based on search parameters</h3>
                             <p className="mt-4 mb-2">
-                                Description.
+                                The listings controller handles the search based on given params, along with rest of the CRUD-actions.
                             </p>
-                            <SyntaxHighlighter language="javascript" style={tomorrowNightBright}>
+                            <SyntaxHighlighter language="ruby" style={tomorrowNightBright}>
                                 {homifyCode2}
                             </SyntaxHighlighter>
-
-                            <h2 className="d-none">Upcoming features</h2>
-                            <ul className="d-none">
-                                <li><i className="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
-                                <li><i className="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
-                                <li><i className="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
-                                <li><i className="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
-                                <li><i className="fa-solid fa-circle-arrow-right"></i>Upcoming feature</li>
-                            </ul>
+                            <p className="mt-4 mb-2">
+                                All the cards are stacked on top of each other and displayed to the user. The user can then swipe through the stack, choosing a "nope" or a "like".
+                                When clicking a card(a listing), a modal shows more information about the listing (photos, address, price, properties, map and more).
+                                If there are no more cards left the user will be informed that there are no more listings that matches the chosen criterias.
+                            </p>
+                            <SyntaxHighlighter language="django" style={tomorrowNightBright}>
+                                {homifyCode3}
+                            </SyntaxHighlighter>
                         </div>
                     </div>
                 </Modal.Body> 

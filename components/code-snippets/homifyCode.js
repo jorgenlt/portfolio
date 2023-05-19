@@ -137,5 +137,293 @@ export default class extends Controller {
 `;
 
 export const homifyCode2 = `
-    'Tech. challenge 2'
+# app/controllers/listings_controller.rb
+
+class ListingsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+  
+  def index
+    # user cannot see and swipe on own listings.
+    @listings = Listing.where.not(user_id: current_user.id)
+
+    if params[:search].present?
+      @search = Search.find(params[:search])
+
+      ["price",
+      "bedrooms",
+      "bathrooms",
+      "address",
+      "city",
+      "country",
+      "street",
+      "postcode",
+      "district",
+      "photos",
+      "description",
+      "property_type",
+      "area_size",
+      "floor",
+      "garden",
+      "balcony",
+      "parking",
+      "family_status",
+      "occupation",
+      "pets",
+      "lift",
+      "furnished"].each do |column|
+        value = @search.send(column.to_sym)
+        if value.present?
+          if column == "price"
+            query = "#{column} > :min AND #{column} < :max"
+          else
+            query = "#{column} = :value"
+          end
+          p query, value
+          @listings = @listings.where(query, value: value, min: @search.price, max: @search.price_max)
+        end
+      end
+    else
+      @listings = @listings.global_search(params[:city]) if params[:city].present?
+
+      if params[:min_price].present? && params[:max_price].present?
+        @listings = @listings.where(price: params[:min_price]..params[:max_price])
+      elsif params[:min_price].present?
+        @listings = @listings.where('price >= ?', params[:min_price])
+      elsif params[:max_price].present?
+        @listings = @listings.where('price <= ?', params[:max_price])
+      end
+
+      @listings = @listings.where(bedrooms: params[:bedrooms]) if params[:bedrooms].present?
+    end
+
+    # for creating the maps in the info windows
+    @markers = @listings.geocoded.map do |listing|
+      {
+        lat: listing.latitude,
+        lng: listing.longitude,
+        id: listing.id,
+        info_window: render_to_string(partial: "info_window", locals: {listing: listing})
+      }
+    end
+  end
+
+  def show
+    @listing = Listing.find(params[:id])
+    @viewing = Viewing.new
+    @match = current_user.matches.find_by(listing: @listing)
+    @listings = Listing.where(id: @listing.id)
+    @markers = @listings.geocoded.map do |listing|
+      {
+        lat: listing.latitude,
+        lng: listing.longitude,
+        id: listing.id,
+        info_window: render_to_string(partial: "info_window", locals: {listing: listing})
+      }
+    end
+  end
+
+  def new
+    @listing = Listing.new
+  end
+
+  def create
+    @user = current_user
+    @listing = Listing.new(listing_params)
+    @listing.user = current_user
+    @listing.save
+
+    if @listing.save!
+      redirect_to listing_path(@listing.id)
+    else
+      render :new
+    end
+  end
+
+  def edit
+    @listing = Listing.find(params[:id])
+  end
+
+  def update
+    @user = current_user
+    @listing = Listing.find(params[:id])
+    @listing.update!(listing_params)
+    redirect_to listing_path(@listing.id)
+  end
+
+  def destroy
+    @listing = Listing.find(params[:id])
+    @listing.destroy
+    redirect_to profile_path
+  end
+
+  private
+
+  def listing_params
+    params.require(:listing).permit(:price, :bedrooms, :bathrooms, :address, :description, :property_type, :area_size, :floor, :garden, :balcony, :parking, :family_status, :occupation, :pets, :lift, :furnished, :user_id, :city, :district, :postcode, :street, :country, photos: [])
+  end
+end
 `;
+
+export const homifyCode3 = `
+<!-- app/views/listings/index.html.erb -->
+
+<div data-controller="swipe">
+  <div class="background-text">
+    <p>There are no more listings that match your criteria. Go back and edit your search.</p>
+  </div>
+  <%# iterating through all the listings to create the swipe-cards %>
+  <div class="profiles">
+    <% @listings.each do |listing| %>
+
+      <!-- Modal -->
+      <button
+              data-swipe-target="modal"
+              type="button"
+              class="btn btn-primary d-none"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal<%= listing.id %>"
+              id="button<%= listing.id %>"
+              >
+      </button>
+      <div class="bg-modal modal fade" id="exampleModal<%= listing.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <i type="button" class="fa-solid fa-xmark btn-close-custom" data-bs-dismiss="modal" aria-label="Close"></i>
+            </div>
+            <div class="modal-body">
+
+              <%# listing show page %>
+              <div>
+                <div class="apartment_name">
+                  <h3><%="#{listing.district}"%></h3>
+                </div>
+                <div class="show_image">
+                  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <% listing.photos.each_with_index do |photo, index| %>
+                      <div class="carousel-item <%="active" if index == 0%>">
+                      <%= cl_image_tag photo.key, height: 400, width: 400, crop: :fill %>
+                      </div>
+                    <% end %>
+                    </div>
+                  </div>
+                </div>
+                <div class="apartment_information_card mt-4">
+                  <h2 class="listing-price">€<%= listing.price.to_s.gsub(/\B(?=(...)*\b)/, '.') %></h2>
+                </div>
+                <div class="d-flex flex-row mt-4">
+                  <ul class="d-flex flex-column col-6" style="list-style: none; margin: 0px; padding: 0px">
+                    <li><p><i class="fa-solid fa-bed me-4"></i><%="#{listing.bedrooms}"%></p></li>
+                    <li><p><i class="fa-solid fa-shower me-4"></i><%="#{listing.bathrooms}"%></p></li>
+                    <li><p><i class="fa-solid fa-square me-4"></i><%="#{listing.area_size} sqm"%></p></li>
+                    <li><p><i class="fa-solid fa-stairs me-4"></i><%="#{listing.floor}"%></p></li>
+                    <li><p><i class="fa-solid fa-sun me-4"></i><%="#{listing.balcony}"%></p></li>
+                  </ul>
+                  <ul class="d-flex flex-column col-6" style="list-style: none; margin: 0px; padding: 0px">
+                    <li><p><i class="fa-solid fa-house me-4"></i><%="#{listing.property_type}"%></p></li>
+                    <li><p><i class="fa-solid fa-chair me-4"></i><%= listing.furnished ? "yes" : "no" %></p></li>
+                    <li><p><i class="fa-solid fa-car me-4"></i><%= listing.parking ? "yes" : "no" %></p></li>
+                    <li><p><i class="fa-solid fa-tree me-4"></i><%= listing.garden ? "yes" : "no" %></p></li>
+                    <li><p><i class="fa-solid fa-elevator me-4"></i><%= listing.lift ? "yes" : "no" %></p></li>
+                  </ul>
+                </div>
+
+
+                <div style="width: 100%; height: 300px; border-radius: 10px;"
+                  data-controller="map"
+                  data-map-markers-value="<%= @markers.select { |marker| marker[:id] == listing.id }.to_json %>"
+                  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+                </div>
+
+                <div class="apartment_information_card mt-4">
+                  <p><%="#{listing.description}"%></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <%# Swipe card %>
+        <div
+          class="profile"
+          data-id="<%= listing.id %>"
+          data-action="click->swipe#toggle"
+          >
+          <div class="swipe_card mb-5">
+            <div class="match-percentage"><p><%= rand(69..97) %>% match</p></div>
+            <div class="swipe_card_image"
+                style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.8)),
+                          url(<%= cl_image_path listing.photos.first.key %>);
+                        display: flex; align-items: end">
+              <div class="swipe_card_header ms-3">
+                <h2><%= "#{listing.district}" %></h2>
+                <h3><%= "#{listing.city}" %></h3>
+                <h2 class="listing-price">€ <%= listing.price.to_s.gsub(/\B(?=(...)*\b)/, '.') %></h2>
+              </div>
+            </div>
+            <div class="swipe_card_description mt-4 ms-3">
+
+              <div class="d-flex flex-row mt-4">
+                <ul class="d-flex flex-column col-6" style="list-style: none; margin: 0px; padding: 0px">
+                  <li><p><i class="fa-solid fa-square me-4"></i><%="#{listing.area_size} sqm"%></p></li>
+                  <li><p><i class="fa-solid fa-bed me-4"></i><%="#{listing.bedrooms}"%></p></li>
+                  <li><p><i class="fa-solid fa-shower me-4"></i><%="#{listing.bathrooms}"%></p></li>
+                  <li><p><i class="fa-solid fa-stairs me-4"></i><%="#{listing.floor}"%></p></li>
+                </ul>
+                <ul class="d-flex flex-column col-6" style="list-style: none; margin: 0px; padding: 0px">
+                  <li><p><i class="fa-solid fa-house me-4"></i><%="#{listing.property_type}"%></p></li>
+                  <li><p><i class="fa-solid fa-chair me-4"></i><%="#{listing.furnished ? 'yes' : 'no'}"%></p></li>
+                  <li><p><i class="fa-solid fa-elevator me-4"></i><%="#{listing.lift ? 'yes' : 'no'}"%></p></li>
+                  <li><p><i class="fa-solid fa-car me-4"></i><%="#{listing.parking ? 'yes' : 'no'}"%></p></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+
+  <%# match_animation %>
+  <div id="match-animation" class="d-none" data-swipe-target="match">
+  <div class="blur"></div>
+    <div class="container-animation">
+      <div class="coast">
+        <div class="wave-rel-wrap">
+          <div class="wave"></div>
+        </div>
+      </div>
+      <div class="coast delay">
+        <div class="wave-rel-wrap">
+          <div class="wave delay"></div>
+        </div>
+      </div>
+      <div class="text text-m">m</div>
+      <div class="text text-a">a</div>
+      <div class="text text-t">t</div>
+      <div class="text text-c">c</div>
+      <div class="text text-h">h</div>
+    </div>
+  </div>
+
+  <%# like_nope_animation %>
+  <%# like %>
+  <div class="fade-in-out d-none" id="fade-in-out-like" data-swipe-target="like">
+    <div class="fade-in-out-container">
+      <h1 class="fade-in-out-text">like</h1>
+    </div>
+  </div>
+
+  <%# nope %>
+  <div class="fade-in-out-nope d-none" id="fade-in-out-nope" data-swipe-target="nope">
+    <div class="fade-in-out-container-nope">
+      <h1 class="fade-in-out-text-nope">nope</h1>
+    </div>
+  </div>
+
+</div>
+`
