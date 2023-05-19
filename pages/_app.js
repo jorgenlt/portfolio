@@ -15,16 +15,20 @@ export default function App({ Component, pageProps }) {
         src="https://www.googletagmanager.com/gtag/js?id=G-Y3C5HBGP1R"
         strategy="afterInteractive"
       />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-Y3C5HBGP1R);
-        `}
-      </Script>
-
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Y3C5HBGP1R', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
       <Component {...pageProps} />
     </>
     ) 
