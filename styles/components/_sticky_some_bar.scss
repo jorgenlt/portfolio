@@ -22,34 +22,8 @@
   }
 }
 
-.contact--some {
-  display: none;
-  // gap: 15px;
-  justify-content: space-evenly;
-  padding: 40px 20px;
-
-  a {
-    color: $white;
-    transition: 200ms;
-
-    &:hover {
-      color: $pri;
-      transform: translateY(-5px);
-      transition: 200ms;
-    }
-  }
-
-  i {
-    font-size: 28px;
-  }
-}
-
 @media only screen and (max-width: 600px) {
   .sticky-some-bar {
     display: none;
-  }
-
-  .contact--some {
-    display: flex;
   }
 }
