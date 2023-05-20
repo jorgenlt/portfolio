@@ -95,8 +95,9 @@ body {
   margin: auto;
   z-index: -1;
   width: 50vw;
+  max-width: 700px;
   height: fit-content;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 #hero--actions {
@@ -166,7 +167,7 @@ body {
     width: 30vw;
     min-width: 300px;
     height: fit-content;
-    opacity: 0.6;
+    opacity: 0.5;
   }
 }
 
