@@ -49,6 +49,10 @@ $timing-function: ease;
     .portfolio-cards--card-overlay {
       opacity: 1;
     }
+
+    .portfolio-cards--card-overlay2 {
+      opacity: 0;
+    }
     
     .portfolio-cards--card-content {
       transform: translateY(0);
@@ -80,12 +84,17 @@ $timing-function: ease;
     transition: $content-duration $timing-function;
     font-weight: 500;
   }
+
+  p {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  }
 }
 
 .portfolio-cards--card-title {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
 .portfolio-cards--card-overlay {
@@ -98,22 +107,30 @@ $timing-function: ease;
   transition: $bg-duration $timing-function;
 }
 
+.portfolio-cards--card-overlay2 {
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, #00000068 20%, rgba(3, 60, 79, 0) 75%);
+}
+
 @media only screen and (max-width: 670px) {
   .portfolio-cards--container {
     justify-content: center;
   }
-
+  
   .portfolio-cards--card {
     width: 40vw;
     height: calc(40vw * 1.6);
   }
-
+  
   .portfolio-cards--card-content {
     p {
       font-size: 12px;
     }
   }
-
+  
   .portfolio-cards--card-title {
     font-size: 18px;
   }
