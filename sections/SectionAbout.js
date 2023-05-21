@@ -23,7 +23,7 @@ export default function SectionAbout() {
                         Feel free to explore my portfolio on the next page and get in touch if you have any questions or opportunities for collaboration.
                     </p>
                 </div>
-                <div id="about--graphic" style={{alignSelf: "center"}}>
+                <div id="about--graphics" style={{alignSelf: "center"}}>
                     <img src="images/about-graphics.png" alt="figure" />
                 </div>
             </div>

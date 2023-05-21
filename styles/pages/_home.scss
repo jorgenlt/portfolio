@@ -151,6 +151,7 @@ body {
 
 #about {
   display: flex;
+  gap: 20px;
   flex-direction: row;
 }
 
@@ -162,10 +163,9 @@ body {
   }
 }
 
-#about--graphic {
+#about--graphics {
   img {
-    width: 30vw;
-    min-width: 300px;
+    width: 500px;
     height: fit-content;
     opacity: 0.5;
   }
@@ -225,7 +225,7 @@ body {
   margin: auto;
   z-index: -1;
   height: fit-content;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 #resume--graphics {
@@ -286,7 +286,7 @@ body {
 
 // Responsive design
 @media only screen and (max-width: 1000px) {
-  #about--graphic {
+  #about--graphics {
     display: none;
   }
 }
