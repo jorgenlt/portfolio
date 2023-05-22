@@ -63,6 +63,10 @@
         list-style: none;
         margin: 15px 0px 0px 0px;
     }
+
+    pre {
+        background-color: $blacker !important;
+    }
 }
 
 .projects-modal--lede {
@@ -93,7 +97,8 @@
 
     img {
       margin: 0px;
-      width: 640px;
+      width: 750px;
+      max-width: 90vw;
     }
 }
 
@@ -117,7 +122,6 @@
 
         pre {
             font-size: 12px;
-            background-color: $black !important;
         }
     }
 
