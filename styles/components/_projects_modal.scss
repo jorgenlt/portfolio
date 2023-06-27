@@ -87,6 +87,7 @@
 
 .projects-modal--media {
     display: flex;
+    gap: 40px;
     flex-direction: column;
 }
 
@@ -98,6 +99,18 @@
     img {
       margin: 0px;
       width: 750px;
+      max-width: 90vw;
+    }
+}
+
+.media--mobile {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 750px;
+
+    img {
+      margin: 0px;
+      width: 350px;
       max-width: 90vw;
     }
 }

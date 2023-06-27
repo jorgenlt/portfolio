@@ -48,19 +48,19 @@ export default function Smartbot() {
               </div>
               <div className="projects-modal--media">
                 <div className='media--desktop'>
-                  <img src="/images/my-pokemon-desktop.png" alt="My Pokémon on desktop." />
+                  <img src="/images/my-pokemon-desktop2.png" alt="My Pokémon on desktop." />
+                </div>
+                <div className='media--mobile'>
+                  <img src="/images/my-pokemon-mobile.png" alt="My Pokémon on mobile." />
                 </div>
               </div>
               <div>
                 <h2>Features</h2>
                 <ul>
-                  <li><i className="fa-solid fa-circle-arrow-right"></i></li>
-                  <li><i className="fa-solid fa-circle-arrow-right"></i></li>
-                  <li><i className="fa-solid fa-circle-arrow-right"></i></li>
-                  <li><i className="fa-solid fa-circle-arrow-right"></i></li>
-                  <li><i className="fa-solid fa-circle-arrow-right"></i></li>
-                  <li><i className="fa-solid fa-circle-arrow-right"></i></li>
-                  <li><i className="fa-solid fa-circle-arrow-right"></i></li>
+                  <li><i className="fa-solid fa-circle-arrow-right"></i>Browse Pokémon from the PokeAPI.</li>
+                  <li><i className="fa-solid fa-circle-arrow-right"></i>Search and filter Pokémon.</li>
+                  <li><i className="fa-solid fa-circle-arrow-right"></i>Save a Pokémon to a list.</li>
+                  <li><i className="fa-solid fa-circle-arrow-right"></i>Edit name of saved Pokémon.</li>
                 </ul>
                 <h2>Technologies</h2>
                 <p>
