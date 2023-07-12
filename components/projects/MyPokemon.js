@@ -2,7 +2,7 @@ import Modal from 'react-bootstrap/Modal';
 import PortfolioCard from '@/components/PortfolioCard';
 import { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-// import { } from '@/components/code-snippets/messagemateCode';
+import { myPokemonCode1, myPokemonCode2, myPokemonCode3, myPokemonCode4 } from '@/components/code-snippets/myPokemonCode'
 import { tomorrowNightBright } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 export default function Smartbot() {
@@ -19,7 +19,7 @@ export default function Smartbot() {
       <>
         <PortfolioCard
             title="My Pokémon"
-            description="Search for Pokémon cards and save them to your list."
+            description="A web application to browse, search, store and edit Pokémon from the PokéAPI"
             backgroundImage='/images/my-pokemon-desktop.png'
             handleShow={handleShow}
         />
@@ -38,8 +38,9 @@ export default function Smartbot() {
             <div className="projects-modal--body">
               <div className="projects-modal--lede">
                 <div>
-                  <p>Pokémon app using the PokeAPI.</p>
+                  <p>A web application to browse, search, store and edit Pokémon from the <a href="https://pokeapi.co/" target="_blank">PokéAPI</a>.</p>
                   <p>Visit site: <a href="https://pokemon.jorgenlt.me" target="_blank">pokemon.jorgenlt.me</a></p>
+                  <p><a href="https://pokemon.jorgenlt.me/docs/index.html" target="_blank">Documentation</a></p>
                   <p><a href="https://github.com/jorgenlt/mine-pokemon" target="_blank">View on GitHub</a></p>
                 </div>
                 <div className="lede--video">
@@ -57,39 +58,40 @@ export default function Smartbot() {
               <div>
                 <h2>Features</h2>
                 <ul>
-                  <li><i className="fa-solid fa-circle-arrow-right"></i>Browse Pokémon from the PokeAPI.</li>
+                  <li><i className="fa-solid fa-circle-arrow-right"></i>Browse Pokémon from the PokéAPI.</li>
                   <li><i className="fa-solid fa-circle-arrow-right"></i>Search and filter Pokémon.</li>
                   <li><i className="fa-solid fa-circle-arrow-right"></i>Save a Pokémon to a list.</li>
                   <li><i className="fa-solid fa-circle-arrow-right"></i>Edit name of saved Pokémon.</li>
                 </ul>
                 <h2>Technologies</h2>
                 <p>
-                  Description of technologies used.
+                  The application is build with React on the <a href="https://vitejs.dev/" target="_blank">Vite.js</a> framework. 
+                  The app combines <a href="https://redux-toolkit.js.org/" target="_blank">Redux Toolkit</a>
+                  , <a href="https://redux.js.org/usage/writing-logic-thunks" target="_blank">Redux Thunk</a>, 
+                  and selectors to manage the state, handle asynchronous actions, and provide efficient access 
+                  to the Pokemon data. It also utilizes an entity adapter to manage the normalized data structure. 
+                  Data is stored in local storage using <a href="https://redux-toolkit.js.org/rtk-query/usage/persistence-and-rehydration" target="_blank">Redux Persist</a>.
+                  The <a href="https://pokemon.jorgenlt.me/docs/index.html" target="_blank">documentation site</a> is generated 
+                  with <a href="https://jsdoc.app/index.html" target="_blank">JSdoc</a>.
                 </p>
                 <h2>Technical challenges</h2>
-                <h3>Making the messages appear in real time for sender and receiver</h3>
-                <p>
-                  Description of challenges.
-                </p>
-                <p>Challenge 1</p>
+                <h3>pokemonSlice.jsx</h3>
+                <p>Setting up the Redux with Redux Toolkit to mangage the app.</p>
                 <SyntaxHighlighter language="javascript" style={tomorrowNightBright}>
-                  {}
+                  {myPokemonCode1}
                 </SyntaxHighlighter>
-                <p className="mt-4 mb-2">Challenge 2</p>
-                <SyntaxHighlighter language="ruby" style={tomorrowNightBright}>
-                  {}
+                <h3>The store</h3>
+                <SyntaxHighlighter language="javascript" style={tomorrowNightBright}>
+                  {myPokemonCode2}
                 </SyntaxHighlighter>
-                <p className="mt-4 mb-2">Challenge 3</p>
-                <SyntaxHighlighter language="django" style={tomorrowNightBright}>
-                  {}
+                <h3>Fetching data from PokeAPI</h3>
+                <SyntaxHighlighter language="javascript" style={tomorrowNightBright}>
+                  {myPokemonCode3}
                 </SyntaxHighlighter>
-                <h2>Upcoming features</h2>
-                <ul>
-                  <li><i className="fa-solid fa-circle-arrow-right"></i></li>
-                  <li><i className="fa-solid fa-circle-arrow-right"></i></li>
-                  <li><i className="fa-solid fa-circle-arrow-right"></i></li>
-                  <li><i className="fa-solid fa-circle-arrow-right"></i></li>
-                </ul>
+                <h3>Folder structure</h3>
+                <SyntaxHighlighter language="bash" style={tomorrowNightBright}>
+                  {myPokemonCode4}
+                </SyntaxHighlighter>
               </div>
             </div>
           </Modal.Body>
