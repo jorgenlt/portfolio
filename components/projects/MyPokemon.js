@@ -43,9 +43,6 @@ export default function Smartbot() {
                   <p><a href="https://pokemon.jorgenlt.me/docs/index.html" target="_blank">Documentation</a></p>
                   <p><a href="https://github.com/jorgenlt/mine-pokemon" target="_blank">View on GitHub</a></p>
                 </div>
-                <div className="lede--video">
-
-                </div>
               </div>
               <div className="projects-modal--media">
                 <div className='media--desktop'>
@@ -75,7 +72,7 @@ export default function Smartbot() {
                   with <a href="https://jsdoc.app/index.html" target="_blank">JSdoc</a>.
                 </p>
                 <h2>Technical challenges</h2>
-                <h3>pokemonSlice.jsx</h3>
+                <h3>The Pokémon slice</h3>
                 <p>Setting up the Redux with Redux Toolkit to mangage the app.</p>
                 <SyntaxHighlighter language="javascript" style={tomorrowNightBright}>
                   {myPokemonCode1}
