@@ -1,7 +1,12 @@
 import Modal from 'react-bootstrap/Modal';
 import PortfolioCard from '@/components/PortfolioCard';
 import { useState } from 'react'
-import { homifyCode1, homifyCode2, homifyCode3 } from '@/components/code-snippets/homifyCode'
+import { 
+  homifyCode1, 
+  homifyCode2, 
+  homifyCode3,
+  homifyCode4 
+} from '@/components/code-snippets/homifyCode';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { tomorrowNightBright } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
@@ -113,6 +118,14 @@ export default function Homify() {
                             </p>
                             <SyntaxHighlighter language="django" style={tomorrowNightBright}>
                                 {homifyCode3}
+                            </SyntaxHighlighter>
+
+                            <h3 className="mt-5">Database Schema</h3>
+                            <p className="mt-4 mb-2">
+                                Database schema for PostgreSQL with ActiveRecord.
+                            </p>
+                            <SyntaxHighlighter language="ruby" style={tomorrowNightBright}>
+                                {homifyCode4}
                             </SyntaxHighlighter>
                         </div>
                     </div>
