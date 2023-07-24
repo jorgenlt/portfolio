@@ -37,7 +37,7 @@ export default function OtherProjects() {
                 <Modal.Body>
                     <div className="projects-modal--body">
                         <div className="other-projects--wrapper">
-                            <h1 className="mt-0">Notes App</h1>
+                            <h2 className="mt-0">Notes App</h2>
                             <div className="other-projects--description">
                                 <div>
                                     <p>A notes app for markdown files made with React.</p>
@@ -72,7 +72,42 @@ export default function OtherProjects() {
                         </div>
 
                         <div className="other-projects--wrapper">
-                        <h1 className="mt-0">Meme Generator</h1>
+                            <h2 className="mt-0">Tenzies Game</h2>
+                            <div className="other-projects--description">
+                                <div>
+                                    <p>An online tenzies game made with React.</p>
+                                    <p>
+                                    Visit site: <a href="https://tenzies.jorgenlt.me" target="_blank" rel="noopener noreferrer">React Tenzies Game</a>
+                                    </p>
+                                    <p><a href="https://github.com/jorgenlt/react-tenzies-game" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+                                    <div className="other-projects--features">
+                                        <p>Features:</p>
+                                        <ul>
+                                            <div>
+                                                <i className="fa-solid fa-circle-arrow-right"></i>
+                                                <li>Roll dices.</li>
+                                            </div>
+                                            <div>
+                                                <i className="fa-solid fa-circle-arrow-right"></i>
+                                                <li>Click to hold dices between rolls.</li>
+                                            </div>
+                                            <div>
+                                                <i className="fa-solid fa-circle-arrow-right"></i>
+                                                <li>Animation on winning.</li>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                    <div className="">
+                                        <a href="https://tenzies.jorgenlt.me" target="_blank" rel="noopener noreferrer">
+                                            <img src="/images/tenzies-desktop.png" alt="Tenzies Game" className="projects-modal--full-img" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="other-projects--wrapper">
+                        <h2 className="mt-0">Meme Generator</h2>
                         <div className="other-projects--description">
                             <div>
                                 <p>A meme generator made with React.</p>
@@ -110,7 +145,7 @@ export default function OtherProjects() {
                         </div>
 
                         <div className="other-projects--wrapper">
-                            <h1>Pomodoro timer</h1>
+                            <h2>Pomodoro timer</h2>
                             <div className="other-projects--description">
                                 <div>
                                     <p>A pomodoro timer the from Web Development Libraries course on freeCodeCamp. A time management tool that breaks work into 25-minute intervals called "Pomodoros" separated by 5-minute breaks.</p>
@@ -143,7 +178,7 @@ export default function OtherProjects() {
                         </div>
 
                         <div className="other-projects--wrapper">
-                            <h1>Javascript Calculator</h1>
+                            <h2>Javascript Calculator</h2>
                             <div className="other-projects--description">
                                 <div>
                                     <p>A javascript calculator from the Web Development Libraries course on freeCodeCamp.</p>
@@ -166,7 +201,7 @@ export default function OtherProjects() {
                         </div>
 
                         <div className="other-projects--wrapper">
-                            <h1>Choropleth Map</h1>
+                            <h2>Choropleth Map</h2>
                             <div className="other-projects--description">
                                 <div>
                                     <p>Choropleth map from Data Visualization course on freeCodeCamp.</p>
@@ -188,7 +223,7 @@ export default function OtherProjects() {
                         </div>
 
                         <div className="other-projects--wrapper">
-                            <h1>Heat Map</h1>
+                            <h2>Heat Map</h2>
                             <div className="other-projects--description">
                                 <div>
                                     <p>Heat map from Data Visualization course on freeCodeCamp.</p>
@@ -210,7 +245,7 @@ export default function OtherProjects() {
                         </div>
 
                         <div className="other-projects--wrapper">
-                            <h1>URL Shortener</h1>
+                            <h2>URL Shortener</h2>
                             <div className="other-projects--description">
                                 <div>
                                     <p>A lightweight URL shortener using API from <a href="https://app.short.io/" target="_blank" rel="noopener noreferrer">app.short.io</a></p>
@@ -232,7 +267,7 @@ export default function OtherProjects() {
                         </div>
 
                         <div className="other-projects--wrapper">
-                            <h1>Currency Converter</h1>
+                            <h2>Currency Converter</h2>
                             <div className="other-projects--description">
                                 <div>
                                     <p>A lightweight currency converter using API from <a href="https://www.exchangerate-api.com/" target="_blank" rel="noopener noreferrer">exchangerate-api.com</a>.</p>

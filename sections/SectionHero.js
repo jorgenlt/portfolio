@@ -12,7 +12,7 @@ export default function SectionHero() {
                         className="disable-select"
                         onClick={() => window.location.href = '#2'}
                     >
-                        See my projects
+                        Projects
                     </div>
                     <a 
                         id="hero--contact" 
@@ -22,7 +22,6 @@ export default function SectionHero() {
                     >
                         Contact
                     </a>
-
                 </div>
             </div>
             <div id="learn-more-container" onClick={() => window.location.href = '#1'}>
