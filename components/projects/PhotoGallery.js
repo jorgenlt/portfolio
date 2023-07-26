@@ -65,7 +65,7 @@ export default function Smartbot() {
               <ul>
                 <li><i className="fa-solid fa-circle-arrow-right"></i>Browse photos by category.</li>
                 <li><i className="fa-solid fa-circle-arrow-right"></i>View photos in full size.</li>
-                <li><i className="fa-solid fa-circle-arrow-right"></i>Upload new images and to category of choice.</li>
+                <li><i className="fa-solid fa-circle-arrow-right"></i>Upload new images to category of choice.</li>
               </ul>
               
               <h2>Technologies</h2>
