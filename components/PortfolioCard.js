@@ -1,4 +1,4 @@
-export default function portfolioCards(props) {
+export default function portfolioCard(props) {
     return (
         <div 
             className="portfolio-cards--card"
