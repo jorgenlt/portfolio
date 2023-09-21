@@ -17,7 +17,7 @@ export default function SectionHero() {
                     <a 
                         id="hero--contact" 
                         className="disable-select"
-                        href="mailto:contact@jorgenlt.me"
+                        href="mailto:contact@jorgenlt.no"
                         target="_blank"
                     >
                         Contact

@@ -4,7 +4,7 @@ export default function SectionContact() {
             <div id="contact-wrapper">
                 <h1>Contact</h1>
                 <div id="contact--links">
-                    <p>Send me an <a href="mailto:contact@jorgenlt.me" className="emailat" target="_blank">email.</a></p>
+                    <p>Send me an <a href="mailto:contact@jorgenlt.no" className="emailat" target="_blank">email.</a></p>
                 </div>
             </div>
             <img src="/images/contact-graphics.png" id="contact--graphics" />

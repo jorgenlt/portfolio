@@ -1,7 +1,7 @@
 export default function SomeBar() {
     return (
         <div className="sticky-some-bar">
-            <a href="mailto:contact@jorgenlt.me" className="emailat" target="_blank">
+            <a href="mailto:contact@jorgenlt.no" className="emailat" target="_blank">
                 <i className="fa-solid fa-at"></i>
             </a>
             <a href="https://www.linkedin.com/in/jorgenlt/" target="_blank" className="linkedin">
