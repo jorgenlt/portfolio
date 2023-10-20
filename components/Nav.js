@@ -1,92 +1,130 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
-export default function Nav() {    
-    useEffect(() => {
-        const pushbar = new Pushbar({
-            blur:true,
-            overlay:true
-        }
-        ); 
-        
-        // mobile navigation, pushbar js
-        const mobileNavAbout = document.querySelector('#mobile-nav-about');
-        const mobileNavPortfolio = document.querySelector('#mobile-nav-portfolio');
-        const mobileNavResume = document.querySelector('#mobile-nav-resume');
-        const mobileNavContact = document.querySelector('#mobile-nav-contact');
+export default function Nav() {
+  useEffect(() => {
+    const pushbar = new Pushbar({
+      blur: true,
+      overlay: true,
+    });
 
-        mobileNavAbout.addEventListener('click', () => {
-        window.location.href = '#1'; // anchors created by fullpage.js
-        pushbar.close(); // closes the mobile nav-menu
-        });
+    // mobile navigation, pushbar js
+    const mobileNavAbout = document.querySelector("#mobile-nav-about");
+    const mobileNavPortfolio = document.querySelector("#mobile-nav-portfolio");
+    const mobileNavResume = document.querySelector("#mobile-nav-resume");
+    const mobileNavContact = document.querySelector("#mobile-nav-contact");
 
-        mobileNavPortfolio.addEventListener('click', () => {
-        window.location.href = '#2'
-        pushbar.close();
-        });
+    mobileNavAbout.addEventListener("click", () => {
+      window.location.href = "#1"; // anchors created by fullpage.js
+      pushbar.close(); // closes the mobile nav-menu
+    });
 
-        mobileNavResume.addEventListener('click', () => {
-        window.location.href = '#3'
-        pushbar.close();
-        });
+    mobileNavPortfolio.addEventListener("click", () => {
+      window.location.href = "#2";
+      pushbar.close();
+    });
 
-        mobileNavContact.addEventListener('click', () => {
-        window.location.href = '#4'
-        pushbar.close();
-        });
-    },[])
+    mobileNavResume.addEventListener("click", () => {
+      window.location.href = "#3";
+      pushbar.close();
+    });
 
-    return (
-        <div>
-            {/* desktop navbar */}
-            <div className="container" id="nav-home">
-            <ul className="nav-links">
-                <li id="nav-about" onClick={() => window.location.href = '#1'}><span className="link-num">01.</span>about</li>
-                <li id="nav-portfolio" onClick={() => window.location.href = '#2'}><span className="link-num">02.</span>portfolio</li>
-                <li id="nav-resume" onClick={() => window.location.href = '#3'}><span className="link-num">03.</span>resume</li>
-                <li id="nav-contact" onClick={() => window.location.href = '#4'}><span className="link-num">04.</span>contact</li>
-            </ul>
-            </div>
+    mobileNavContact.addEventListener("click", () => {
+      window.location.href = "#4";
+      pushbar.close();
+    });
+  }, []);
 
-            {/* mobile navbar */}
-            <div className="" id="mobile-nav-home">
-                {/* open menu */}
-                <div id="burger" data-pushbar-target="mypushbar1">
-                    <span><i className="fa-solid fa-bars"></i></span>
-                </div>
+  return (
+    <div>
+      {/* desktop navbar */}
+      <div className="container" id="nav-home">
+        <ul className="nav-links">
+          <li id="nav-about" onClick={() => (window.location.href = "#1")}>
+            <span className="link-num">01.</span>about
+          </li>
+          <li id="nav-portfolio" onClick={() => (window.location.href = "#2")}>
+            <span className="link-num">02.</span>portfolio
+          </li>
+          <li id="nav-resume" onClick={() => (window.location.href = "#3")}>
+            <span className="link-num">03.</span>resume
+          </li>
+          <li id="nav-contact" onClick={() => (window.location.href = "#4")}>
+            <span className="link-num">04.</span>contact
+          </li>
+        </ul>
+      </div>
 
-                {/* pushbar slide menu */}
-                <div id="mobile-menu" data-pushbar-id="mypushbar1" data-pushbar-direction="right">
-                    {/* close menu */}
-                    <div id="burger-close" data-pushbar-close>
-                        <span><i className="fa-solid fa-xmark"></i></span>
-                    </div>
-                    {/* menu content */}
-                    <ul id="mobile-nav-links">
-                        <li id="mobile-nav-about" ><span className="mobile-link-num">01.</span>about</li>
-                        <li id="mobile-nav-portfolio"><span className="mobile-link-num">02.</span>portfolio</li>
-                        <li id="mobile-nav-resume"><span className="mobile-link-num">03.</span>resume</li>
-                        <li id="mobile-nav-contact"><span className="mobile-link-num">04.</span>contact</li>
-                    </ul>
-                    {/* mobile some links */}
-                    <ul id='mobile-some-links'>
-                        <a href="mailto:contact@jorgenlt.me" target="_blank">
-                            <li><i className="fa-solid fa-at"></i><span>email</span></li>
-                        </a>
-                        <a href="https://www.linkedin.com/in/jorgenlt/" target="_blank">
-                            <li><i className="fa-brands fa-linkedin-in"></i><span>linkedin</span></li>
-                        </a>
-                        <a href="https://github.com/jorgenlt" target="_blank">
-                            <li><i className="fa-brands fa-github"></i><span>github</span></li>
-                        </a>
-                        <a href="https://codepen.io/dogonscooter" target="_blank">
-                            <li><i className="fa-brands fa-codepen"></i><span>codepen</span></li>
-                        </a>
-                        <a href="https://www.freecodecamp.org/jorgenlt" target="_blank">
-                            <li><i className="fa-brands fa-free-code-camp"></i><span>freeCodeCamp</span></li>
-                        </a>
-                    </ul>
-                </div>
-            </div>
+      {/* mobile navbar */}
+      <div className="" id="mobile-nav-home">
+        {/* open menu */}
+        <div id="burger" data-pushbar-target="mypushbar1">
+          <span>
+            <i className="fa-solid fa-bars"></i>
+          </span>
         </div>
-    )
+
+        {/* pushbar slide menu */}
+        <div
+          id="mobile-menu"
+          data-pushbar-id="mypushbar1"
+          data-pushbar-direction="right"
+        >
+          {/* close menu */}
+          <div id="burger-close" data-pushbar-close>
+            <span>
+              <i className="fa-solid fa-xmark"></i>
+            </span>
+          </div>
+          {/* menu content */}
+          <ul id="mobile-nav-links">
+            <li id="mobile-nav-about">
+              <span className="mobile-link-num">01.</span>about
+            </li>
+            <li id="mobile-nav-portfolio">
+              <span className="mobile-link-num">02.</span>portfolio
+            </li>
+            <li id="mobile-nav-resume">
+              <span className="mobile-link-num">03.</span>resume
+            </li>
+            <li id="mobile-nav-contact">
+              <span className="mobile-link-num">04.</span>contact
+            </li>
+          </ul>
+          {/* mobile some links */}
+          <ul id="mobile-some-links">
+            <a href="mailto:contact@jorgenlt.me" target="_blank">
+              <li>
+                <i className="fa-solid fa-at"></i>
+                <span>email</span>
+              </li>
+            </a>
+            <a href="https://www.linkedin.com/in/jorgenlt/" target="_blank">
+              <li>
+                <i className="fa-brands fa-linkedin-in"></i>
+                <span>linkedin</span>
+              </li>
+            </a>
+            <a href="https://github.com/jorgenlt" target="_blank">
+              <li>
+                <i className="fa-brands fa-github"></i>
+                <span>github</span>
+              </li>
+            </a>
+            <a href="https://codepen.io/dogonscooter" target="_blank">
+              <li>
+                <i className="fa-brands fa-codepen"></i>
+                <span>codepen</span>
+              </li>
+            </a>
+            <a href="https://www.freecodecamp.org/jorgenlt" target="_blank">
+              <li>
+                <i className="fa-brands fa-free-code-camp"></i>
+                <span>freeCodeCamp</span>
+              </li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
 }

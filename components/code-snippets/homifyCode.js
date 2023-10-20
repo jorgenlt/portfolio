@@ -1,5 +1,3 @@
-// escape `and $
-
 export const homifyCode1 = `
 // app/javascript/controllers/swipe_controller.js
 
@@ -426,7 +424,7 @@ export const homifyCode3 = `
   </div>
 
 </div>
-`
+`;
 
 export const homifyCode4 = `
 ActiveRecord::Schema[7.0].define(version: 2022_11_29_083308) do
@@ -583,4 +581,4 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_29_083308) do
   add_foreign_key "searches", "users"
   add_foreign_key "viewings", "matches"
 end
-`
+`;

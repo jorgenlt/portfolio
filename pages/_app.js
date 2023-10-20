@@ -1,12 +1,11 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { useEffect } from 'react';
-import Script from 'next/script';
-import '@/styles/app.scss';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect } from "react";
+import Script from "next/script";
+import "@/styles/app.scss";
 
-
-export default function App({ Component, pageProps }) {  
+export default function App({ Component, pageProps }) {
   useEffect(() => {
-    require('bootstrap/dist/js/bootstrap.bundle.min.js');
+    require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
 
   return (
@@ -31,5 +30,5 @@ export default function App({ Component, pageProps }) {
       />
       <Component {...pageProps} />
     </>
-    ) 
+  );
 }
