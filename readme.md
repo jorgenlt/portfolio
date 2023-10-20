@@ -1,1 +1,1 @@
-Visit my portfolio at [jorgenlt.me](http://www.jorgenlt.no).
+Visit my portfolio at [jorgenlt.no](http://www.jorgenlt.no).
