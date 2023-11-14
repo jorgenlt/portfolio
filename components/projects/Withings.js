@@ -41,7 +41,14 @@ export default function Smartbot() {
           <div className="projects-modal--body">
             <div className="projects-modal--lede">
               <div>
-                <p>Description.</p>
+                <p>
+                  A web application to view detailed data from ScanWatch, a
+                  smart watch from{" "}
+                  <a href="https://www.withings.com" target="_blank">
+                    Withings
+                  </a>
+                  .
+                </p>
                 <p>
                   <a
                     href="https://github.com/jorgenlt/withings-data-reader"
@@ -85,7 +92,55 @@ export default function Smartbot() {
 
               <h2>Technologies</h2>
               <p>
-                Description.
+                The application is build with React on the{" "}
+                <a href="https://vitejs.dev/" target="_blank">
+                  Vite.js
+                </a>{" "}
+                framework. The app combines{" "}
+                <a href="https://redux-toolkit.js.org/" target="_blank">
+                  Redux Toolkit
+                </a>
+                ,{" "}
+                <a
+                  href="https://redux.js.org/usage/writing-logic-thunks"
+                  target="_blank"
+                >
+                  Redux Thunk
+                </a>
+                , and selectors to manage the state and actions.
+                <a href="https://date-fns.org/" target="_blank">
+                  Date-fns
+                </a>{" "}
+                is being used for working with dates and times, and{" "}
+                <a
+                  href="https://github.com/rt2zz/redux-persist#readme"
+                  target="_blank"
+                >
+                  Redux Persist
+                </a>{" "}
+                to persist Redux state. Raw data (CSV) is parsed with{" "}
+                <a href="https://react-papaparse.js.org" target="_blank">
+                  React-Paparse
+                </a>
+                . Site navigation with{" "}
+                <a href="https://reactrouter.com/" target="_blank">
+                  React Router
+                </a>
+                . Charts are made with{" "}
+                <a href="https://recharts.org/" target="_blank">
+                  Recharts
+                </a>
+                . The application is additionally supported by react-datepicker,
+                react-device-detect, react-icons, react-transition-group and
+                uuid.
+              </p>
+              <p>
+                <a
+                  href="https://github.com/jorgenlt/withings-data-reader"
+                  target="_blank"
+                >
+                  View on GitHub
+                </a>
               </p>
 
               <h2>Project structure</h2>
