@@ -55,13 +55,13 @@ export default function Smartbot() {
                 </p>
                 <p>
                   Visit site:{" "}
-                  <a href="https://pokemon.jorgenlt.me" target="_blank">
-                    pokemon.jorgenlt.me
+                  <a href="https://pokemon.jorgenlt.no" target="_blank">
+                    pokemon.jorgenlt.no
                   </a>
                 </p>
                 <p>
                   <a
-                    href="https://pokemon.jorgenlt.me/docs/index.html"
+                    href="https://pokemon.jorgenlt.no/docs/index.html"
                     target="_blank"
                   >
                     Documentation
@@ -140,7 +140,7 @@ export default function Smartbot() {
                 </a>
                 . The{" "}
                 <a
-                  href="https://pokemon.jorgenlt.me/docs/index.html"
+                  href="https://pokemon.jorgenlt.no/docs/index.html"
                   target="_blank"
                 >
                   documentation site

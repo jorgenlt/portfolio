@@ -49,8 +49,8 @@ export default function Smartbot() {
                 <p>A photo portfolio site for photographers.</p>
                 <p>
                   Visit site:{" "}
-                  <a href="https://photography.jorgenlt.me" target="_blank">
-                    photography.jorgenlt.me
+                  <a href="https://photography.jorgenlt.no" target="_blank">
+                    photography.jorgenlt.no
                   </a>
                 </p>
                 <p>
@@ -65,7 +65,7 @@ export default function Smartbot() {
             </div>
             <div className="projects-modal--media">
               <div className="media--desktop">
-                <a href="https://photography.jorgenlt.me" target="_blank">
+                <a href="https://photography.jorgenlt.no" target="_blank">
                   <img
                     src="/images/photo-gallery-desktop2.jpg"
                     alt="Photo Gallery on desktop."

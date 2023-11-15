@@ -43,7 +43,7 @@ export default function Spotify() {
                 <p>Frontend clone of the Spotify artist page.</p>
                 <p>
                   Visit site:{" "}
-                  <a href="https://spotify.jorgenlt.me" target="_blank">
+                  <a href="https://spotify.jorgenlt.no" target="_blank">
                     Spotify Artist Page
                   </a>
                 </p>

@@ -46,7 +46,7 @@ export default function OtherProjects() {
                   <p>
                     Visit site:{" "}
                     <a
-                      href="https://notes-app.jorgenlt.me"
+                      href="https://notes-app.jorgenlt.no"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -84,7 +84,7 @@ export default function OtherProjects() {
                   </div>
                   <div className="">
                     <a
-                      href="https://notes-app.jorgenlt.me"
+                      href="https://notes-app.jorgenlt.no"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -107,7 +107,7 @@ export default function OtherProjects() {
                   <p>
                     Visit site:{" "}
                     <a
-                      href="https://tenzies.jorgenlt.me"
+                      href="https://tenzies.jorgenlt.no"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -142,7 +142,7 @@ export default function OtherProjects() {
                   </div>
                   <div className="">
                     <a
-                      href="https://tenzies.jorgenlt.me"
+                      href="https://tenzies.jorgenlt.no"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -165,7 +165,7 @@ export default function OtherProjects() {
                   <p>
                     Visit site:{" "}
                     <a
-                      href="https://meme.jorgenlt.me"
+                      href="https://meme.jorgenlt.no"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -203,7 +203,7 @@ export default function OtherProjects() {
                   </div>
                   <div className="meme-screenshots">
                     <a
-                      href="https://meme.jorgenlt.me"
+                      href="https://meme.jorgenlt.no"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -213,7 +213,7 @@ export default function OtherProjects() {
                       />
                     </a>
                     <a
-                      href="https://meme.jorgenlt.me"
+                      href="https://meme.jorgenlt.no"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -442,7 +442,7 @@ export default function OtherProjects() {
                   <p>
                     Visit site:{" "}
                     <a
-                      href="https://url.jorgenlt.me"
+                      href="https://url.jorgenlt.no"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -462,7 +462,7 @@ export default function OtherProjects() {
                     </ul>
                   </div>
                   <a
-                    href="https://url.jorgenlt.me"
+                    href="https://url.jorgenlt.no"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -494,7 +494,7 @@ export default function OtherProjects() {
                   <p>
                     Visit site:{" "}
                     <a
-                      href="https://currency-converter.jorgenlt.me/"
+                      href="https://currency-converter.jorgenlt.no/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -511,7 +511,7 @@ export default function OtherProjects() {
                     </ul>
                   </div>
                   <a
-                    href="https://currency-converter.jorgenlt.me/"
+                    href="https://currency-converter.jorgenlt.no/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
