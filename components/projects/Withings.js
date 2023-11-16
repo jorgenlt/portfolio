@@ -109,40 +109,62 @@ export default function Smartbot() {
                 </a>
                 , and selectors to manage the state and actions.
                 <a href="https://date-fns.org/" target="_blank">
+                  {" "}
                   Date-fns
                 </a>{" "}
-                is being used for working with dates and times, and{" "}
+                handles dates and times, and{" "}
                 <a
                   href="https://github.com/rt2zz/redux-persist#readme"
                   target="_blank"
                 >
                   Redux Persist
                 </a>{" "}
-                to persist Redux state. Raw data (CSV) is parsed with{" "}
+                save the Redux state in the browser's local storage. Raw CSV
+                data is parsed with{" "}
                 <a href="https://react-papaparse.js.org" target="_blank">
+                  {" "}
                   React-Paparse
                 </a>
-                . Site navigation with{" "}
+                .{" "}
                 <a href="https://reactrouter.com/" target="_blank">
                   React Router
-                </a>
-                . Charts are made with{" "}
+                </a>{" "}
+                does the site navigation. Charts are made with{" "}
                 <a href="https://recharts.org/" target="_blank">
                   Recharts
                 </a>
-                . The application is additionally supported by react-datepicker,
-                react-device-detect, react-icons, react-transition-group and
-                uuid.
-              </p>
-              <p>
+                . Additionally, the application is supplemented by{" "}
+                <a href="https://reactdatepicker.com" target="_blank">
+                  react-datepicker
+                </a>
+                ,{" "}
                 <a
-                  href="https://github.com/jorgenlt/withings-data-reader"
+                  href="https://www.npmjs.com/package/react-device-detect"
                   target="_blank"
                 >
-                  View on GitHub
+                  react-device-detect
                 </a>
+                ,{" "}
+                <a
+                  href="https://www.npmjs.com/package/react-icons"
+                  target="_blank"
+                >
+                  react-icons
+                </a>
+                ,{" "}
+                <a
+                  href="https://www.npmjs.com/package/react-transition-group"
+                  target="_blank"
+                >
+                  react-transition-group
+                </a>{" "}
+                and
+                <a href="https://www.npmjs.com/package/uuid" target="_blank">
+                  {" "}
+                  uuid
+                </a>
+                .
               </p>
-
               <h2>Project structure</h2>
               <SyntaxHighlighter language="bash" style={tomorrowNightBright}>
                 {}
