@@ -2,7 +2,12 @@ import Modal from "react-bootstrap/Modal";
 import PortfolioCard from "@/components/PortfolioCard";
 import { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { withingsCode1 } from "@/components/code-snippets/withingsCode";
+import {
+  withingsCode1,
+  withingsCode2,
+  withingsCode3,
+  withingsCode4
+} from "@/components/code-snippets/withingsCode";
 import { tomorrowNightBright } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 export default function Smartbot() {
@@ -174,14 +179,31 @@ export default function Smartbot() {
               </SyntaxHighlighter>
 
               <h2>Technical challenges</h2>
-
-              <h3>Header</h3>
+              <h3>Parsing uploaded files</h3>
               <p>Description.</p>
               <SyntaxHighlighter
                 language="javascript"
                 style={tomorrowNightBright}
               >
-                {}
+                {withingsCode2}
+              </SyntaxHighlighter>
+
+              <h3>Working with data, App.jsx</h3>
+              <p>Description.</p>
+              <SyntaxHighlighter
+                language="javascript"
+                style={tomorrowNightBright}
+              >
+                {withingsCode3}
+              </SyntaxHighlighter>
+
+              <h3>Charts</h3>
+              <p>Description.</p>
+              <SyntaxHighlighter
+                language="javascript"
+                style={tomorrowNightBright}
+              >
+                {withingsCode4}
               </SyntaxHighlighter>
 
               <h2>Upcoming features</h2>
