@@ -2,7 +2,7 @@ import Modal from "react-bootstrap/Modal";
 import PortfolioCard from "@/components/PortfolioCard";
 import { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-// import {} from "@/components/code-snippets/messagemateCode";
+import { withingsCode1 } from "@/components/code-snippets/withingsCode";
 import { tomorrowNightBright } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 export default function Smartbot() {
@@ -42,12 +42,19 @@ export default function Smartbot() {
             <div className="projects-modal--lede">
               <div>
                 <p>
-                  A web application to view detailed data from ScanWatch, a
-                  smart watch from{" "}
+                  A web application to view detailed health data from ScanWatch,
+                  a smart watch from{" "}
                   <a href="https://www.withings.com" target="_blank">
                     Withings
                   </a>
                   .
+                </p>
+                <p>
+                  Visit site:{" "}
+                  <a href="https://scanwatch.jorgenlt.no" target="_blank">
+                    scanwatch.jorgenlt.no
+                  </a>{" "}
+                  (demo files provided are for testing)
                 </p>
                 <p>
                   <a
@@ -77,16 +84,12 @@ export default function Smartbot() {
               <h2>Features</h2>
               <ul>
                 <li>
-                  <i className="fa-solid fa-circle-arrow-right"></i>1
+                  <i className="fa-solid fa-circle-arrow-right"></i>Upload
+                  health data from a Withings account.
                 </li>
                 <li>
-                  <i className="fa-solid fa-circle-arrow-right"></i>2
-                </li>
-                <li>
-                  <i className="fa-solid fa-circle-arrow-right"></i>3
-                </li>
-                <li>
-                  <i className="fa-solid fa-circle-arrow-right"></i>4
+                  <i className="fa-solid fa-circle-arrow-right"></i>View
+                  detailed charts on sleep, blood oxygen, heart rate and weight.
                 </li>
               </ul>
 
@@ -167,7 +170,7 @@ export default function Smartbot() {
               </p>
               <h2>Project structure</h2>
               <SyntaxHighlighter language="bash" style={tomorrowNightBright}>
-                {}
+                {withingsCode1}
               </SyntaxHighlighter>
 
               <h2>Technical challenges</h2>
@@ -184,16 +187,8 @@ export default function Smartbot() {
               <h2>Upcoming features</h2>
               <ul>
                 <li>
-                  <i className="fa-solid fa-circle-arrow-right"></i>1
-                </li>
-                <li>
-                  <i className="fa-solid fa-circle-arrow-right"></i>2
-                </li>
-                <li>
-                  <i className="fa-solid fa-circle-arrow-right"></i>3
-                </li>
-                <li>
-                  <i className="fa-solid fa-circle-arrow-right"></i>4
+                  <i className="fa-solid fa-circle-arrow-right"></i> Download
+                  chart as image.
                 </li>
               </ul>
             </div>
