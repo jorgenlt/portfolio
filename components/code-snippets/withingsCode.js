@@ -260,7 +260,7 @@ const App = () => {
   // Populate hr state
   useEffect(() => {
     if (rawHrHr) {
-      // Process raw dataedux DevTools serialization slow and consuming a lot of memor
+      // Process raw data
       let rawData = [...rawHrHr];
 
       // Remove headersResponsiveContainer

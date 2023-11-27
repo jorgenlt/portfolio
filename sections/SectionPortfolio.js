@@ -19,7 +19,7 @@ const portfolioCards = [
   { id: 4, name: "Messagemate", tech: ["rails", "javascript", "ruby", "android"] },
   { id: 5, name: "Smartbot", tech: ["react native", "javascript", "android", "redux"] },
   { id: 6, name: "Photo Gallery", tech: ["react", "redux", "javascript"] },
-  { id: 7, name: "PortfolioWebsite", tech: ["react", "javascript", "next.js"] },
+  { id: 7, name: "PortfolioWebsite", tech: ["react", "javascript"] },
   { id: 8, name: "Spotify", tech: ["javascript"] },
   { id: 9, name: "Findit", tech: ["rails", "ruby", "javascript"] },
   { id: 10, name: "Tidder", tech: ["rails", "javascript", "ruby"] },
@@ -73,13 +73,6 @@ export default function SectionPortfolio() {
               className={selectedTech.includes("javascript") ? "selected" : ""}
             >
               JavaScript
-            </button>
-            <button
-              onClick={handleTechButtonClick}
-              value="next.js"
-              className={selectedTech.includes("next.js") ? "selected" : ""}
-            >
-              Next.js
             </button>
             <button
               onClick={handleTechButtonClick}

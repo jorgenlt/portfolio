@@ -6,7 +6,7 @@ import {
   withingsCode1,
   withingsCode2,
   withingsCode3,
-  withingsCode4
+  withingsCode4,
 } from "@/components/code-snippets/withingsCode";
 import { tomorrowNightBright } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
@@ -59,7 +59,7 @@ export default function Smartbot() {
                   <a href="https://scanwatch.jorgenlt.no" target="_blank">
                     scanwatch.jorgenlt.no
                   </a>{" "}
-                  (demo files provided are for testing)
+                  (demo files are provided for testing)
                 </p>
                 <p>
                   <a
@@ -131,7 +131,7 @@ export default function Smartbot() {
                 data is parsed with{" "}
                 <a href="https://react-papaparse.js.org" target="_blank">
                   {" "}
-                  React-Paparse
+                  React-PapaParse
                 </a>
                 .{" "}
                 <a href="https://reactrouter.com/" target="_blank">
@@ -180,7 +180,20 @@ export default function Smartbot() {
 
               <h2>Technical challenges</h2>
               <h3>Parsing uploaded files</h3>
-              <p>Description.</p>
+              <p>
+                The function uploadFilesThunk loops through each file and checks
+                if it is an allowed file type.
+              </p>
+              <p>
+                For each allowed file, PapaParse is used to parse the CSV data.
+                In the complete-callback, the parsed data is pushed to the
+                parsedFiles array. The parsedFiles arrray containing all the
+                parsed files is returned.
+              </p>
+              <p>
+                On the Redux side the files are stored by filename when the
+                thunk is fulfilled.
+              </p>
               <SyntaxHighlighter
                 language="javascript"
                 style={tomorrowNightBright}
@@ -188,21 +201,25 @@ export default function Smartbot() {
                 {withingsCode2}
               </SyntaxHighlighter>
 
-              <h3>Working with data, App.jsx</h3>
-              <p>Description.</p>
-              <SyntaxHighlighter
-                language="javascript"
-                style={tomorrowNightBright}
-              >
+              <h3>Prepare the raw upload data for usage in the app</h3>
+              <p>
+                The raw CSV data, that are uploaded and parsed, are further
+                processed to be used in the app. The processed data is then
+                dispatched to update the appropriate state slice, such as spo2
+                data dispatching updateSpo2.
+              </p>
+              <SyntaxHighlighter language="jsx" style={tomorrowNightBright}>
                 {withingsCode3}
               </SyntaxHighlighter>
 
               <h3>Charts</h3>
-              <p>Description.</p>
-              <SyntaxHighlighter
-                language="javascript"
-                style={tomorrowNightBright}
-              >
+              <p>
+                The charts are created using different components from Recharts.
+                For example, in the SpO2 chart a LineChart component maps data
+                to Y and X axis. When the date is updated the chart rerenders to
+                show the updated data.
+              </p>
+              <SyntaxHighlighter language="jsx" style={tomorrowNightBright}>
                 {withingsCode4}
               </SyntaxHighlighter>
 
