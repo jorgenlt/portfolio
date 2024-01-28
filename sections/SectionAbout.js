@@ -14,15 +14,15 @@ export default function SectionAbout() {
           </p>
 
           <p>
-            I am proficient in both JavaScript and Ruby, and I am experienced in
-            using libraries such as React and frameworks such as Ruby on Rails
-            and Next.js. I take great pride in creating visually appealing and
+            My programming languages are JavaScript and Ruby, and I am experienced in
+            using libraries such as React and frameworks such as Ruby on Rails, Vite.js and 
+            Next.js. I take great pride in creating visually appealing and
             responsive websites and web applications that not only look great
             but also function seamlessly. I'm curious person at heart and I'm
             always looking to learn new things and improve my coding skills.
           </p>
           <p>
-            Last year, I completed a{" "}
+            In 2022, I completed a{" "}
             <a href="https://www.lewagon.com/" target="_blank" rel="noreferrer">
               Le Wagon
             </a>{" "}
@@ -37,6 +37,7 @@ export default function SectionAbout() {
             </a>
             , which represent approximately 1200 hours of coursework in total.
           </p>
+          <p>Last year I was invited to join IBM Skillbuild Front End Web Development Bootcamp, and completed this course over the summer.</p>
           <p>
             Feel free to explore my portfolio on the next page and get in touch
             if you have any questions or opportunities for collaboration.

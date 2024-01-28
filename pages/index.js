@@ -16,7 +16,7 @@ export default function Home() {
         <title>Jørgen Larsen Tjønnteig, Portfolio (jorgenlt)</title>
         <meta
           name="description"
-          content="Portfolio page of Jørgen Larsen Tjønnteig, fullstack web developer. Skills: Full Stack Web Development, Javascript, SQL, Ruby, Ruby on Rails, HTML, CSS, UX/UI, Product Design, Bootstrap. Visit portfolio for projects and resume / CV."
+          content="Portfolio page of Jørgen Larsen Tjønnteig, fullstack web developer. Skills: Full Stack Web Development, Javascript, React, Ruby, Ruby on Rails, HTML, CSS, UX/UI, Product Design, Bootstrap. Visit portfolio for projects and resume."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
