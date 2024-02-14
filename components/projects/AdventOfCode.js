@@ -127,10 +127,6 @@ export default function AdventOfCode() {
                 </a>{" "}
                 makes the code easily readable.
               </p>
-              <h2>Project structure - if relevant</h2>
-              <SyntaxHighlighter language="bash" style={tomorrowNightBright}>
-                {"project structure"}
-              </SyntaxHighlighter>
 
               <h2>Technical challenges</h2>
               <h3>The Redux slice with API call</h3>
