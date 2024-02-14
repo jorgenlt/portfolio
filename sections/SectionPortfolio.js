@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Homify from "@/components/projects/Homify";
-import Withings from '@/components/projects/Withings'
+import Withings from "@/components/projects/Withings";
 import MyPokemon from "@/components/projects/MyPokemon";
 import Messagemate from "@/components/projects/Messagemate";
 import Smartbot from "@/components/projects/Smartbot";
@@ -10,21 +10,75 @@ import Spotify from "@/components/projects/Spotify";
 import Findit from "@/components/projects/Findit";
 import Tidder from "@/components/projects/Tidder";
 import NodejsChatgpt from "@/components/projects/NodejsChatgpt";
+import AdventOfCode from "@/components/projects/AdventOfCode";
 import OtherProjects from "@/components/projects/OtherProjects";
 
 const portfolioCards = [
-  { id: 1, name: "Homify", tech: ["rails", "javascript", "ruby"] },
-  { id: 2, name: "Withings", tech: ["react", "redux", "javascript"] },
-  { id: 3, name: "My Pokemon", tech: ["javascript", "react", "redux"] },
-  { id: 4, name: "Messagemate", tech: ["rails", "javascript", "ruby", "android"] },
-  { id: 5, name: "Smartbot", tech: ["react native", "javascript", "android", "redux"] },
-  { id: 6, name: "Photo Gallery", tech: ["react", "redux", "javascript"] },
-  { id: 7, name: "PortfolioWebsite", tech: ["react", "javascript"] },
-  { id: 8, name: "Spotify", tech: ["javascript"] },
-  { id: 9, name: "Findit", tech: ["rails", "ruby", "javascript"] },
-  { id: 10, name: "Tidder", tech: ["rails", "javascript", "ruby"] },
-  { id: 11, name: "NodejsChatgpt", tech: ["node.js", "javascript"] },
-  { id: 12, name: "OtherProjects", tech: ["react", "javascript"] },
+  {
+    id: 1,
+    name: "Homify",
+    tech: ["rails", "javascript", "ruby"],
+  },
+  {
+    id: 2,
+    name: "Withings",
+    tech: ["react", "redux", "javascript"],
+  },
+  {
+    id: 3,
+    name: "My Pokemon",
+    tech: ["javascript", "react", "redux"],
+  },
+  {
+    id: 4,
+    name: "Messagemate",
+    tech: ["rails", "javascript", "ruby", "android"],
+  },
+  {
+    id: 5,
+    name: "Smartbot",
+    tech: ["react native", "javascript", "android", "redux"],
+  },
+  {
+    id: 6,
+    name: "Photo Gallery",
+    tech: ["react", "redux", "javascript"],
+  },
+  {
+    id: 7,
+    name: "PortfolioWebsite",
+    tech: ["react", "javascript"],
+  },
+  {
+    id: 8,
+    name: "Spotify",
+    tech: ["javascript"],
+  },
+  {
+    id: 9,
+    name: "Findit",
+    tech: ["rails", "ruby", "javascript"],
+  },
+  {
+    id: 10,
+    name: "Tidder",
+    tech: ["rails", "javascript", "ruby"],
+  },
+  {
+    id: 11,
+    name: "NodejsChatgpt",
+    tech: ["node.js", "javascript"],
+  },
+  {
+    id: 12,
+    name: "AdventOfCode",
+    tech: ["react", "javascript"],
+  },
+  {
+    id: 13,
+    name: "OtherProjects",
+    tech: ["react", "javascript"],
+  },
 ];
 
 export default function SectionPortfolio() {
@@ -147,6 +201,8 @@ export default function SectionPortfolio() {
                 return <NodejsChatgpt key={card.id} tech={card.tech} />;
               case "PortfolioWebsite":
                 return <PortfolioWebsite key={card.id} tech={card.tech} />;
+              case "AdventOfCode":
+                return <AdventOfCode key={card.id} tech={card.tech} />;
               default:
                 return null;
             }
